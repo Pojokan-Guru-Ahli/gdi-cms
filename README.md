@@ -37,6 +37,7 @@ mongorestore
   * Access Admin : `http://localhost:1337/admin`
     * User : JuniYadi
     * Password : qweasd
+  * Documentation  : `http://localhost:1337/documentation/`
 
 If you already restore a database, access url `http://localhost:1337/blogs`
 
