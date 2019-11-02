@@ -7,6 +7,16 @@ sudo apt update
 sudo apt install mongodb
 ```
 
+### MongoDB GUI Client
+```
+sudo apt install snap
+sudo snap install robo3t-snap
+```
+
+### Default Login Detail
+* Port `27017`
+* Username and Password Empty (For local development only)
+
 ## Backup and Restore MongoDB Database
 * You can find backup database on folder `dump`
 
