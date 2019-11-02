@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "blog",
+  "info": {
+    "name": "blog",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    }
+  }
+}
