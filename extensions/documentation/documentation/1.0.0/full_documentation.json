@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/03/2019 10:40:43 AM"
+    "x-generation-date": "11/03/2019 3:35:43 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1052,6 +1052,63 @@
             }
           }
         ]
+      }
+    },
+    "/": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Customroute"
+        ],
+        "parameters": []
       }
     },
     "/email/": {
@@ -3240,6 +3297,19 @@
           }
         }
       },
+      "Customroute": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "NewCustomroute": {
+        "properties": {}
+      },
       "Users-PermissionsRole": {
         "required": [
           "id",
@@ -3494,6 +3564,9 @@
     },
     {
       "name": "Category"
+    },
+    {
+      "name": "Customroute"
     },
     {
       "name": "Email - Email"
