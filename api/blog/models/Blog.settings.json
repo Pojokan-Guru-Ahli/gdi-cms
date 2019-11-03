@@ -17,6 +17,14 @@
     },
     "body": {
       "type": "richtext"
+    },
+    "category": {
+      "model": "category"
+    },
+    "Thumbnail": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
