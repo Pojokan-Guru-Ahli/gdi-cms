@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "questions",
+  "info": {
+    "name": "questions",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "question": {
+      "required": true,
+      "type": "richtext"
+    },
+    "correct_answer": {
+      "required": true,
+      "type": "richtext"
+    },
+    "related_image_url": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}
