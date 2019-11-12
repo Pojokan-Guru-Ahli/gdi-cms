@@ -248,6 +248,63 @@
         }
       }
     },
+    "/courses/me": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Course"
+        ],
+        "parameters": []
+      }
+    },
     "/courses/count": {
       "get": {
         "deprecated": false,
@@ -568,6 +625,9 @@
           },
           "Quiz": {
             "type": "object"
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -581,6 +641,9 @@
           },
           "Quiz": {
             "type": "object"
+          },
+          "user": {
+            "type": "string"
           }
         }
       }

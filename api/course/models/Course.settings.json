@@ -23,6 +23,9 @@
     },
     "Quiz": {
       "type": "json"
+    },
+    "user": {
+      "type": "string"
     }
   }
 }
