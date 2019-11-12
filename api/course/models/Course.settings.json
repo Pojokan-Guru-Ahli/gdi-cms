@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "course",
+  "info": {
+    "name": "course",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "Icon_Url": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "Quiz": {
+      "type": "json"
+    }
+  }
+}
