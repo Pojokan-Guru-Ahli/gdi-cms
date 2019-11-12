@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "11/12/2019 10:49:31 AM"
+    "x-generation-date": "11/12/2019 11:23:20 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -290,6 +290,63 @@
             }
           }
         }
+      }
+    },
+    "/courses/me": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Course"
+        ],
+        "parameters": []
       }
     },
     "/courses/count": {
@@ -3240,6 +3297,9 @@
           },
           "Quiz": {
             "type": "object"
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -3253,6 +3313,9 @@
           },
           "Quiz": {
             "type": "object"
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
