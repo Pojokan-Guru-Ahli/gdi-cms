@@ -1,139 +1,18 @@
 {
   "paths": {
-    "/users-permissions/init": {
+    "/curriculums": {
       "get": {
         "deprecated": false,
-        "description": "Check if the first admin user has already been registered",
+        "description": "Find all the curriculums's records",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": []
-      }
-    },
-    "/users-permissions/roles/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve a role depending on its id",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/users-permissions/roles": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve all role documents",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Users-PermissionsRole"
+                    "$ref": "#/components/schemas/Curriculums"
                   }
                 }
               }
@@ -172,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Curriculums"
         ],
         "parameters": [
           {
@@ -309,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new role",
+        "description": "Create a new curriculums record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
+                  "$ref": "#/components/schemas/Curriculums"
                 }
               }
             }
@@ -354,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Curriculums"
         ],
         "requestBody": {
           "description": "",
@@ -362,99 +241,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
+                "$ref": "#/components/schemas/NewCurriculums"
               }
             }
           }
         }
       }
     },
-    "/users-permissions/roles/{role}": {
-      "put": {
+    "/curriculums/count": {
+      "get": {
         "deprecated": false,
-        "description": "Update a role",
+        "description": "Retrieve the numver of curriculums documents",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a role",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -494,11 +300,200 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Curriculums"
+        ],
+        "parameters": []
+      }
+    },
+    "/curriculums/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one curriculums record",
+        "responses": {
+          "200": {
+            "description": "Retrieve curriculums document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Curriculums"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Curriculums"
         ],
         "parameters": [
           {
-            "name": "role",
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single curriculums record",
+        "responses": {
+          "200": {
+            "description": "Retrieve curriculums document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Curriculums"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Curriculums"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCurriculums"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single curriculums record",
+        "responses": {
+          "200": {
+            "description": "deletes a single curriculums based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Curriculums"
+        ],
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -513,139 +508,51 @@
   },
   "components": {
     "schemas": {
-      "Users-PermissionsRole": {
+      "Curriculums": {
         "required": [
           "id",
-          "name"
+          "curriculum",
+          "chapters",
+          "course",
+          "class"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
+          "curriculum": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
+          "chapters": {
+            "type": "object"
           },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "controller": {
-                  "type": "string"
-                },
-                "action": {
-                  "type": "string"
-                },
-                "enabled": {
-                  "type": "boolean"
-                },
-                "policy": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                }
-              }
-            }
+          "course": {
+            "type": "object"
           },
-          "users": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "phone_number": {
-                  "type": "string"
-                },
-                "image_url": {
-                  "type": "string"
-                },
-                "user_teacher": {
-                  "type": "object"
-                },
-                "user_student": {
-                  "type": "object"
-                }
-              }
-            }
+          "class": {
+            "type": "object"
           }
         }
       },
-      "NewUsers-PermissionsRole": {
+      "NewCurriculums": {
         "required": [
-          "name"
+          "curriculum",
+          "chapters",
+          "course",
+          "class"
         ],
         "properties": {
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
+          "curriculum": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
+          "chapters": {
+            "type": "object"
           },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "course": {
+            "type": "object"
           },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "class": {
+            "type": "object"
           }
         }
       }
@@ -653,7 +560,7 @@
   },
   "tags": [
     {
-      "name": "Users-Permissions - Role"
+      "name": "Curriculums"
     }
   ]
 }

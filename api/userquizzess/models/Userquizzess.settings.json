@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "userquizzess",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "user_id": {
+      "required": true,
+      "type": "string"
+    },
+    "quiz_title": {
+      "required": true,
+      "type": "string"
+    },
+    "duration_seconds": {
+      "type": "integer",
+      "required": true
+    },
+    "video": {
+      "type": "json",
+      "required": true
+    },
+    "course": {
+      "required": true,
+      "type": "json"
+    },
+    "correct_answer": {
+      "type": "integer",
+      "required": true
+    },
+    "total_question": {
+      "type": "integer",
+      "required": true
+    },
+    "selected_question": {
+      "required": true,
+      "type": "json"
+    },
+    "user_answer": {
+      "type": "json"
+    }
+  }
+}

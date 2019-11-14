@@ -1,130 +1,9 @@
 {
   "paths": {
-    "/users-permissions/init": {
+    "/userquizzesses": {
       "get": {
         "deprecated": false,
-        "description": "Check if the first admin user has already been registered",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": []
-      }
-    },
-    "/users-permissions/roles/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve a role depending on its id",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/users-permissions/roles": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve all role documents",
+        "description": "",
         "responses": {
           "200": {
             "description": "response",
@@ -133,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Users-PermissionsRole"
+                    "$ref": "#/components/schemas/Userquizzess"
                   }
                 }
               }
@@ -172,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Userquizzess"
         ],
         "parameters": [
           {
@@ -309,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new role",
+        "description": "Create a new record",
         "responses": {
           "200": {
             "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
+                  "$ref": "#/components/schemas/Userquizzess"
                 }
               }
             }
@@ -354,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Userquizzess"
         ],
         "requestBody": {
           "description": "",
@@ -362,90 +241,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
+                "$ref": "#/components/schemas/NewUserquizzess"
               }
             }
           }
         }
       }
     },
-    "/users-permissions/roles/{role}": {
-      "put": {
+    "/userquizzesses/count": {
+      "get": {
         "deprecated": false,
-        "description": "Update a role",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a role",
+        "description": "",
         "responses": {
           "200": {
             "description": "response",
@@ -453,8 +259,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -494,11 +300,200 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Userquizzess"
+        ],
+        "parameters": []
+      }
+    },
+    "/userquizzesses/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Userquizzess"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Userquizzess"
         ],
         "parameters": [
           {
-            "name": "role",
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Userquizzess"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Userquizzess"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUserquizzess"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Userquizzess"
+        ],
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -513,139 +508,89 @@
   },
   "components": {
     "schemas": {
-      "Users-PermissionsRole": {
+      "Userquizzess": {
         "required": [
           "id",
-          "name"
+          "user_id",
+          "quiz_title",
+          "duration_seconds",
+          "video",
+          "course",
+          "correct_answer",
+          "total_question",
+          "selected_question"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
+          "user_id": {
             "type": "string"
           },
-          "type": {
+          "quiz_title": {
             "type": "string"
           },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "controller": {
-                  "type": "string"
-                },
-                "action": {
-                  "type": "string"
-                },
-                "enabled": {
-                  "type": "boolean"
-                },
-                "policy": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                }
-              }
-            }
+          "duration_seconds": {
+            "type": "integer"
           },
-          "users": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "phone_number": {
-                  "type": "string"
-                },
-                "image_url": {
-                  "type": "string"
-                },
-                "user_teacher": {
-                  "type": "object"
-                },
-                "user_student": {
-                  "type": "object"
-                }
-              }
-            }
+          "video": {
+            "type": "object"
+          },
+          "course": {
+            "type": "object"
+          },
+          "correct_answer": {
+            "type": "integer"
+          },
+          "total_question": {
+            "type": "integer"
+          },
+          "selected_question": {
+            "type": "object"
+          },
+          "user_answer": {
+            "type": "object"
           }
         }
       },
-      "NewUsers-PermissionsRole": {
+      "NewUserquizzess": {
         "required": [
-          "name"
+          "user_id",
+          "quiz_title",
+          "duration_seconds",
+          "video",
+          "course",
+          "correct_answer",
+          "total_question",
+          "selected_question"
         ],
         "properties": {
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
+          "user_id": {
             "type": "string"
           },
-          "type": {
+          "quiz_title": {
             "type": "string"
           },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "duration_seconds": {
+            "type": "integer"
           },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "video": {
+            "type": "object"
+          },
+          "course": {
+            "type": "object"
+          },
+          "correct_answer": {
+            "type": "integer"
+          },
+          "total_question": {
+            "type": "integer"
+          },
+          "selected_question": {
+            "type": "object"
+          },
+          "user_answer": {
+            "type": "object"
           }
         }
       }
@@ -653,7 +598,7 @@
   },
   "tags": [
     {
-      "name": "Users-Permissions - Role"
+      "name": "Userquizzess"
     }
   ]
 }

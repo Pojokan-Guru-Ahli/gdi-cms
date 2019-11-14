@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "questions",
+  "info": {
+    "name": "questions",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "question": {
+      "required": true,
+      "type": "richtext"
+    },
+    "image_url": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "difficulty": {
+      "required": true,
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "type": "enumeration"
+    },
+    "created_by": {
+      "required": true,
+      "type": "string"
+    },
+    "correct_answer": {
+      "required": true,
+      "type": "string"
+    },
+    "answer_options": {
+      "required": true,
+      "type": "json"
+    },
+    "approved_by": {
+      "required": true,
+      "type": "string"
+    },
+    "video": {
+      "required": true,
+      "type": "json"
+    }
+  }
+}

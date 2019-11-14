@@ -1,139 +1,18 @@
 {
   "paths": {
-    "/users-permissions/init": {
+    "/questions": {
       "get": {
         "deprecated": false,
-        "description": "Check if the first admin user has already been registered",
+        "description": "Find all the questions's records",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": []
-      }
-    },
-    "/users-permissions/roles/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve a role depending on its id",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/users-permissions/roles": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve all role documents",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve questions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Users-PermissionsRole"
+                    "$ref": "#/components/schemas/Questions"
                   }
                 }
               }
@@ -172,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Questions"
         ],
         "parameters": [
           {
@@ -309,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new role",
+        "description": "Create a new questions record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve questions document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
+                  "$ref": "#/components/schemas/Questions"
                 }
               }
             }
@@ -354,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Questions"
         ],
         "requestBody": {
           "description": "",
@@ -362,99 +241,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
+                "$ref": "#/components/schemas/NewQuestions"
               }
             }
           }
         }
       }
     },
-    "/users-permissions/roles/{role}": {
-      "put": {
+    "/questions/count": {
+      "get": {
         "deprecated": false,
-        "description": "Update a role",
+        "description": "Retrieve the numver of questions documents",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users-PermissionsRole"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users-Permissions - Role"
-        ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsers-PermissionsRole"
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a role",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve questions document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -494,11 +300,200 @@
         },
         "summary": "",
         "tags": [
-          "Users-Permissions - Role"
+          "Questions"
+        ],
+        "parameters": []
+      }
+    },
+    "/questions/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one questions record",
+        "responses": {
+          "200": {
+            "description": "Retrieve questions document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Questions"
         ],
         "parameters": [
           {
-            "name": "role",
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single questions record",
+        "responses": {
+          "200": {
+            "description": "Retrieve questions document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Questions"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Questions"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewQuestions"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single questions record",
+        "responses": {
+          "200": {
+            "description": "deletes a single questions based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Questions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -513,139 +508,135 @@
   },
   "components": {
     "schemas": {
-      "Users-PermissionsRole": {
+      "Questions": {
         "required": [
           "id",
-          "name"
+          "question",
+          "image_url",
+          "difficulty",
+          "created_by",
+          "correct_answer",
+          "answer_options",
+          "approved_by",
+          "video"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "minLength": 3
-          },
-          "description": {
+          "question": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
-          },
-          "permissions": {
+          "image_url": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "type",
-                "controller",
-                "action",
-                "enabled"
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "type": {
+                "name": {
                   "type": "string"
                 },
-                "controller": {
+                "hash": {
                   "type": "string"
                 },
-                "action": {
+                "sha256": {
                   "type": "string"
                 },
-                "enabled": {
-                  "type": "boolean"
-                },
-                "policy": {
+                "ext": {
                   "type": "string"
                 },
-                "role": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
+                "mime": {
                   "type": "string"
                 },
-                "username": {
+                "size": {
                   "type": "string"
                 },
-                "email": {
+                "url": {
                   "type": "string"
                 },
                 "provider": {
                   "type": "string"
                 },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "phone_number": {
-                  "type": "string"
-                },
-                "image_url": {
-                  "type": "string"
-                },
-                "user_teacher": {
+                "provider_metadata": {
                   "type": "object"
                 },
-                "user_student": {
-                  "type": "object"
+                "related": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "correct_answer": {
+            "type": "string"
+          },
+          "answer_options": {
+            "type": "object"
+          },
+          "approved_by": {
+            "type": "string"
+          },
+          "video": {
+            "type": "object"
           }
         }
       },
-      "NewUsers-PermissionsRole": {
+      "NewQuestions": {
         "required": [
-          "name"
+          "question",
+          "difficulty",
+          "created_by",
+          "correct_answer",
+          "answer_options",
+          "approved_by",
+          "video"
         ],
         "properties": {
-          "name": {
+          "question": {
+            "type": "string"
+          },
+          "difficulty": {
             "type": "string",
-            "minLength": 3
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
           },
-          "description": {
+          "created_by": {
             "type": "string"
           },
-          "type": {
+          "correct_answer": {
             "type": "string"
           },
-          "permissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "answer_options": {
+            "type": "object"
           },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "approved_by": {
+            "type": "string"
+          },
+          "video": {
+            "type": "object"
           }
         }
       }
@@ -653,7 +644,7 @@
   },
   "tags": [
     {
-      "name": "Users-Permissions - Role"
+      "name": "Questions"
     }
   ]
 }

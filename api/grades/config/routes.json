@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/grades",
+      "handler": "Grades.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/grades/count",
+      "handler": "Grades.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/grades/:id",
+      "handler": "Grades.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/grades",
+      "handler": "Grades.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/grades/:id",
+      "handler": "Grades.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/grades/:id",
+      "handler": "Grades.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
