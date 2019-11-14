@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/curriculums",
+      "handler": "Curriculums.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/curriculums/count",
+      "handler": "Curriculums.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/curriculums",
+      "handler": "Curriculums.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
