@@ -1161,6 +1161,18 @@
                 }
               }
             }
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "user_teacher": {
+            "type": "object"
+          },
+          "user_student": {
+            "type": "object"
           }
         }
       },
@@ -1198,6 +1210,18 @@
           },
           "role": {
             "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "user_teacher": {
+            "type": "object"
+          },
+          "user_student": {
+            "type": "object"
           }
         }
       }
