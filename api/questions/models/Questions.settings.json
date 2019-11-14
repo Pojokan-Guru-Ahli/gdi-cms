@@ -16,14 +16,40 @@
       "required": true,
       "type": "richtext"
     },
-    "correct_answer": {
-      "required": true,
-      "type": "richtext"
-    },
-    "related_image_url": {
+    "image_url": {
       "collection": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": true
+    },
+    "difficulty": {
+      "required": true,
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "type": "enumeration"
+    },
+    "created_by": {
+      "required": true,
+      "type": "string"
+    },
+    "correct_answer": {
+      "required": true,
+      "type": "string"
+    },
+    "answer_options": {
+      "required": true,
+      "type": "json"
+    },
+    "approved_by": {
+      "required": true,
+      "type": "string"
+    },
+    "video": {
+      "required": true,
+      "type": "json"
     }
   }
 }

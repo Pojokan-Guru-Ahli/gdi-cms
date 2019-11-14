@@ -512,7 +512,13 @@
         "required": [
           "id",
           "question",
-          "correct_answer"
+          "image_url",
+          "difficulty",
+          "created_by",
+          "correct_answer",
+          "answer_options",
+          "approved_by",
+          "video"
         ],
         "properties": {
           "id": {
@@ -521,10 +527,7 @@
           "question": {
             "type": "string"
           },
-          "correct_answer": {
-            "type": "string"
-          },
-          "related_image_url": {
+          "image_url": {
             "type": "array",
             "items": {
               "required": [
@@ -572,20 +575,68 @@
                 }
               }
             }
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "correct_answer": {
+            "type": "string"
+          },
+          "answer_options": {
+            "type": "object"
+          },
+          "approved_by": {
+            "type": "string"
+          },
+          "video": {
+            "type": "object"
           }
         }
       },
       "NewQuestions": {
         "required": [
           "question",
-          "correct_answer"
+          "difficulty",
+          "created_by",
+          "correct_answer",
+          "answer_options",
+          "approved_by",
+          "video"
         ],
         "properties": {
           "question": {
             "type": "string"
           },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "created_by": {
+            "type": "string"
+          },
           "correct_answer": {
             "type": "string"
+          },
+          "answer_options": {
+            "type": "object"
+          },
+          "approved_by": {
+            "type": "string"
+          },
+          "video": {
+            "type": "object"
           }
         }
       }
