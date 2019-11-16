@@ -51,7 +51,7 @@ Resources:
   rCmsArtifactBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: beta.tutorialinaja.tech
+      BucketName: cms.gdi.pojokan.io
       AccessControl: BucketOwnerFullControl
     DeletionPolicy: Delete
 
