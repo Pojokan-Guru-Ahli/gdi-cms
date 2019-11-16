@@ -310,7 +310,7 @@ Resources:
                 Version: 1
                 Provider: S3
               Configuration:
-                Extract: true
+                Extract: false
                 BucketName: !Ref rCmsArtifactBucket
               InputArtifacts:
                 - Name: BuildCICDOutput
