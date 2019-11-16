@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Deployes a CICD pipeline for the Front End Model and Controller Web solution.
+Description: Deployes a CICD pipeline for the Content Management System of Generasi Digital Indonesia.
 
 ### Prerequisite #####
 
