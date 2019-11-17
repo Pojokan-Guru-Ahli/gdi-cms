@@ -207,6 +207,7 @@ Resources:
               - codebuild:BatchGetBuilds
             Resource:
               - !GetAtt [rCodeBuildCICD, Arn]
+              - !GetAtt [rCodeRestartCICD, Arn]
           - Effect: 'Allow'
             Action:
               - s3:*
