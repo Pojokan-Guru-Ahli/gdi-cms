@@ -315,6 +315,19 @@ Resources:
               InputArtifacts:
                 - Name: BuildCICDOutput
               RunOrder: 1
+        - Name: restart
+          Actions:
+            - Name: restart-strapi-service
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: 1
+                Provider: CodeBuild
+              Configuration:
+                ProjectName: !Ref rCodeRestartCICD
+              RunOrder: 1
+              InputArtifacts:
+                - Name: BuildCICDOutput
 
   rGithubWebhook:
     Type: AWS::CodePipeline::Webhook
@@ -345,9 +358,6 @@ Resources:
         Type: linuxContainer
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/standard:2.0
-        EnvironmentVariables:
-          - Name: CmsArtifactBucket
-            Value: !Ref rCmsArtifactBucket
       Source:
         Type: CODEPIPELINE
         BuildSpec: |
@@ -370,6 +380,37 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub ${pSolutionNaming}-cicd-package-cb
+
+  rCodeRestartCICD:
+    Type: AWS::CodeBuild::Project
+    DependsOn:
+      - rCodeBuildRole
+      - rArtifactStoreBucket
+    Properties:
+      Name: !Sub ${pSolutionNaming}-cicd-package-cb
+      Description: 'Restart Strapi Service as part of the CICD Pipeline'
+      ServiceRole: !GetAtt [rCodeBuildRole, Arn]
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: linuxContainer
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:2.0
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: |
+          version: 0.2
+          phases:
+            install:
+              runtime-versions:
+                nodejs: 10
+            build:
+              commands:
+                - set -ex
+                - printenv
+                - ls -R
+                - curl -X POST http://cms.gdi.pojokan.io/sync/v1/sync -H 'Content-Type: application/json' -d '{\"file\": \"artifact.zip\", \"service\": \"cms.service\", \"destination\": \"gdi-cms\"}'
+      TimeoutInMinutes: 20
 
 Outputs:
   CodePipelineURL:
