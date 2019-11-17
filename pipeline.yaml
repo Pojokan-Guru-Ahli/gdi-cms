@@ -387,7 +387,7 @@ Resources:
       - rCodeBuildRole
       - rArtifactStoreBucket
     Properties:
-      Name: !Sub ${pSolutionNaming}-cicd-package-cb
+      Name: !Sub ${pSolutionNaming}-cicd-restart-cb
       Description: 'Restart Strapi Service as part of the CICD Pipeline'
       ServiceRole: !GetAtt [rCodeBuildRole, Arn]
       Artifacts:
