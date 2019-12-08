@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "Contributors",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "school": {
+      "model": "schools"
+    },
+    "contibutorName": {
+      "required": true,
+      "type": "string"
+    },
+    "contributorEmail": {
+      "required": true,
+      "type": "email"
+    },
+    "contributorPassword": {
+      "required": true,
+      "type": "password"
+    },
+    "contributorBirthday": {
+      "required": false,
+      "type": "date"
+    },
+    "contributorAddress": {
+      "required": false,
+      "type": "text"
+    },
+    "contributorCity": {
+      "required": false,
+      "type": "string"
+    },
+    "contributorProvince": {
+      "required": false,
+      "type": "string"
+    },
+    "contributorPostCode": {
+      "required": false,
+      "type": "string"
+    },
+    "contributorPhoneNumber": {
+      "required": false,
+      "type": "string"
+    },
+    "contributorStatus": {
+      "required": false,
+      "type": "boolean"
+    }
+  }
+}

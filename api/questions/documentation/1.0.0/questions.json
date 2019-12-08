@@ -511,23 +511,221 @@
       "Questions": {
         "required": [
           "id",
-          "question",
-          "image_url",
-          "difficulty",
-          "created_by",
-          "correct_answer",
-          "answer_options",
-          "approved_by",
-          "video"
+          "questionType",
+          "questionText",
+          "optionA",
+          "optionB",
+          "optionC",
+          "optionD",
+          "optionE",
+          "answer",
+          "explanationType"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "question": {
-            "type": "string"
+          "school": {
+            "required": [
+              "id",
+              "schoolName",
+              "schoolEmail",
+              "schoolPassword",
+              "schoolPrefix",
+              "schoolAddress",
+              "schoolCity",
+              "schoolProvince",
+              "schoolPostCode",
+              "schoolStatus"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "schoolName": {
+                "type": "string"
+              },
+              "schoolEmail": {
+                "type": "string"
+              },
+              "schoolPassword": {
+                "type": "string"
+              },
+              "schoolPrefix": {
+                "type": "string"
+              },
+              "schoolAddress": {
+                "type": "string"
+              },
+              "schoolCity": {
+                "type": "string"
+              },
+              "schoolProvince": {
+                "type": "string"
+              },
+              "schoolPostCode": {
+                "type": "integer"
+              },
+              "schoolPhoneNumber": {
+                "type": "string"
+              },
+              "schoolStatus": {
+                "type": "boolean"
+              },
+              "quizzes": {
+                "type": "string"
+              }
+            }
           },
-          "image_url": {
+          "classGroup": {
+            "required": [
+              "id",
+              "groupLevel",
+              "groupName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "groupLevel": {
+                "type": "integer"
+              },
+              "groupName": {
+                "type": "string"
+              },
+              "publishStatus": {
+                "type": "boolean"
+              },
+              "externalUrl": {
+                "type": "string"
+              }
+            }
+          },
+          "class": {
+            "required": [
+              "id",
+              "classLevel",
+              "className",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classGroup": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "integer"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "subject": {
+            "required": [
+              "id",
+              "subjectLevel",
+              "subjectName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "class": {
+                "type": "string"
+              },
+              "subClass": {
+                "type": "string"
+              },
+              "subjectLevel": {
+                "type": "integer"
+              },
+              "subjectName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "content": {
+            "required": [
+              "id",
+              "contentCode",
+              "contentTitle",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "contributor": {
+                "type": "string"
+              },
+              "subject": {
+                "type": "string"
+              },
+              "contentCode": {
+                "type": "string"
+              },
+              "contentTitle": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "contentFile": {
+            "required": [
+              "id",
+              "subContentTitle",
+              "pdfFile",
+              "videoFile"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "subContentTitle": {
+                "type": "string"
+              },
+              "pdfFile": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "videoFile": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "questionType": {
+            "type": "string",
+            "enum": [
+              "image",
+              "text"
+            ]
+          },
+          "questionImage": {
             "type": "array",
             "items": {
               "required": [
@@ -576,67 +774,278 @@
               }
             }
           },
-          "difficulty": {
+          "questionText": {
+            "type": "string"
+          },
+          "optionA": {
+            "type": "string"
+          },
+          "optionB": {
+            "type": "string"
+          },
+          "optionC": {
+            "type": "string"
+          },
+          "optionD": {
+            "type": "string"
+          },
+          "optionE": {
+            "type": "string"
+          },
+          "answer": {
             "type": "string",
             "enum": [
-              "easy",
-              "medium",
-              "hard"
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
             ]
           },
-          "created_by": {
+          "explanationType": {
+            "type": "string",
+            "enum": [
+              "image",
+              "text",
+              "pdf",
+              "video"
+            ]
+          },
+          "imageExplanation": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "textExplanation": {
             "type": "string"
           },
-          "correct_answer": {
-            "type": "string"
+          "pdfExplanation": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "answer_options": {
-            "type": "object"
+          "videoExplanation": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "approved_by": {
-            "type": "string"
-          },
-          "video": {
-            "type": "object"
+          "activeStatus": {
+            "type": "boolean"
           }
         }
       },
       "NewQuestions": {
         "required": [
-          "question",
-          "difficulty",
-          "created_by",
-          "correct_answer",
-          "answer_options",
-          "approved_by",
-          "video"
+          "questionType",
+          "questionText",
+          "optionA",
+          "optionB",
+          "optionC",
+          "optionD",
+          "optionE",
+          "answer",
+          "explanationType"
         ],
         "properties": {
-          "question": {
+          "school": {
             "type": "string"
           },
-          "difficulty": {
+          "classGroup": {
+            "type": "string"
+          },
+          "class": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "contentFile": {
+            "type": "string"
+          },
+          "questionType": {
             "type": "string",
             "enum": [
-              "easy",
-              "medium",
-              "hard"
+              "image",
+              "text"
             ]
           },
-          "created_by": {
+          "questionText": {
             "type": "string"
           },
-          "correct_answer": {
+          "optionA": {
             "type": "string"
           },
-          "answer_options": {
-            "type": "object"
-          },
-          "approved_by": {
+          "optionB": {
             "type": "string"
           },
-          "video": {
-            "type": "object"
+          "optionC": {
+            "type": "string"
+          },
+          "optionD": {
+            "type": "string"
+          },
+          "optionE": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "explanationType": {
+            "type": "string",
+            "enum": [
+              "image",
+              "text",
+              "pdf",
+              "video"
+            ]
+          },
+          "textExplanation": {
+            "type": "string"
+          },
+          "activeStatus": {
+            "type": "boolean"
           }
         }
       }

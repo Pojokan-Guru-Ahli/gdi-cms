@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "Students",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "school": {
+      "model": "schools"
+    },
+    "studentNumber": {
+      "required": true,
+      "type": "string"
+    },
+    "studentName": {
+      "required": true,
+      "type": "string"
+    },
+    "studentBirthday": {
+      "required": false,
+      "type": "date"
+    },
+    "parentMobilePhone": {
+      "required": false,
+      "type": "string"
+    }
+  }
+}

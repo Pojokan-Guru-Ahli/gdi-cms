@@ -12,44 +12,108 @@
     ]
   },
   "attributes": {
-    "question": {
-      "required": true,
-      "type": "richtext"
+    "school": {
+      "model": "schools"
     },
-    "image_url": {
-      "collection": "file",
-      "via": "related",
-      "plugin": "upload",
-      "required": true
+    "classGroup": {
+      "model": "classgroups"
     },
-    "difficulty": {
+    "class": {
+      "model": "classes"
+    },
+    "subject": {
+      "model": "subjects"
+    },
+    "content": {
+      "model": "contents"
+    },
+    "contentFile": {
+      "model": "contentfiles"
+    },
+    "questionType": {
       "required": true,
       "enum": [
-        "easy",
-        "medium",
-        "hard"
+        "image",
+        "text"
       ],
       "type": "enumeration"
     },
-    "created_by": {
+    "questionImage": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "questionText": {
+      "required": true,
+      "type": "richtext"
+    },
+    "optionA": {
       "required": true,
       "type": "string"
     },
-    "correct_answer": {
+    "optionB": {
       "required": true,
       "type": "string"
     },
-    "answer_options": {
-      "required": true,
-      "type": "json"
-    },
-    "approved_by": {
+    "optionC": {
       "required": true,
       "type": "string"
     },
-    "video": {
+    "optionD": {
       "required": true,
-      "type": "json"
+      "type": "string"
+    },
+    "optionE": {
+      "required": true,
+      "type": "string"
+    },
+    "answer": {
+      "required": true,
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "type": "enumeration"
+    },
+    "explanationType": {
+      "required": true,
+      "enum": [
+        "image",
+        "text",
+        "pdf",
+        "video"
+      ],
+      "type": "enumeration"
+    },
+    "imageExplanation": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "textExplanation": {
+      "required": false,
+      "type": "richtext"
+    },
+    "pdfExplanation": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "videoExplanation": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "activeStatus": {
+      "required": false,
+      "type": "boolean"
     }
   }
 }

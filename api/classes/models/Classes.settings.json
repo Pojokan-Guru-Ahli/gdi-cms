@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "Classes",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "classGroup": {
+      "model": "classgroups"
+    },
+    "classLevel": {
+      "required": true,
+      "type": "integer"
+    },
+    "className": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "richtext"
+    }
+  }
+}

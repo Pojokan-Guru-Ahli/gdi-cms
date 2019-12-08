@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "Contents",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "contributor": {
+      "model": "contributors"
+    },
+    "subject": {
+      "model": "subjects"
+    },
+    "contentCode": {
+      "required": true,
+      "type": "string"
+    },
+    "contentTitle": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "richtext"
+    }
+  }
+}

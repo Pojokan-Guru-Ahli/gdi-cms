@@ -1,0 +1,60 @@
+{
+  "connection": "default",
+  "collectionName": "schools",
+  "info": {
+    "name": "Schools",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "schoolName": {
+      "required": true,
+      "type": "string"
+    },
+    "schoolEmail": {
+      "required": true,
+      "type": "email"
+    },
+    "schoolPassword": {
+      "required": true,
+      "type": "password"
+    },
+    "schoolPrefix": {
+      "required": true,
+      "type": "string"
+    },
+    "schoolAddress": {
+      "required": true,
+      "type": "text"
+    },
+    "schoolCity": {
+      "required": true,
+      "type": "string"
+    },
+    "schoolProvince": {
+      "required": true,
+      "type": "string"
+    },
+    "schoolPostCode": {
+      "required": true,
+      "type": "integer"
+    },
+    "schoolPhoneNumber": {
+      "required": false,
+      "type": "string"
+    },
+    "schoolStatus": {
+      "required": true,
+      "type": "boolean"
+    },
+    "quizzes": {
+      "model": "quizzes",
+      "via": "schoolParticipant"
+    }
+  }
+}
