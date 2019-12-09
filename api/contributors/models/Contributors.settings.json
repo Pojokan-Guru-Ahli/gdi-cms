@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "contributors",
   "info": {
-    "name": "Contributors",
+    "name": "contributors",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
     ]
   },
   "attributes": {
-    "school": {
+    "schools": {
       "model": "schools"
     },
     "contibutorName": {
@@ -28,31 +28,24 @@
       "type": "password"
     },
     "contributorBirthday": {
-      "required": false,
       "type": "date"
     },
     "contributorAddress": {
-      "required": false,
       "type": "text"
     },
     "contributorCity": {
-      "required": false,
       "type": "string"
     },
     "contributorProvince": {
-      "required": false,
       "type": "string"
     },
     "contributorPostCode": {
-      "required": false,
       "type": "string"
     },
     "contributorPhoneNumber": {
-      "required": false,
       "type": "string"
     },
     "contributorStatus": {
-      "required": false,
       "type": "boolean"
     }
   }
