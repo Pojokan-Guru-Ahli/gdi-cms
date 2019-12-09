@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "contentfile",
+  "info": {
+    "name": "contentfiles",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "contents": {
+      "model": "contents"
+    },
+    "subContentTitle": {
+      "required": true,
+      "type": "string"
+    },
+    "pdfFile": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "videoFile": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
