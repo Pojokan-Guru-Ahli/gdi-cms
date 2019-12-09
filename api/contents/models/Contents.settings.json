@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "contents",
   "info": {
-    "name": "Contents",
+    "name": "contents",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
     ]
   },
   "attributes": {
-    "contributor": {
+    "contributors": {
       "model": "contributors"
     },
     "subject": {
