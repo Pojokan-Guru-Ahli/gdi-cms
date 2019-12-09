@@ -2,33 +2,28 @@
   "connection": "default",
   "collectionName": "",
   "info": {
-    "name": "Class Groups",
+    "name": "classgroups",
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "createdAt",
-      "updatedAt"
-    ]
+    "timestamps": true
   },
   "attributes": {
-    "school": {
+    "schools": {
       "model": "schools"
     },
     "groupLevel": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "groupName": {
       "required": true,
       "type": "string"
     },
     "publishStatus": {
-      "required": false,
       "type": "boolean"
     },
     "externalUrl": {
-      "required": false,
       "type": "string"
     }
   }
