@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/classgroups": {
+    "/quizzes": {
       "get": {
         "deprecated": false,
-        "description": "Find all the classgroups's records",
+        "description": "Find all the quizzes's records",
         "responses": {
           "200": {
-            "description": "Retrieve classgroups document(s)",
+            "description": "Retrieve quizzes document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Classgroups"
+                    "$ref": "#/components/schemas/Quizzes"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new classgroups record",
+        "description": "Create a new quizzes record",
         "responses": {
           "200": {
-            "description": "Retrieve classgroups document(s)",
+            "description": "Retrieve quizzes document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Classgroups"
+                  "$ref": "#/components/schemas/Quizzes"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClassgroups"
+                "$ref": "#/components/schemas/NewQuizzes"
               }
             }
           }
         }
       }
     },
-    "/classgroups/count": {
+    "/quizzes/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of classgroups documents",
+        "description": "Retrieve the numver of quizzes documents",
         "responses": {
           "200": {
-            "description": "Retrieve classgroups document(s)",
+            "description": "Retrieve quizzes document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "parameters": []
       }
     },
-    "/classgroups/{id}": {
+    "/quizzes/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one classgroups record",
+        "description": "Find one quizzes record",
         "responses": {
           "200": {
-            "description": "Retrieve classgroups document(s)",
+            "description": "Retrieve quizzes document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Classgroups"
+                  "$ref": "#/components/schemas/Quizzes"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single classgroups record",
+        "description": "Update a single quizzes record",
         "responses": {
           "200": {
-            "description": "Retrieve classgroups document(s)",
+            "description": "Retrieve quizzes document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Classgroups"
+                  "$ref": "#/components/schemas/Quizzes"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewClassgroups"
+                "$ref": "#/components/schemas/NewQuizzes"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single classgroups record",
+        "description": "Delete a single quizzes record",
         "responses": {
           "200": {
-            "description": "deletes a single classgroups based on the ID supplied",
+            "description": "deletes a single quizzes based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Classgroups"
+          "Quizzes"
         ],
         "parameters": [
           {
@@ -508,101 +508,187 @@
   },
   "components": {
     "schemas": {
-      "Classgroups": {
+      "Quizzes": {
         "required": [
           "id",
-          "groupLevel",
-          "groupName"
+          "quizName",
+          "description",
+          "capacity",
+          "studentPerSchool",
+          "quizDate",
+          "durationHour",
+          "durationMinute",
+          "totalQuestions",
+          "totalWinners"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "schools": {
+          "classgroups": {
             "required": [
               "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
-              "schoolPostCode"
+              "groupLevel",
+              "groupName"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "schoolName": {
+              "schools": {
                 "type": "string"
               },
-              "schoolEmail": {
-                "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
-              "schoolPostCode": {
+              "groupLevel": {
                 "type": "integer"
               },
-              "schoolPhoneNumber": {
+              "groupName": {
                 "type": "string"
               },
-              "schoolStatus": {
+              "publishStatus": {
                 "type": "boolean"
               },
-              "quizzes": {
+              "externalUrl": {
                 "type": "string"
               }
             }
           },
-          "groupLevel": {
+          "quizName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capacity": {
             "type": "integer"
           },
-          "groupName": {
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "schoolName",
+                "schoolEmail",
+                "schoolPassword",
+                "schoolPrefix",
+                "schoolAddress",
+                "schoolCity",
+                "schoolProvince",
+                "schoolPostCode"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "schoolName": {
+                  "type": "string"
+                },
+                "schoolEmail": {
+                  "type": "string"
+                },
+                "schoolPassword": {
+                  "type": "string"
+                },
+                "schoolPrefix": {
+                  "type": "string"
+                },
+                "schoolAddress": {
+                  "type": "string"
+                },
+                "schoolCity": {
+                  "type": "string"
+                },
+                "schoolProvince": {
+                  "type": "string"
+                },
+                "schoolPostCode": {
+                  "type": "integer"
+                },
+                "schoolPhoneNumber": {
+                  "type": "string"
+                },
+                "schoolStatus": {
+                  "type": "boolean"
+                },
+                "quizzes": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "studentPerSchool": {
+            "type": "integer"
+          },
+          "quizDate": {
             "type": "string"
           },
-          "publishStatus": {
+          "durationHour": {
+            "type": "integer"
+          },
+          "durationMinute": {
+            "type": "integer"
+          },
+          "totalQuestions": {
+            "type": "integer"
+          },
+          "totalWinners": {
+            "type": "integer"
+          },
+          "quizStatus": {
             "type": "boolean"
-          },
-          "externalUrl": {
-            "type": "string"
           }
         }
       },
-      "NewClassgroups": {
+      "NewQuizzes": {
         "required": [
-          "groupLevel",
-          "groupName"
+          "quizName",
+          "description",
+          "capacity",
+          "studentPerSchool",
+          "quizDate",
+          "durationHour",
+          "durationMinute",
+          "totalQuestions",
+          "totalWinners"
         ],
         "properties": {
-          "schools": {
+          "classgroups": {
             "type": "string"
           },
-          "groupLevel": {
+          "quizName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capacity": {
             "type": "integer"
           },
-          "groupName": {
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "studentPerSchool": {
+            "type": "integer"
+          },
+          "quizDate": {
             "type": "string"
           },
-          "publishStatus": {
+          "durationHour": {
+            "type": "integer"
+          },
+          "durationMinute": {
+            "type": "integer"
+          },
+          "totalQuestions": {
+            "type": "integer"
+          },
+          "totalWinners": {
+            "type": "integer"
+          },
+          "quizStatus": {
             "type": "boolean"
-          },
-          "externalUrl": {
-            "type": "string"
           }
         }
       }
@@ -610,7 +696,7 @@
   },
   "tags": [
     {
-      "name": "Classgroups"
+      "name": "Quizzes"
     }
   ]
 }

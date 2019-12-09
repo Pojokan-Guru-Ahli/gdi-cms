@@ -553,6 +553,64 @@
           },
           "schoolStatus": {
             "type": "boolean"
+          },
+          "quizzes": {
+            "required": [
+              "id",
+              "quizName",
+              "description",
+              "capacity",
+              "studentPerSchool",
+              "quizDate",
+              "durationHour",
+              "durationMinute",
+              "totalQuestions",
+              "totalWinners"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classgroups": {
+                "type": "string"
+              },
+              "quizName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "integer"
+              },
+              "schoolParticipant": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "studentPerSchool": {
+                "type": "integer"
+              },
+              "quizDate": {
+                "type": "string"
+              },
+              "durationHour": {
+                "type": "integer"
+              },
+              "durationMinute": {
+                "type": "integer"
+              },
+              "totalQuestions": {
+                "type": "integer"
+              },
+              "totalWinners": {
+                "type": "integer"
+              },
+              "quizStatus": {
+                "type": "boolean"
+              }
+            }
           }
         }
       },
@@ -597,6 +655,9 @@
           },
           "schoolStatus": {
             "type": "boolean"
+          },
+          "quizzes": {
+            "type": "string"
           }
         }
       }

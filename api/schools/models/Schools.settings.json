@@ -46,6 +46,10 @@
     },
     "schoolStatus": {
       "type": "boolean"
+    },
+    "quizzes": {
+      "model": "quizzes",
+      "via": "schoolParticipant"
     }
   }
 }

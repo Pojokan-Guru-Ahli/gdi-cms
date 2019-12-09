@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/09/2019 10:27:59 AM"
+    "x-generation-date": "12/09/2019 11:12:28 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4258,6 +4258,9 @@
               },
               "schoolStatus": {
                 "type": "boolean"
+              },
+              "quizzes": {
+                "type": "string"
               }
             }
           },
@@ -4300,21 +4303,185 @@
       },
       "Quizzes": {
         "required": [
-          "id"
+          "id",
+          "quizName",
+          "description",
+          "capacity",
+          "studentPerSchool",
+          "quizDate",
+          "durationHour",
+          "durationMinute",
+          "totalQuestions",
+          "totalWinners"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "asdasd": {
+          "classgroups": {
+            "required": [
+              "id",
+              "groupLevel",
+              "groupName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "schools": {
+                "type": "string"
+              },
+              "groupLevel": {
+                "type": "integer"
+              },
+              "groupName": {
+                "type": "string"
+              },
+              "publishStatus": {
+                "type": "boolean"
+              },
+              "externalUrl": {
+                "type": "string"
+              }
+            }
+          },
+          "quizName": {
             "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "integer"
+          },
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "schoolName",
+                "schoolEmail",
+                "schoolPassword",
+                "schoolPrefix",
+                "schoolAddress",
+                "schoolCity",
+                "schoolProvince",
+                "schoolPostCode"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "schoolName": {
+                  "type": "string"
+                },
+                "schoolEmail": {
+                  "type": "string"
+                },
+                "schoolPassword": {
+                  "type": "string"
+                },
+                "schoolPrefix": {
+                  "type": "string"
+                },
+                "schoolAddress": {
+                  "type": "string"
+                },
+                "schoolCity": {
+                  "type": "string"
+                },
+                "schoolProvince": {
+                  "type": "string"
+                },
+                "schoolPostCode": {
+                  "type": "integer"
+                },
+                "schoolPhoneNumber": {
+                  "type": "string"
+                },
+                "schoolStatus": {
+                  "type": "boolean"
+                },
+                "quizzes": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "studentPerSchool": {
+            "type": "integer"
+          },
+          "quizDate": {
+            "type": "string"
+          },
+          "durationHour": {
+            "type": "integer"
+          },
+          "durationMinute": {
+            "type": "integer"
+          },
+          "totalQuestions": {
+            "type": "integer"
+          },
+          "totalWinners": {
+            "type": "integer"
+          },
+          "quizStatus": {
+            "type": "boolean"
           }
         }
       },
       "NewQuizzes": {
+        "required": [
+          "quizName",
+          "description",
+          "capacity",
+          "studentPerSchool",
+          "quizDate",
+          "durationHour",
+          "durationMinute",
+          "totalQuestions",
+          "totalWinners"
+        ],
         "properties": {
-          "asdasd": {
+          "classgroups": {
             "type": "string"
+          },
+          "quizName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "capacity": {
+            "type": "integer"
+          },
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "studentPerSchool": {
+            "type": "integer"
+          },
+          "quizDate": {
+            "type": "string"
+          },
+          "durationHour": {
+            "type": "integer"
+          },
+          "durationMinute": {
+            "type": "integer"
+          },
+          "totalQuestions": {
+            "type": "integer"
+          },
+          "totalWinners": {
+            "type": "integer"
+          },
+          "quizStatus": {
+            "type": "boolean"
           }
         }
       },
@@ -4363,6 +4530,64 @@
           },
           "schoolStatus": {
             "type": "boolean"
+          },
+          "quizzes": {
+            "required": [
+              "id",
+              "quizName",
+              "description",
+              "capacity",
+              "studentPerSchool",
+              "quizDate",
+              "durationHour",
+              "durationMinute",
+              "totalQuestions",
+              "totalWinners"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classgroups": {
+                "type": "string"
+              },
+              "quizName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "integer"
+              },
+              "schoolParticipant": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "studentPerSchool": {
+                "type": "integer"
+              },
+              "quizDate": {
+                "type": "string"
+              },
+              "durationHour": {
+                "type": "integer"
+              },
+              "durationMinute": {
+                "type": "integer"
+              },
+              "totalQuestions": {
+                "type": "integer"
+              },
+              "totalWinners": {
+                "type": "integer"
+              },
+              "quizStatus": {
+                "type": "boolean"
+              }
+            }
           }
         }
       },
@@ -4407,6 +4632,9 @@
           },
           "schoolStatus": {
             "type": "boolean"
+          },
+          "quizzes": {
+            "type": "string"
           }
         }
       },

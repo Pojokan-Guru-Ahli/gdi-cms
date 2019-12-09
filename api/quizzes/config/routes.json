@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quizzes",
+      "handler": "Quizzes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quizzes/count",
+      "handler": "Quizzes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quizzes/:id",
+      "handler": "Quizzes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quizzes",
+      "handler": "Quizzes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quizzes/:id",
+      "handler": "Quizzes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quizzes/:id",
+      "handler": "Quizzes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

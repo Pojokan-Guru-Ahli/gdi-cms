@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "quizzes",
   "info": {
-    "name": "Quizzes",
+    "name": "quizzes",
     "description": ""
   },
   "options": {
@@ -12,7 +12,7 @@
     ]
   },
   "attributes": {
-    "classGroup": {
+    "classgroups": {
       "model": "classgroups"
     },
     "quizName": {
@@ -24,39 +24,38 @@
       "type": "richtext"
     },
     "capacity": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "schoolParticipant": {
       "collection": "schools",
       "via": "quizzes"
     },
     "studentPerSchool": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "quizDate": {
       "required": true,
       "type": "date"
     },
     "durationHour": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "durationMinute": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "totalQuestions": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "totalWinners": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "quizStatus": {
-      "required": false,
       "type": "boolean"
     }
   }
