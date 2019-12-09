@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/classgroups",
+      "handler": "Classgroups.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/classgroups/count",
+      "handler": "Classgroups.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/classgroups/:id",
+      "handler": "Classgroups.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/classgroups",
+      "handler": "Classgroups.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/classgroups/:id",
+      "handler": "Classgroups.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/classgroups/:id",
+      "handler": "Classgroups.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

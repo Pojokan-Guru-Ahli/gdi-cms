@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/contentfiles",
+      "handler": "Contentfiles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contentfiles/count",
+      "handler": "Contentfiles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/contentfiles/:id",
+      "handler": "Contentfiles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/contentfiles",
+      "handler": "Contentfiles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/contentfiles/:id",
+      "handler": "Contentfiles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/contentfiles/:id",
+      "handler": "Contentfiles.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "subjects",
   "info": {
-    "name": "Subjects",
+    "name": "subjects",
     "description": ""
   },
   "options": {
@@ -12,22 +12,21 @@
     ]
   },
   "attributes": {
-    "class": {
+    "classes": {
       "model": "classes"
     },
     "subClass": {
       "model": "subclasses"
     },
     "subjectLevel": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "subjectName": {
       "required": true,
       "type": "string"
     },
     "description": {
-      "required": false,
       "type": "richtext"
     }
   }

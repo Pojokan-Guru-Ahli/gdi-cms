@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "students",
   "info": {
-    "name": "Students",
+    "name": "students",
     "description": ""
   },
   "options": {
@@ -24,11 +24,9 @@
       "type": "string"
     },
     "studentBirthday": {
-      "required": false,
       "type": "date"
     },
     "parentMobilePhone": {
-      "required": false,
       "type": "string"
     }
   }

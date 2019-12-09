@@ -513,19 +513,19 @@
           "id",
           "questionType",
           "questionText",
-          "optionA",
           "optionB",
           "optionC",
           "optionD",
           "optionE",
           "answer",
-          "explanationType"
+          "explanationType",
+          "activeStatus"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "school": {
+          "schools": {
             "required": [
               "id",
               "schoolName",
@@ -535,8 +535,7 @@
               "schoolAddress",
               "schoolCity",
               "schoolProvince",
-              "schoolPostCode",
-              "schoolStatus"
+              "schoolPostCode"
             ],
             "properties": {
               "id": {
@@ -577,7 +576,32 @@
               }
             }
           },
-          "classGroup": {
+          "classes": {
+            "required": [
+              "id",
+              "classLevel",
+              "className",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classgroups": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "integer"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          },
+          "classgroups": {
             "required": [
               "id",
               "groupLevel",
@@ -587,7 +611,7 @@
               "id": {
                 "type": "string"
               },
-              "school": {
+              "schools": {
                 "type": "string"
               },
               "groupLevel": {
@@ -604,31 +628,6 @@
               }
             }
           },
-          "class": {
-            "required": [
-              "id",
-              "classLevel",
-              "className",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classGroup": {
-                "type": "string"
-              },
-              "classLevel": {
-                "type": "integer"
-              },
-              "className": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
-          },
           "subject": {
             "required": [
               "id",
@@ -639,7 +638,7 @@
               "id": {
                 "type": "string"
               },
-              "class": {
+              "classes": {
                 "type": "string"
               },
               "subClass": {
@@ -656,7 +655,7 @@
               }
             }
           },
-          "content": {
+          "contents": {
             "required": [
               "id",
               "contentCode",
@@ -667,7 +666,7 @@
               "id": {
                 "type": "string"
               },
-              "contributor": {
+              "contributors": {
                 "type": "string"
               },
               "subject": {
@@ -684,34 +683,26 @@
               }
             }
           },
-          "contentFile": {
+          "contentfile": {
             "required": [
               "id",
-              "subContentTitle",
-              "pdfFile",
-              "videoFile"
+              "subContentTitle"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "content": {
+              "contents": {
                 "type": "string"
               },
               "subContentTitle": {
                 "type": "string"
               },
               "pdfFile": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+                "type": "string"
               },
               "videoFile": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+                "type": "string"
               },
               "description": {
                 "type": "string"
@@ -726,51 +717,48 @@
             ]
           },
           "questionImage": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           },
@@ -812,51 +800,48 @@
             ]
           },
           "imageExplanation": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           },
@@ -864,100 +849,94 @@
             "type": "string"
           },
           "pdfExplanation": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           },
           "videoExplanation": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "sha256": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                }
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
               }
             }
           },
@@ -970,31 +949,31 @@
         "required": [
           "questionType",
           "questionText",
-          "optionA",
           "optionB",
           "optionC",
           "optionD",
           "optionE",
           "answer",
-          "explanationType"
+          "explanationType",
+          "activeStatus"
         ],
         "properties": {
-          "school": {
+          "schools": {
             "type": "string"
           },
-          "classGroup": {
+          "classes": {
             "type": "string"
           },
-          "class": {
+          "classgroups": {
             "type": "string"
           },
           "subject": {
             "type": "string"
           },
-          "content": {
+          "contents": {
             "type": "string"
           },
-          "contentFile": {
+          "contentfile": {
             "type": "string"
           },
           "questionType": {

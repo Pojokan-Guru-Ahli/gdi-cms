@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/subclasses",
+      "handler": "Subclasses.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subclasses/count",
+      "handler": "Subclasses.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subclasses/:id",
+      "handler": "Subclasses.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/subclasses",
+      "handler": "Subclasses.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/subclasses/:id",
+      "handler": "Subclasses.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/subclasses/:id",
+      "handler": "Subclasses.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
