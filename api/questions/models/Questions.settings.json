@@ -12,22 +12,22 @@
     ]
   },
   "attributes": {
-    "school": {
+    "schools": {
       "model": "schools"
     },
-    "classGroup": {
-      "model": "classgroups"
-    },
-    "class": {
+    "classes": {
       "model": "classes"
+    },
+    "classgroups": {
+      "model": "classgroups"
     },
     "subject": {
       "model": "subjects"
     },
-    "content": {
+    "contents": {
       "model": "contents"
     },
-    "contentFile": {
+    "contentfile": {
       "model": "contentfiles"
     },
     "questionType": {
@@ -39,17 +39,15 @@
       "type": "enumeration"
     },
     "questionImage": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
-      "plugin": "upload",
-      "required": false
+      "plugin": "upload"
     },
     "questionText": {
       "required": true,
       "type": "richtext"
     },
     "optionA": {
-      "required": true,
       "type": "string"
     },
     "optionB": {
@@ -69,7 +67,6 @@
       "type": "string"
     },
     "answer": {
-      "required": true,
       "enum": [
         "A",
         "B",
@@ -77,43 +74,40 @@
         "D",
         "E"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "required": true
     },
     "explanationType": {
-      "required": true,
       "enum": [
         "image",
         "text",
         "pdf",
         "video"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "required": true
     },
     "imageExplanation": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
-      "plugin": "upload",
-      "required": false
+      "plugin": "upload"
     },
     "textExplanation": {
-      "required": false,
       "type": "richtext"
     },
     "pdfExplanation": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
-      "plugin": "upload",
-      "required": false
+      "plugin": "upload"
     },
     "videoExplanation": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
-      "plugin": "upload",
-      "required": false
+      "plugin": "upload"
     },
     "activeStatus": {
-      "required": false,
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     }
   }
 }
