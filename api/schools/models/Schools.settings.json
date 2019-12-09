@@ -1,15 +1,12 @@
 {
   "connection": "default",
-  "collectionName": "schools",
+  "collectionName": "",
   "info": {
-    "name": "Schools",
+    "name": "schools",
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "createdAt",
-      "updatedAt"
-    ]
+    "timestamps": true
   },
   "attributes": {
     "schoolName": {
@@ -41,20 +38,14 @@
       "type": "string"
     },
     "schoolPostCode": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "schoolPhoneNumber": {
-      "required": false,
       "type": "string"
     },
     "schoolStatus": {
-      "required": true,
       "type": "boolean"
-    },
-    "quizzes": {
-      "model": "quizzes",
-      "via": "schoolParticipant"
     }
   }
 }
