@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "classes",
   "info": {
-    "name": "Classes",
+    "name": "classes",
     "description": ""
   },
   "options": {
@@ -12,12 +12,12 @@
     ]
   },
   "attributes": {
-    "classGroup": {
+    "classgroups": {
       "model": "classgroups"
     },
     "classLevel": {
-      "required": true,
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "className": {
       "required": true,
