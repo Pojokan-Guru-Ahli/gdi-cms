@@ -918,6 +918,20 @@
                 }
               }
             }
+          },
+          "difficulties": {
+            "type": "string",
+            "enum": [
+              "Easy",
+              "Medium",
+              "Hard"
+            ]
+          },
+          "sourceInfo": {
+            "type": "string"
+          },
+          "sourceYear": {
+            "type": "integer"
           }
         }
       },
@@ -998,6 +1012,20 @@
           },
           "classes": {
             "type": "string"
+          },
+          "difficulties": {
+            "type": "string",
+            "enum": [
+              "Easy",
+              "Medium",
+              "Hard"
+            ]
+          },
+          "sourceInfo": {
+            "type": "string"
+          },
+          "sourceYear": {
+            "type": "integer"
           }
         }
       }

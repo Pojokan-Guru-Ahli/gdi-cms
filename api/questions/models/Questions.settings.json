@@ -105,6 +105,20 @@
     },
     "classes": {
       "model": "classes"
+    },
+    "difficulties": {
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ],
+      "type": "enumeration"
+    },
+    "sourceInfo": {
+      "type": "string"
+    },
+    "sourceYear": {
+      "type": "integer"
     }
   }
 }
