@@ -603,32 +603,6 @@
               }
             }
           },
-          "contentfile": {
-            "required": [
-              "id",
-              "subContentTitle"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subContentTitle": {
-                "type": "string"
-              },
-              "pdfFile": {
-                "type": "string"
-              },
-              "videoFile": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "contents": {
-                "type": "string"
-              }
-            }
-          },
           "questionType": {
             "type": "string",
             "enum": [
@@ -971,6 +945,18 @@
             "properties": {
               "id": {
                 "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -993,9 +979,6 @@
             "type": "string"
           },
           "subject": {
-            "type": "string"
-          },
-          "contentfile": {
             "type": "string"
           },
           "questionType": {

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contentfiles": {
+    "/curriculums": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contentfiles's records",
+        "description": "Find all the curriculums's records",
         "responses": {
           "200": {
-            "description": "Retrieve contentfiles document(s)",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contentfiles"
+                    "$ref": "#/components/schemas/Curriculums"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contentfiles record",
+        "description": "Create a new curriculums record",
         "responses": {
           "200": {
-            "description": "Retrieve contentfiles document(s)",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contentfiles"
+                  "$ref": "#/components/schemas/Curriculums"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContentfiles"
+                "$ref": "#/components/schemas/NewCurriculums"
               }
             }
           }
         }
       }
     },
-    "/contentfiles/count": {
+    "/curriculums/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contentfiles documents",
+        "description": "Retrieve the numver of curriculums documents",
         "responses": {
           "200": {
-            "description": "Retrieve contentfiles document(s)",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "parameters": []
       }
     },
-    "/contentfiles/{id}": {
+    "/curriculums/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contentfiles record",
+        "description": "Find one curriculums record",
         "responses": {
           "200": {
-            "description": "Retrieve contentfiles document(s)",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contentfiles"
+                  "$ref": "#/components/schemas/Curriculums"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contentfiles record",
+        "description": "Update a single curriculums record",
         "responses": {
           "200": {
-            "description": "Retrieve contentfiles document(s)",
+            "description": "Retrieve curriculums document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contentfiles"
+                  "$ref": "#/components/schemas/Curriculums"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContentfiles"
+                "$ref": "#/components/schemas/NewCurriculums"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contentfiles record",
+        "description": "Delete a single curriculums record",
         "responses": {
           "200": {
-            "description": "deletes a single contentfiles based on the ID supplied",
+            "description": "deletes a single curriculums based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contentfiles"
+          "Curriculums"
         ],
         "parameters": [
           {
@@ -508,137 +508,22 @@
   },
   "components": {
     "schemas": {
-      "Contentfiles": {
+      "Curriculums": {
         "required": [
-          "id",
-          "subContentTitle"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "subContentTitle": {
+          "name": {
             "type": "string"
-          },
-          "pdfFile": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "videoFile": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "description": {
-            "type": "string"
-          },
-          "contents": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewContentfiles": {
-        "required": [
-          "subContentTitle"
-        ],
+      "NewCurriculums": {
         "properties": {
-          "subContentTitle": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "contents": {
+          "name": {
             "type": "string"
           }
         }
@@ -647,7 +532,7 @@
   },
   "tags": [
     {
-      "name": "Contentfiles"
+      "name": "Curriculums"
     }
   ]
 }

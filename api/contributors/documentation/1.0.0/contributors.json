@@ -582,6 +582,31 @@
                 }
               }
             }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -623,6 +648,12 @@
             "type": "boolean"
           },
           "classes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"

@@ -49,6 +49,10 @@
       "collection": "classes",
       "dominant": true,
       "via": "contributors"
+    },
+    "courses": {
+      "collection": "courses",
+      "via": "contributors"
     }
   }
 }

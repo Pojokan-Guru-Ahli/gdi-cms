@@ -515,11 +515,128 @@
         "properties": {
           "id": {
             "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "icon": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "contibutorName",
+                "contributorEmail",
+                "contributorPassword"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "contibutorName": {
+                  "type": "string"
+                },
+                "contributorEmail": {
+                  "type": "string"
+                },
+                "contributorPassword": {
+                  "type": "string"
+                },
+                "contributorBirthday": {
+                  "type": "string"
+                },
+                "contributorAddress": {
+                  "type": "string"
+                },
+                "contributorCity": {
+                  "type": "string"
+                },
+                "contributorProvince": {
+                  "type": "string"
+                },
+                "contributorPostCode": {
+                  "type": "string"
+                },
+                "contributorPhoneNumber": {
+                  "type": "string"
+                },
+                "contributorStatus": {
+                  "type": "boolean"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
       "NewCourses": {
-        "properties": {}
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   },

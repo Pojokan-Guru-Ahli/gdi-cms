@@ -18,9 +18,6 @@
     "subject": {
       "model": "subjects"
     },
-    "contentfile": {
-      "model": "contentfiles"
-    },
     "questionType": {
       "required": true,
       "enum": [

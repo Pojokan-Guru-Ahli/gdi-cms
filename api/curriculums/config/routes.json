@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/contentfiles",
-      "handler": "Contentfiles.find",
+      "path": "/curriculums",
+      "handler": "Curriculums.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/contentfiles/count",
-      "handler": "Contentfiles.count",
+      "path": "/curriculums/count",
+      "handler": "Curriculums.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/contentfiles/:id",
-      "handler": "Contentfiles.findOne",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/contentfiles",
-      "handler": "Contentfiles.create",
+      "path": "/curriculums",
+      "handler": "Curriculums.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/contentfiles/:id",
-      "handler": "Contentfiles.update",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/contentfiles/:id",
-      "handler": "Contentfiles.delete",
+      "path": "/curriculums/:id",
+      "handler": "Curriculums.delete",
       "config": {
         "policies": []
       }
