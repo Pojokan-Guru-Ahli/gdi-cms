@@ -518,6 +518,36 @@
           "id": {
             "type": "string"
           },
+          "subClass": {
+            "required": [
+              "id",
+              "subClassName",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "subClassName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              }
+            }
+          },
+          "subjectLevel": {
+            "type": "integer"
+          },
+          "subjectName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
           "classes": {
             "required": [
               "id",
@@ -529,49 +559,22 @@
               "id": {
                 "type": "string"
               },
-              "classgroups": {
-                "type": "string"
-              },
               "classLevel": {
-                "type": "integer"
+                "type": "string"
               },
               "className": {
                 "type": "string"
               },
               "description": {
                 "type": "string"
+              },
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "subClass": {
-            "required": [
-              "id",
-              "subClassName",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              },
-              "subClassName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
-          },
-          "subjectLevel": {
-            "type": "integer"
-          },
-          "subjectName": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
           }
         }
       },
@@ -581,9 +584,6 @@
           "subjectName"
         ],
         "properties": {
-          "classes": {
-            "type": "string"
-          },
           "subClass": {
             "type": "string"
           },
@@ -594,6 +594,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "classes": {
             "type": "string"
           }
         }

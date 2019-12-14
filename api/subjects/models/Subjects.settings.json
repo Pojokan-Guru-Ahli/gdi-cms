@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "classes": {
-      "model": "classes"
-    },
     "subClass": {
       "model": "subclasses"
     },
@@ -28,6 +25,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "classes": {
+      "model": "classes"
     }
   }
 }

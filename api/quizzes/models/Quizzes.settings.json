@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "classgroups": {
-      "model": "classgroups"
-    },
     "quizName": {
       "required": true,
       "type": "string"

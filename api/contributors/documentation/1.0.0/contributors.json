@@ -519,57 +519,6 @@
           "id": {
             "type": "string"
           },
-          "schools": {
-            "required": [
-              "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
-              "schoolPostCode"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schoolName": {
-                "type": "string"
-              },
-              "schoolEmail": {
-                "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
-              },
-              "quizzes": {
-                "type": "string"
-              }
-            }
-          },
           "contibutorName": {
             "type": "string"
           },
@@ -599,6 +548,37 @@
           },
           "contributorStatus": {
             "type": "boolean"
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "classLevel",
+                "className",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classLevel": {
+                  "type": "string"
+                },
+                "className": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -609,9 +589,6 @@
           "contributorPassword"
         ],
         "properties": {
-          "schools": {
-            "type": "string"
-          },
           "contibutorName": {
             "type": "string"
           },
@@ -641,6 +618,12 @@
           },
           "contributorStatus": {
             "type": "boolean"
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

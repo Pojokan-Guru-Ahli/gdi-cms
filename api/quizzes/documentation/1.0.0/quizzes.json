@@ -525,33 +525,6 @@
           "id": {
             "type": "string"
           },
-          "classgroups": {
-            "required": [
-              "id",
-              "groupLevel",
-              "groupName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schools": {
-                "type": "string"
-              },
-              "groupLevel": {
-                "type": "integer"
-              },
-              "groupName": {
-                "type": "string"
-              },
-              "publishStatus": {
-                "type": "boolean"
-              },
-              "externalUrl": {
-                "type": "string"
-              }
-            }
-          },
           "quizName": {
             "type": "string"
           },
@@ -651,9 +624,6 @@
           "totalWinners"
         ],
         "properties": {
-          "classgroups": {
-            "type": "string"
-          },
           "quizName": {
             "type": "string"
           },

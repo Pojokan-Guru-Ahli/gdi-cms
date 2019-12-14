@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "contributors": {
-      "model": "contributors"
-    },
     "subject": {
       "model": "subjects"
     },
@@ -29,6 +26,9 @@
     "description": {
       "required": true,
       "type": "richtext"
+    },
+    "contributors": {
+      "model": "contributors"
     }
   }
 }

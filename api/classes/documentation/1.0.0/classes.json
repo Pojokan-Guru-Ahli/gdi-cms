@@ -519,41 +519,66 @@
           "id": {
             "type": "string"
           },
-          "classgroups": {
-            "required": [
-              "id",
-              "groupLevel",
-              "groupName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schools": {
-                "type": "string"
-              },
-              "groupLevel": {
-                "type": "integer"
-              },
-              "groupName": {
-                "type": "string"
-              },
-              "publishStatus": {
-                "type": "boolean"
-              },
-              "externalUrl": {
-                "type": "string"
-              }
-            }
-          },
           "classLevel": {
-            "type": "integer"
+            "type": "string"
           },
           "className": {
             "type": "string"
           },
           "description": {
             "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "contibutorName",
+                "contributorEmail",
+                "contributorPassword"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "contibutorName": {
+                  "type": "string"
+                },
+                "contributorEmail": {
+                  "type": "string"
+                },
+                "contributorPassword": {
+                  "type": "string"
+                },
+                "contributorBirthday": {
+                  "type": "string"
+                },
+                "contributorAddress": {
+                  "type": "string"
+                },
+                "contributorCity": {
+                  "type": "string"
+                },
+                "contributorProvince": {
+                  "type": "string"
+                },
+                "contributorPostCode": {
+                  "type": "string"
+                },
+                "contributorPhoneNumber": {
+                  "type": "string"
+                },
+                "contributorStatus": {
+                  "type": "boolean"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -564,17 +589,20 @@
           "description"
         ],
         "properties": {
-          "classgroups": {
-            "type": "string"
-          },
           "classLevel": {
-            "type": "integer"
+            "type": "string"
           },
           "className": {
             "type": "string"
           },
           "description": {
             "type": "string"
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

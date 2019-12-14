@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "schools": {
-      "model": "schools"
-    },
     "contibutorName": {
       "required": true,
       "type": "string"
@@ -47,6 +44,11 @@
     },
     "contributorStatus": {
       "type": "boolean"
+    },
+    "classes": {
+      "collection": "classes",
+      "dominant": true,
+      "via": "contributors"
     }
   }
 }

@@ -15,12 +15,6 @@
     "schools": {
       "model": "schools"
     },
-    "classes": {
-      "model": "classes"
-    },
-    "classgroups": {
-      "model": "classgroups"
-    },
     "subject": {
       "model": "subjects"
     },
@@ -108,6 +102,9 @@
     "activeStatus": {
       "type": "boolean",
       "required": true
+    },
+    "classes": {
+      "model": "classes"
     }
   }
 }

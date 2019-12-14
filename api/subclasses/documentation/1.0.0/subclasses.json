@@ -518,6 +518,12 @@
           "id": {
             "type": "string"
           },
+          "subClassName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
           "classes": {
             "required": [
               "id",
@@ -529,25 +535,22 @@
               "id": {
                 "type": "string"
               },
-              "classgroups": {
-                "type": "string"
-              },
               "classLevel": {
-                "type": "integer"
+                "type": "string"
               },
               "className": {
                 "type": "string"
               },
               "description": {
                 "type": "string"
+              },
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "subClassName": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
           }
         }
       },
@@ -557,13 +560,13 @@
           "description"
         ],
         "properties": {
-          "classes": {
-            "type": "string"
-          },
           "subClassName": {
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "classes": {
             "type": "string"
           }
         }

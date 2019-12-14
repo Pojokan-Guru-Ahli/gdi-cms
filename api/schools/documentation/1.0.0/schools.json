@@ -571,9 +571,6 @@
               "id": {
                 "type": "string"
               },
-              "classgroups": {
-                "type": "string"
-              },
               "quizName": {
                 "type": "string"
               },

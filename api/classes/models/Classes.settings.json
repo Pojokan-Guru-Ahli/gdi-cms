@@ -12,11 +12,8 @@
     ]
   },
   "attributes": {
-    "classgroups": {
-      "model": "classgroups"
-    },
     "classLevel": {
-      "type": "integer",
+      "type": "string",
       "required": true
     },
     "className": {
@@ -26,6 +23,10 @@
     "description": {
       "required": true,
       "type": "richtext"
+    },
+    "contributors": {
+      "collection": "contributors",
+      "via": "classes"
     }
   }
 }

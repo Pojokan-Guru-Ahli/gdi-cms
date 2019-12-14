@@ -528,9 +528,6 @@
               "id": {
                 "type": "string"
               },
-              "contributors": {
-                "type": "string"
-              },
               "subject": {
                 "type": "string"
               },
@@ -541,6 +538,9 @@
                 "type": "string"
               },
               "description": {
+                "type": "string"
+              },
+              "contributors": {
                 "type": "string"
               }
             }

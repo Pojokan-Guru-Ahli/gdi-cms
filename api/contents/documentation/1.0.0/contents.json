@@ -519,6 +519,42 @@
           "id": {
             "type": "string"
           },
+          "subject": {
+            "required": [
+              "id",
+              "subjectLevel",
+              "subjectName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "subClass": {
+                "type": "string"
+              },
+              "subjectLevel": {
+                "type": "integer"
+              },
+              "subjectName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              }
+            }
+          },
+          "contentCode": {
+            "type": "string"
+          },
+          "contentTitle": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
           "contributors": {
             "required": [
               "id",
@@ -528,9 +564,6 @@
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "schools": {
                 "type": "string"
               },
               "contibutorName": {
@@ -562,44 +595,14 @@
               },
               "contributorStatus": {
                 "type": "boolean"
-              }
-            }
-          },
-          "subject": {
-            "required": [
-              "id",
-              "subjectLevel",
-              "subjectName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
               "classes": {
-                "type": "string"
-              },
-              "subClass": {
-                "type": "string"
-              },
-              "subjectLevel": {
-                "type": "integer"
-              },
-              "subjectName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "contentCode": {
-            "type": "string"
-          },
-          "contentTitle": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
           }
         }
       },
@@ -610,9 +613,6 @@
           "description"
         ],
         "properties": {
-          "contributors": {
-            "type": "string"
-          },
           "subject": {
             "type": "string"
           },
@@ -623,6 +623,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "contributors": {
             "type": "string"
           }
         }
