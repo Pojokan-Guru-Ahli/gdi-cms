@@ -30,12 +30,6 @@
     "contributorAddress": {
       "type": "text"
     },
-    "contributorCity": {
-      "type": "string"
-    },
-    "contributorProvince": {
-      "type": "string"
-    },
     "contributorPostCode": {
       "type": "string"
     },
@@ -47,12 +41,15 @@
     },
     "classes": {
       "collection": "classes",
-      "dominant": true,
-      "via": "contributors"
+      "via": "contributors",
+      "dominant": true
     },
     "courses": {
       "collection": "courses",
       "via": "contributors"
+    },
+    "cities": {
+      "model": "cities"
     }
   }
 }

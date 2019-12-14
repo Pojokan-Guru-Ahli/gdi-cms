@@ -24,10 +24,6 @@
       "type": "integer",
       "required": true
     },
-    "schoolParticipant": {
-      "collection": "schools",
-      "via": "quizzes"
-    },
     "studentPerSchool": {
       "type": "integer",
       "required": true
@@ -73,6 +69,10 @@
     "questions": {
       "collection": "questions",
       "dominant": true,
+      "via": "quizzes"
+    },
+    "schoolParticipant": {
+      "collection": "schools",
       "via": "quizzes"
     }
   }

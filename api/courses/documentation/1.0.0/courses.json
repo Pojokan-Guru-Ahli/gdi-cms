@@ -566,64 +566,6 @@
               }
             }
           },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorCity": {
-                  "type": "string"
-                },
-                "contributorProvince": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -651,12 +593,6 @@
                 },
                 "capacity": {
                   "type": "integer"
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "studentPerSchool": {
                   "type": "integer"
@@ -702,6 +638,67 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "contibutorName",
+                "contributorEmail",
+                "contributorPassword"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "contibutorName": {
+                  "type": "string"
+                },
+                "contributorEmail": {
+                  "type": "string"
+                },
+                "contributorPassword": {
+                  "type": "string"
+                },
+                "contributorBirthday": {
+                  "type": "string"
+                },
+                "contributorAddress": {
+                  "type": "string"
+                },
+                "contributorPostCode": {
+                  "type": "string"
+                },
+                "contributorPhoneNumber": {
+                  "type": "string"
+                },
+                "contributorStatus": {
+                  "type": "boolean"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cities": {
+                  "type": "string"
                 }
               }
             }
@@ -716,13 +713,13 @@
           "name": {
             "type": "string"
           },
-          "contributors": {
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "quizzes": {
+          "contributors": {
             "type": "array",
             "items": {
               "type": "string"

@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "schools",
   "info": {
     "name": "schools",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "schoolName": {
@@ -29,14 +32,6 @@
       "required": true,
       "type": "text"
     },
-    "schoolCity": {
-      "required": true,
-      "type": "string"
-    },
-    "schoolProvince": {
-      "required": true,
-      "type": "string"
-    },
     "schoolPostCode": {
       "type": "integer",
       "required": true
@@ -50,6 +45,9 @@
     "quizzes": {
       "model": "quizzes",
       "via": "schoolParticipant"
+    },
+    "cities": {
+      "model": "cities"
     }
   }
 }

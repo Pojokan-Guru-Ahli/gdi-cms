@@ -563,16 +563,16 @@
               "description": {
                 "type": "string"
               },
-              "contributors": {
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"

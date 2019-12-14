@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "schools": {
-      "model": "schools"
-    },
     "subject": {
       "model": "subjects"
     },
@@ -127,6 +124,9 @@
     "questionDetail": {
       "type": "richtext",
       "required": true
+    },
+    "schools": {
+      "model": "schools"
     }
   }
 }

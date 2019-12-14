@@ -526,57 +526,6 @@
           "id": {
             "type": "string"
           },
-          "schools": {
-            "required": [
-              "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
-              "schoolPostCode"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schoolName": {
-                "type": "string"
-              },
-              "schoolEmail": {
-                "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
-              },
-              "quizzes": {
-                "type": "string"
-              }
-            }
-          },
           "subject": {
             "required": [
               "id",
@@ -908,16 +857,16 @@
               "description": {
                 "type": "string"
               },
-              "contributors": {
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -940,13 +889,13 @@
               "icon": {
                 "type": "string"
               },
-              "contributors": {
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -1000,12 +949,6 @@
                 "capacity": {
                   "type": "integer"
                 },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "studentPerSchool": {
                   "type": "integer"
                 },
@@ -1050,6 +993,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -1059,6 +1008,52 @@
           },
           "questionDetail": {
             "type": "string"
+          },
+          "schools": {
+            "required": [
+              "id",
+              "schoolName",
+              "schoolEmail",
+              "schoolPassword",
+              "schoolPrefix",
+              "schoolAddress",
+              "schoolPostCode"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "schoolName": {
+                "type": "string"
+              },
+              "schoolEmail": {
+                "type": "string"
+              },
+              "schoolPassword": {
+                "type": "string"
+              },
+              "schoolPrefix": {
+                "type": "string"
+              },
+              "schoolAddress": {
+                "type": "string"
+              },
+              "schoolPostCode": {
+                "type": "integer"
+              },
+              "schoolPhoneNumber": {
+                "type": "string"
+              },
+              "schoolStatus": {
+                "type": "boolean"
+              },
+              "quizzes": {
+                "type": "string"
+              },
+              "cities": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1076,9 +1071,6 @@
           "questionDetail"
         ],
         "properties": {
-          "schools": {
-            "type": "string"
-          },
           "subject": {
             "type": "string"
           },
@@ -1156,6 +1148,9 @@
             "type": "string"
           },
           "questionDetail": {
+            "type": "string"
+          },
+          "schools": {
             "type": "string"
           }
         }

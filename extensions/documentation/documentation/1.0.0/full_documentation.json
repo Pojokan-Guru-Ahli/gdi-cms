@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/14/2019 4:34:38 PM"
+    "x-generation-date": "12/14/2019 4:43:17 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -534,6 +534,511 @@
         "summary": "",
         "tags": [
           "Chapters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/cities": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the cities's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve cities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cities"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new cities record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cities"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCities"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cities/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of cities documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve cities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
+        ],
+        "parameters": []
+      }
+    },
+    "/cities/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one cities record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cities"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single cities record",
+        "responses": {
+          "200": {
+            "description": "Retrieve cities document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cities"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewCities"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single cities record",
+        "responses": {
+          "200": {
+            "description": "deletes a single cities based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Cities"
         ],
         "parameters": [
           {
@@ -3059,6 +3564,511 @@
         "summary": "",
         "tags": [
           "Grades"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/provinces": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the provinces's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve provinces document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Provinces"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new provinces record",
+        "responses": {
+          "200": {
+            "description": "Retrieve provinces document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Provinces"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProvinces"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/provinces/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of provinces documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve provinces document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
+        ],
+        "parameters": []
+      }
+    },
+    "/provinces/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one provinces record",
+        "responses": {
+          "200": {
+            "description": "Retrieve provinces document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Provinces"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single provinces record",
+        "responses": {
+          "200": {
+            "description": "Retrieve provinces document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Provinces"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProvinces"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single provinces record",
+        "responses": {
+          "200": {
+            "description": "deletes a single provinces based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Provinces"
         ],
         "parameters": [
           {
@@ -8732,12 +9742,6 @@
                 "capacity": {
                   "type": "integer"
                 },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "studentPerSchool": {
                   "type": "integer"
                 },
@@ -8782,6 +9786,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -8807,6 +9817,53 @@
           }
         }
       },
+      "Cities": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "province": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "cities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewCities": {
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "province": {
+            "type": "string"
+          }
+        }
+      },
       "Classes": {
         "required": [
           "id",
@@ -8825,64 +9882,6 @@
           },
           "description": {
             "type": "string"
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorCity": {
-                  "type": "string"
-                },
-                "contributorProvince": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           },
           "grades": {
             "required": [
@@ -8926,12 +9925,6 @@
                 "capacity": {
                   "type": "integer"
                 },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "studentPerSchool": {
                   "type": "integer"
                 },
@@ -8976,6 +9969,67 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "contibutorName",
+                "contributorEmail",
+                "contributorPassword"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "contibutorName": {
+                  "type": "string"
+                },
+                "contributorEmail": {
+                  "type": "string"
+                },
+                "contributorPassword": {
+                  "type": "string"
+                },
+                "contributorBirthday": {
+                  "type": "string"
+                },
+                "contributorAddress": {
+                  "type": "string"
+                },
+                "contributorPostCode": {
+                  "type": "string"
+                },
+                "contributorPhoneNumber": {
+                  "type": "string"
+                },
+                "contributorStatus": {
+                  "type": "boolean"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cities": {
+                  "type": "string"
                 }
               }
             }
@@ -8997,16 +10051,16 @@
           "description": {
             "type": "string"
           },
-          "contributors": {
+          "grades": {
+            "type": "string"
+          },
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "grades": {
-            "type": "string"
-          },
-          "quizzes": {
+          "contributors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -9040,12 +10094,6 @@
           "contributorAddress": {
             "type": "string"
           },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
           "contributorPostCode": {
             "type": "string"
           },
@@ -9076,16 +10124,16 @@
                 "description": {
                   "type": "string"
                 },
-                "contributors": {
+                "grades": {
+                  "type": "string"
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "grades": {
-                  "type": "string"
-                },
-                "quizzes": {
+                "contributors": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9111,18 +10159,35 @@
                 "icon": {
                   "type": "string"
                 },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
+              }
+            }
+          },
+          "cities": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
               }
             }
           }
@@ -9150,12 +10215,6 @@
           "contributorAddress": {
             "type": "string"
           },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
           "contributorPostCode": {
             "type": "string"
           },
@@ -9176,6 +10235,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "cities": {
+            "type": "string"
           }
         }
       },
@@ -9237,64 +10299,6 @@
               }
             }
           },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorCity": {
-                  "type": "string"
-                },
-                "contributorProvince": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -9322,12 +10326,6 @@
                 },
                 "capacity": {
                   "type": "integer"
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "studentPerSchool": {
                   "type": "integer"
@@ -9373,6 +10371,67 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "contributors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "contibutorName",
+                "contributorEmail",
+                "contributorPassword"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "contibutorName": {
+                  "type": "string"
+                },
+                "contributorEmail": {
+                  "type": "string"
+                },
+                "contributorPassword": {
+                  "type": "string"
+                },
+                "contributorBirthday": {
+                  "type": "string"
+                },
+                "contributorAddress": {
+                  "type": "string"
+                },
+                "contributorPostCode": {
+                  "type": "string"
+                },
+                "contributorPhoneNumber": {
+                  "type": "string"
+                },
+                "contributorStatus": {
+                  "type": "boolean"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cities": {
+                  "type": "string"
                 }
               }
             }
@@ -9387,13 +10446,13 @@
           "name": {
             "type": "string"
           },
-          "contributors": {
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "quizzes": {
+          "contributors": {
             "type": "array",
             "items": {
               "type": "string"
@@ -9449,6 +10508,56 @@
           }
         }
       },
+      "Provinces": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cities": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "province": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewProvinces": {
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "cities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "Questions": {
         "required": [
           "id",
@@ -9466,57 +10575,6 @@
         "properties": {
           "id": {
             "type": "string"
-          },
-          "schools": {
-            "required": [
-              "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
-              "schoolPostCode"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schoolName": {
-                "type": "string"
-              },
-              "schoolEmail": {
-                "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
-              },
-              "quizzes": {
-                "type": "string"
-              }
-            }
           },
           "subject": {
             "required": [
@@ -9849,16 +10907,16 @@
               "description": {
                 "type": "string"
               },
-              "contributors": {
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9881,13 +10939,13 @@
               "icon": {
                 "type": "string"
               },
-              "contributors": {
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9941,12 +10999,6 @@
                 "capacity": {
                   "type": "integer"
                 },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "studentPerSchool": {
                   "type": "integer"
                 },
@@ -9991,6 +11043,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "schoolParticipant": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -10000,6 +11058,52 @@
           },
           "questionDetail": {
             "type": "string"
+          },
+          "schools": {
+            "required": [
+              "id",
+              "schoolName",
+              "schoolEmail",
+              "schoolPassword",
+              "schoolPrefix",
+              "schoolAddress",
+              "schoolPostCode"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "schoolName": {
+                "type": "string"
+              },
+              "schoolEmail": {
+                "type": "string"
+              },
+              "schoolPassword": {
+                "type": "string"
+              },
+              "schoolPrefix": {
+                "type": "string"
+              },
+              "schoolAddress": {
+                "type": "string"
+              },
+              "schoolPostCode": {
+                "type": "integer"
+              },
+              "schoolPhoneNumber": {
+                "type": "string"
+              },
+              "schoolStatus": {
+                "type": "boolean"
+              },
+              "quizzes": {
+                "type": "string"
+              },
+              "cities": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10017,9 +11121,6 @@
           "questionDetail"
         ],
         "properties": {
-          "schools": {
-            "type": "string"
-          },
           "subject": {
             "type": "string"
           },
@@ -10098,6 +11199,9 @@
           },
           "questionDetail": {
             "type": "string"
+          },
+          "schools": {
+            "type": "string"
           }
         }
       },
@@ -10159,60 +11263,6 @@
           "capacity": {
             "type": "integer"
           },
-          "schoolParticipant": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "schoolName",
-                "schoolEmail",
-                "schoolPassword",
-                "schoolPrefix",
-                "schoolAddress",
-                "schoolCity",
-                "schoolProvince",
-                "schoolPostCode"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "schoolName": {
-                  "type": "string"
-                },
-                "schoolEmail": {
-                  "type": "string"
-                },
-                "schoolPassword": {
-                  "type": "string"
-                },
-                "schoolPrefix": {
-                  "type": "string"
-                },
-                "schoolAddress": {
-                  "type": "string"
-                },
-                "schoolCity": {
-                  "type": "string"
-                },
-                "schoolProvince": {
-                  "type": "string"
-                },
-                "schoolPostCode": {
-                  "type": "integer"
-                },
-                "schoolPhoneNumber": {
-                  "type": "string"
-                },
-                "schoolStatus": {
-                  "type": "boolean"
-                },
-                "quizzes": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "studentPerSchool": {
             "type": "integer"
           },
@@ -10255,16 +11305,16 @@
                 "description": {
                   "type": "string"
                 },
-                "contributors": {
+                "grades": {
+                  "type": "string"
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "grades": {
-                  "type": "string"
-                },
-                "quizzes": {
+                "contributors": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10316,13 +11366,13 @@
                 "icon": {
                   "type": "string"
                 },
-                "contributors": {
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "quizzes": {
+                "contributors": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10349,9 +11399,6 @@
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "schools": {
                   "type": "string"
                 },
                 "subject": {
@@ -10425,6 +11472,58 @@
                 },
                 "questionDetail": {
                   "type": "string"
+                },
+                "schools": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "schoolName",
+                "schoolEmail",
+                "schoolPassword",
+                "schoolPrefix",
+                "schoolAddress",
+                "schoolPostCode"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "schoolName": {
+                  "type": "string"
+                },
+                "schoolEmail": {
+                  "type": "string"
+                },
+                "schoolPassword": {
+                  "type": "string"
+                },
+                "schoolPrefix": {
+                  "type": "string"
+                },
+                "schoolAddress": {
+                  "type": "string"
+                },
+                "schoolPostCode": {
+                  "type": "integer"
+                },
+                "schoolPhoneNumber": {
+                  "type": "string"
+                },
+                "schoolStatus": {
+                  "type": "boolean"
+                },
+                "quizzes": {
+                  "type": "string"
+                },
+                "cities": {
+                  "type": "string"
                 }
               }
             }
@@ -10452,12 +11551,6 @@
           },
           "capacity": {
             "type": "integer"
-          },
-          "schoolParticipant": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "studentPerSchool": {
             "type": "integer"
@@ -10503,6 +11596,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "schoolParticipant": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -10514,8 +11613,6 @@
           "schoolPassword",
           "schoolPrefix",
           "schoolAddress",
-          "schoolCity",
-          "schoolProvince",
           "schoolPostCode"
         ],
         "properties": {
@@ -10535,12 +11632,6 @@
             "type": "string"
           },
           "schoolAddress": {
-            "type": "string"
-          },
-          "schoolCity": {
-            "type": "string"
-          },
-          "schoolProvince": {
             "type": "string"
           },
           "schoolPostCode": {
@@ -10577,12 +11668,6 @@
               },
               "capacity": {
                 "type": "integer"
-              },
-              "schoolParticipant": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "studentPerSchool": {
                 "type": "integer"
@@ -10628,6 +11713,29 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "schoolParticipant": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "cities": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
               }
             }
           }
@@ -10640,8 +11748,6 @@
           "schoolPassword",
           "schoolPrefix",
           "schoolAddress",
-          "schoolCity",
-          "schoolProvince",
           "schoolPostCode"
         ],
         "properties": {
@@ -10660,12 +11766,6 @@
           "schoolAddress": {
             "type": "string"
           },
-          "schoolCity": {
-            "type": "string"
-          },
-          "schoolProvince": {
-            "type": "string"
-          },
           "schoolPostCode": {
             "type": "integer"
           },
@@ -10676,6 +11776,9 @@
             "type": "boolean"
           },
           "quizzes": {
+            "type": "string"
+          },
+          "cities": {
             "type": "string"
           }
         }
@@ -10690,6 +11793,18 @@
           "id": {
             "type": "string"
           },
+          "studentNumber": {
+            "type": "string"
+          },
+          "studentName": {
+            "type": "string"
+          },
+          "studentBirthday": {
+            "type": "string"
+          },
+          "parentMobilePhone": {
+            "type": "string"
+          },
           "school": {
             "required": [
               "id",
@@ -10698,8 +11813,6 @@
               "schoolPassword",
               "schoolPrefix",
               "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
               "schoolPostCode"
             ],
             "properties": {
@@ -10721,12 +11834,6 @@
               "schoolAddress": {
                 "type": "string"
               },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
               "schoolPostCode": {
                 "type": "integer"
               },
@@ -10738,20 +11845,11 @@
               },
               "quizzes": {
                 "type": "string"
+              },
+              "cities": {
+                "type": "string"
               }
             }
-          },
-          "studentNumber": {
-            "type": "string"
-          },
-          "studentName": {
-            "type": "string"
-          },
-          "studentBirthday": {
-            "type": "string"
-          },
-          "parentMobilePhone": {
-            "type": "string"
           }
         }
       },
@@ -10761,9 +11859,6 @@
           "studentName"
         ],
         "properties": {
-          "school": {
-            "type": "string"
-          },
           "studentNumber": {
             "type": "string"
           },
@@ -10774,6 +11869,9 @@
             "type": "string"
           },
           "parentMobilePhone": {
+            "type": "string"
+          },
+          "school": {
             "type": "string"
           }
         }
@@ -10883,16 +11981,16 @@
               "description": {
                 "type": "string"
               },
-              "contributors": {
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
+              "contributors": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11214,6 +12312,9 @@
       "name": "Chapters"
     },
     {
+      "name": "Cities"
+    },
+    {
       "name": "Classes"
     },
     {
@@ -11227,6 +12328,9 @@
     },
     {
       "name": "Grades"
+    },
+    {
+      "name": "Provinces"
     },
     {
       "name": "Questions"

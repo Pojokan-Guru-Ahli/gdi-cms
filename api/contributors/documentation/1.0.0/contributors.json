@@ -534,12 +534,6 @@
           "contributorAddress": {
             "type": "string"
           },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
           "contributorPostCode": {
             "type": "string"
           },
@@ -570,16 +564,16 @@
                 "description": {
                   "type": "string"
                 },
-                "contributors": {
+                "grades": {
+                  "type": "string"
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "grades": {
-                  "type": "string"
-                },
-                "quizzes": {
+                "contributors": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -605,18 +599,35 @@
                 "icon": {
                   "type": "string"
                 },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
+              }
+            }
+          },
+          "cities": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
               }
             }
           }
@@ -644,12 +655,6 @@
           "contributorAddress": {
             "type": "string"
           },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
           "contributorPostCode": {
             "type": "string"
           },
@@ -670,6 +675,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "cities": {
+            "type": "string"
           }
         }
       }

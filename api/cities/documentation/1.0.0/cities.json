@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/schools": {
+    "/cities": {
       "get": {
         "deprecated": false,
-        "description": "Find all the schools's records",
+        "description": "Find all the cities's records",
         "responses": {
           "200": {
-            "description": "Retrieve schools document(s)",
+            "description": "Retrieve cities document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Schools"
+                    "$ref": "#/components/schemas/Cities"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new schools record",
+        "description": "Create a new cities record",
         "responses": {
           "200": {
-            "description": "Retrieve schools document(s)",
+            "description": "Retrieve cities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Schools"
+                  "$ref": "#/components/schemas/Cities"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSchools"
+                "$ref": "#/components/schemas/NewCities"
               }
             }
           }
         }
       }
     },
-    "/schools/count": {
+    "/cities/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of schools documents",
+        "description": "Retrieve the numver of cities documents",
         "responses": {
           "200": {
-            "description": "Retrieve schools document(s)",
+            "description": "Retrieve cities document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "parameters": []
       }
     },
-    "/schools/{id}": {
+    "/cities/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one schools record",
+        "description": "Find one cities record",
         "responses": {
           "200": {
-            "description": "Retrieve schools document(s)",
+            "description": "Retrieve cities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Schools"
+                  "$ref": "#/components/schemas/Cities"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single schools record",
+        "description": "Update a single cities record",
         "responses": {
           "200": {
-            "description": "Retrieve schools document(s)",
+            "description": "Retrieve cities document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Schools"
+                  "$ref": "#/components/schemas/Cities"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSchools"
+                "$ref": "#/components/schemas/NewCities"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single schools record",
+        "description": "Delete a single cities record",
         "responses": {
           "200": {
-            "description": "deletes a single schools based on the ID supplied",
+            "description": "deletes a single cities based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Schools"
+          "Cities"
         ],
         "parameters": [
           {
@@ -508,124 +508,19 @@
   },
   "components": {
     "schemas": {
-      "Schools": {
+      "Cities": {
         "required": [
           "id",
-          "schoolName",
-          "schoolEmail",
-          "schoolPassword",
-          "schoolPrefix",
-          "schoolAddress",
-          "schoolPostCode"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "schoolName": {
+          "name": {
             "type": "string"
           },
-          "schoolEmail": {
-            "type": "string"
-          },
-          "schoolPassword": {
-            "type": "string"
-          },
-          "schoolPrefix": {
-            "type": "string"
-          },
-          "schoolAddress": {
-            "type": "string"
-          },
-          "schoolPostCode": {
-            "type": "integer"
-          },
-          "schoolPhoneNumber": {
-            "type": "string"
-          },
-          "schoolStatus": {
-            "type": "boolean"
-          },
-          "quizzes": {
-            "required": [
-              "id",
-              "quizName",
-              "description",
-              "capacity",
-              "studentPerSchool",
-              "quizDate",
-              "durationHour",
-              "durationMinute",
-              "totalQuestions",
-              "totalWinners"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "quizName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "integer"
-              },
-              "studentPerSchool": {
-                "type": "integer"
-              },
-              "quizDate": {
-                "type": "string"
-              },
-              "durationHour": {
-                "type": "integer"
-              },
-              "durationMinute": {
-                "type": "integer"
-              },
-              "totalQuestions": {
-                "type": "integer"
-              },
-              "totalWinners": {
-                "type": "integer"
-              },
-              "quizStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "chapters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "schoolParticipant": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "cities": {
+          "province": {
             "required": [
               "id",
               "name"
@@ -637,51 +532,25 @@
               "name": {
                 "type": "string"
               },
-              "province": {
-                "type": "string"
+              "cities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
         }
       },
-      "NewSchools": {
+      "NewCities": {
         "required": [
-          "schoolName",
-          "schoolEmail",
-          "schoolPassword",
-          "schoolPrefix",
-          "schoolAddress",
-          "schoolPostCode"
+          "name"
         ],
         "properties": {
-          "schoolName": {
+          "name": {
             "type": "string"
           },
-          "schoolEmail": {
-            "type": "string"
-          },
-          "schoolPassword": {
-            "type": "string"
-          },
-          "schoolPrefix": {
-            "type": "string"
-          },
-          "schoolAddress": {
-            "type": "string"
-          },
-          "schoolPostCode": {
-            "type": "integer"
-          },
-          "schoolPhoneNumber": {
-            "type": "string"
-          },
-          "schoolStatus": {
-            "type": "boolean"
-          },
-          "quizzes": {
-            "type": "string"
-          },
-          "cities": {
+          "province": {
             "type": "string"
           }
         }
@@ -690,7 +559,7 @@
   },
   "tags": [
     {
-      "name": "Schools"
+      "name": "Cities"
     }
   ]
 }

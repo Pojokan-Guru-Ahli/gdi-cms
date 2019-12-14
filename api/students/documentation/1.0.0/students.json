@@ -518,6 +518,18 @@
           "id": {
             "type": "string"
           },
+          "studentNumber": {
+            "type": "string"
+          },
+          "studentName": {
+            "type": "string"
+          },
+          "studentBirthday": {
+            "type": "string"
+          },
+          "parentMobilePhone": {
+            "type": "string"
+          },
           "school": {
             "required": [
               "id",
@@ -526,8 +538,6 @@
               "schoolPassword",
               "schoolPrefix",
               "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
               "schoolPostCode"
             ],
             "properties": {
@@ -549,12 +559,6 @@
               "schoolAddress": {
                 "type": "string"
               },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
               "schoolPostCode": {
                 "type": "integer"
               },
@@ -566,20 +570,11 @@
               },
               "quizzes": {
                 "type": "string"
+              },
+              "cities": {
+                "type": "string"
               }
             }
-          },
-          "studentNumber": {
-            "type": "string"
-          },
-          "studentName": {
-            "type": "string"
-          },
-          "studentBirthday": {
-            "type": "string"
-          },
-          "parentMobilePhone": {
-            "type": "string"
           }
         }
       },
@@ -589,9 +584,6 @@
           "studentName"
         ],
         "properties": {
-          "school": {
-            "type": "string"
-          },
           "studentNumber": {
             "type": "string"
           },
@@ -602,6 +594,9 @@
             "type": "string"
           },
           "parentMobilePhone": {
+            "type": "string"
+          },
+          "school": {
             "type": "string"
           }
         }

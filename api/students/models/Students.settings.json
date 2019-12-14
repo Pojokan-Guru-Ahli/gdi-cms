@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "school": {
-      "model": "schools"
-    },
     "studentNumber": {
       "required": true,
       "type": "string",
@@ -29,6 +26,9 @@
     },
     "parentMobilePhone": {
       "type": "string"
+    },
+    "school": {
+      "model": "schools"
     }
   }
 }

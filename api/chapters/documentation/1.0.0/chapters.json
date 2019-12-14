@@ -562,12 +562,6 @@
                 "capacity": {
                   "type": "integer"
                 },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "studentPerSchool": {
                   "type": "integer"
                 },
@@ -608,6 +602,12 @@
                   }
                 },
                 "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "schoolParticipant": {
                   "type": "array",
                   "items": {
                     "type": "string"

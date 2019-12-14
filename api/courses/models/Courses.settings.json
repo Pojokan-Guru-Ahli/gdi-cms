@@ -22,13 +22,13 @@
       "via": "related",
       "plugin": "upload"
     },
-    "contributors": {
-      "collection": "contributors",
-      "via": "courses",
-      "dominant": true
-    },
     "quizzes": {
       "collection": "quizzes",
+      "via": "courses"
+    },
+    "contributors": {
+      "collection": "contributors",
+      "dominant": true,
       "via": "courses"
     }
   }

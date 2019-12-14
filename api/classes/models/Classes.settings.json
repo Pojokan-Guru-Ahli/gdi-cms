@@ -23,15 +23,15 @@
     "description": {
       "type": "richtext"
     },
-    "contributors": {
-      "collection": "contributors",
-      "via": "classes"
-    },
     "grades": {
       "model": "grades"
     },
     "quizzes": {
       "collection": "quizzes",
+      "via": "classes"
+    },
+    "contributors": {
+      "collection": "contributors",
       "via": "classes"
     }
   }
