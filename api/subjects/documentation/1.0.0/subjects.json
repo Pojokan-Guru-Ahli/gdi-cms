@@ -573,6 +573,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "grades": {
+                "type": "string"
               }
             }
           }

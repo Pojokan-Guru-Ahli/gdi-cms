@@ -103,9 +103,6 @@
       "type": "boolean",
       "required": true
     },
-    "classes": {
-      "model": "classes"
-    },
     "difficulties": {
       "enum": [
         "Easy",
@@ -114,11 +111,16 @@
       ],
       "type": "enumeration"
     },
-    "sourceInfo": {
-      "type": "string"
+    "questionVideo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     },
-    "sourceYear": {
-      "type": "integer"
+    "source": {
+      "model": "questionsources"
+    },
+    "classes": {
+      "model": "classes"
     }
   }
 }

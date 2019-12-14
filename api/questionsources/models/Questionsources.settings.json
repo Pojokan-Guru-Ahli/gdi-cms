@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "source",
+  "info": {
+    "name": "questionsources",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "sourceInfo": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

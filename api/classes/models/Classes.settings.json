@@ -27,6 +27,9 @@
     "contributors": {
       "collection": "contributors",
       "via": "classes"
+    },
+    "grades": {
+      "model": "grades"
     }
   }
 }

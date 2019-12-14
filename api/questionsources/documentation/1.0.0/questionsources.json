@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contributors": {
+    "/questionsources": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contributors's records",
+        "description": "Find all the questionsources's records",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve questionsources document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contributors"
+                    "$ref": "#/components/schemas/Questionsources"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contributors record",
+        "description": "Create a new questionsources record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve questionsources document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Questionsources"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributors"
+                "$ref": "#/components/schemas/NewQuestionsources"
               }
             }
           }
         }
       }
     },
-    "/contributors/count": {
+    "/questionsources/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contributors documents",
+        "description": "Retrieve the numver of questionsources documents",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve questionsources document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "parameters": []
       }
     },
-    "/contributors/{id}": {
+    "/questionsources/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contributors record",
+        "description": "Find one questionsources record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve questionsources document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Questionsources"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contributors record",
+        "description": "Update a single questionsources record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve questionsources document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Questionsources"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributors"
+                "$ref": "#/components/schemas/NewQuestionsources"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contributors record",
+        "description": "Delete a single questionsources record",
         "responses": {
           "200": {
-            "description": "deletes a single contributors based on the ID supplied",
+            "description": "deletes a single questionsources based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Questionsources"
         ],
         "parameters": [
           {
@@ -508,125 +508,29 @@
   },
   "components": {
     "schemas": {
-      "Contributors": {
+      "Questionsources": {
         "required": [
-          "id",
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "contibutorName": {
+          "sourceInfo": {
             "type": "string"
           },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "classLevel",
-                "className",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classLevel": {
-                  "type": "string"
-                },
-                "className": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "grades": {
-                  "type": "string"
-                }
-              }
-            }
+          "year": {
+            "type": "integer"
           }
         }
       },
-      "NewContributors": {
-        "required": [
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
-        ],
+      "NewQuestionsources": {
         "properties": {
-          "contibutorName": {
+          "sourceInfo": {
             "type": "string"
           },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorCity": {
-            "type": "string"
-          },
-          "contributorProvince": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "year": {
+            "type": "integer"
           }
         }
       }
@@ -634,7 +538,7 @@
   },
   "tags": [
     {
-      "name": "Contributors"
+      "name": "Questionsources"
     }
   ]
 }

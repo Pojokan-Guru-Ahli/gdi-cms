@@ -891,6 +891,76 @@
           "activeStatus": {
             "type": "boolean"
           },
+          "difficulties": {
+            "type": "string",
+            "enum": [
+              "Easy",
+              "Medium",
+              "Hard"
+            ]
+          },
+          "questionVideo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "source": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sourceInfo": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              }
+            }
+          },
           "classes": {
             "required": [
               "id",
@@ -916,22 +986,11 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "grades": {
+                "type": "string"
               }
             }
-          },
-          "difficulties": {
-            "type": "string",
-            "enum": [
-              "Easy",
-              "Medium",
-              "Hard"
-            ]
-          },
-          "sourceInfo": {
-            "type": "string"
-          },
-          "sourceYear": {
-            "type": "integer"
           }
         }
       },
@@ -1010,9 +1069,6 @@
           "activeStatus": {
             "type": "boolean"
           },
-          "classes": {
-            "type": "string"
-          },
           "difficulties": {
             "type": "string",
             "enum": [
@@ -1021,11 +1077,11 @@
               "Hard"
             ]
           },
-          "sourceInfo": {
+          "source": {
             "type": "string"
           },
-          "sourceYear": {
-            "type": "integer"
+          "classes": {
+            "type": "string"
           }
         }
       }
