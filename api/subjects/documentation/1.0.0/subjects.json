@@ -518,27 +518,6 @@
           "id": {
             "type": "string"
           },
-          "subClass": {
-            "required": [
-              "id",
-              "subClassName",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subClassName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              }
-            }
-          },
           "subjectLevel": {
             "type": "integer"
           },
@@ -548,12 +527,28 @@
           "description": {
             "type": "string"
           },
+          "subClass": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "chapters": {
+                "type": "string"
+              }
+            }
+          },
           "classes": {
             "required": [
               "id",
               "classLevel",
-              "className",
-              "description"
+              "className"
             ],
             "properties": {
               "id": {
@@ -576,6 +571,12 @@
               },
               "grades": {
                 "type": "string"
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -587,9 +588,6 @@
           "subjectName"
         ],
         "properties": {
-          "subClass": {
-            "type": "string"
-          },
           "subjectLevel": {
             "type": "integer"
           },
@@ -597,6 +595,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "subClass": {
             "type": "string"
           },
           "classes": {

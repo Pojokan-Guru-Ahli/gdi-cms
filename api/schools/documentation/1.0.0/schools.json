@@ -606,6 +606,30 @@
               },
               "quizStatus": {
                 "type": "boolean"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "chapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/subclasses",
-      "handler": "Subclasses.find",
+      "path": "/chapters",
+      "handler": "Chapters.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/subclasses/count",
-      "handler": "Subclasses.count",
+      "path": "/chapters/count",
+      "handler": "Chapters.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/subclasses/:id",
-      "handler": "Subclasses.findOne",
+      "path": "/chapters/:id",
+      "handler": "Chapters.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/subclasses",
-      "handler": "Subclasses.create",
+      "path": "/chapters",
+      "handler": "Chapters.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/subclasses/:id",
-      "handler": "Subclasses.update",
+      "path": "/chapters/:id",
+      "handler": "Chapters.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/subclasses/:id",
-      "handler": "Subclasses.delete",
+      "path": "/chapters/:id",
+      "handler": "Chapters.delete",
       "config": {
         "policies": []
       }

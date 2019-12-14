@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/subclasses": {
+    "/subchapters": {
       "get": {
         "deprecated": false,
-        "description": "Find all the subclasses's records",
+        "description": "Find all the subchapters's records",
         "responses": {
           "200": {
-            "description": "Retrieve subclasses document(s)",
+            "description": "Retrieve subchapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Subclasses"
+                    "$ref": "#/components/schemas/Subchapters"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new subclasses record",
+        "description": "Create a new subchapters record",
         "responses": {
           "200": {
-            "description": "Retrieve subclasses document(s)",
+            "description": "Retrieve subchapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subclasses"
+                  "$ref": "#/components/schemas/Subchapters"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubclasses"
+                "$ref": "#/components/schemas/NewSubchapters"
               }
             }
           }
         }
       }
     },
-    "/subclasses/count": {
+    "/subchapters/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of subclasses documents",
+        "description": "Retrieve the numver of subchapters documents",
         "responses": {
           "200": {
-            "description": "Retrieve subclasses document(s)",
+            "description": "Retrieve subchapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "parameters": []
       }
     },
-    "/subclasses/{id}": {
+    "/subchapters/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one subclasses record",
+        "description": "Find one subchapters record",
         "responses": {
           "200": {
-            "description": "Retrieve subclasses document(s)",
+            "description": "Retrieve subchapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subclasses"
+                  "$ref": "#/components/schemas/Subchapters"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single subclasses record",
+        "description": "Update a single subchapters record",
         "responses": {
           "200": {
-            "description": "Retrieve subclasses document(s)",
+            "description": "Retrieve subchapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Subclasses"
+                  "$ref": "#/components/schemas/Subchapters"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSubclasses"
+                "$ref": "#/components/schemas/NewSubchapters"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single subclasses record",
+        "description": "Delete a single subchapters record",
         "responses": {
           "200": {
-            "description": "deletes a single subclasses based on the ID supplied",
+            "description": "deletes a single subchapters based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Subclasses"
+          "Subchapters"
         ],
         "parameters": [
           {
@@ -508,68 +508,52 @@
   },
   "components": {
     "schemas": {
-      "Subclasses": {
+      "Subchapters": {
         "required": [
           "id",
-          "subClassName",
-          "description"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "subClassName": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
-          "classes": {
+          "chapters": {
             "required": [
               "id",
-              "classLevel",
-              "className",
-              "description"
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "classLevel": {
+              "name": {
                 "type": "string"
               },
-              "className": {
+              "curriculums": {
                 "type": "string"
               },
-              "description": {
-                "type": "string"
-              },
-              "contributors": {
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "grades": {
-                "type": "string"
               }
             }
           }
         }
       },
-      "NewSubclasses": {
+      "NewSubchapters": {
         "required": [
-          "subClassName",
-          "description"
+          "name"
         ],
         "properties": {
-          "subClassName": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
-          "classes": {
+          "chapters": {
             "type": "string"
           }
         }
@@ -578,7 +562,7 @@
   },
   "tags": [
     {
-      "name": "Subclasses"
+      "name": "Subchapters"
     }
   ]
 }

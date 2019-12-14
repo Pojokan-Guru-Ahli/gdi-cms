@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/questions": {
+    "/chapters": {
       "get": {
         "deprecated": false,
-        "description": "Find all the questions's records",
+        "description": "Find all the chapters's records",
         "responses": {
           "200": {
-            "description": "Retrieve questions document(s)",
+            "description": "Retrieve chapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Questions"
+                    "$ref": "#/components/schemas/Chapters"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new questions record",
+        "description": "Create a new chapters record",
         "responses": {
           "200": {
-            "description": "Retrieve questions document(s)",
+            "description": "Retrieve chapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Questions"
+                  "$ref": "#/components/schemas/Chapters"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewQuestions"
+                "$ref": "#/components/schemas/NewChapters"
               }
             }
           }
         }
       }
     },
-    "/questions/count": {
+    "/chapters/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of questions documents",
+        "description": "Retrieve the numver of chapters documents",
         "responses": {
           "200": {
-            "description": "Retrieve questions document(s)",
+            "description": "Retrieve chapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "parameters": []
       }
     },
-    "/questions/{id}": {
+    "/chapters/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one questions record",
+        "description": "Find one chapters record",
         "responses": {
           "200": {
-            "description": "Retrieve questions document(s)",
+            "description": "Retrieve chapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Questions"
+                  "$ref": "#/components/schemas/Chapters"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single questions record",
+        "description": "Update a single chapters record",
         "responses": {
           "200": {
-            "description": "Retrieve questions document(s)",
+            "description": "Retrieve chapters document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Questions"
+                  "$ref": "#/components/schemas/Chapters"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewQuestions"
+                "$ref": "#/components/schemas/NewChapters"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single questions record",
+        "description": "Delete a single chapters record",
         "responses": {
           "200": {
-            "description": "deletes a single questions based on the ID supplied",
+            "description": "deletes a single chapters based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Questions"
+          "Chapters"
         ],
         "parameters": [
           {
@@ -508,424 +508,19 @@
   },
   "components": {
     "schemas": {
-      "Questions": {
+      "Chapters": {
         "required": [
           "id",
-          "questionType",
-          "optionB",
-          "optionC",
-          "optionD",
-          "optionE",
-          "answer",
-          "explanationType",
-          "activeStatus",
-          "question",
-          "questionDetail"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "schools": {
-            "required": [
-              "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolCity",
-              "schoolProvince",
-              "schoolPostCode"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "schoolName": {
-                "type": "string"
-              },
-              "schoolEmail": {
-                "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolCity": {
-                "type": "string"
-              },
-              "schoolProvince": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
-              },
-              "quizzes": {
-                "type": "string"
-              }
-            }
-          },
-          "subject": {
-            "required": [
-              "id",
-              "subjectLevel",
-              "subjectName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subjectLevel": {
-                "type": "integer"
-              },
-              "subjectName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "subClass": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              }
-            }
-          },
-          "questionType": {
-            "type": "string",
-            "enum": [
-              "image",
-              "text"
-            ]
-          },
-          "questionImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "optionA": {
+          "name": {
             "type": "string"
           },
-          "optionB": {
-            "type": "string"
-          },
-          "optionC": {
-            "type": "string"
-          },
-          "optionD": {
-            "type": "string"
-          },
-          "optionE": {
-            "type": "string"
-          },
-          "answer": {
-            "type": "string",
-            "enum": [
-              "A",
-              "B",
-              "C",
-              "D",
-              "E"
-            ]
-          },
-          "explanationType": {
-            "type": "string",
-            "enum": [
-              "image",
-              "text",
-              "pdf",
-              "video"
-            ]
-          },
-          "imageExplanation": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "textExplanation": {
-            "type": "string"
-          },
-          "pdfExplanation": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "videoExplanation": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "activeStatus": {
-            "type": "boolean"
-          },
-          "difficulties": {
-            "type": "string",
-            "enum": [
-              "Easy",
-              "Medium",
-              "Hard"
-            ]
-          },
-          "questionVideo": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "classes": {
-            "required": [
-              "id",
-              "classLevel",
-              "className"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classLevel": {
-                "type": "string"
-              },
-              "className": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "contents": {
+          "curriculums": {
             "required": [
               "id",
               "name"
@@ -936,39 +531,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "source": {
-            "required": [
-              "id",
-              "sourceInfo",
-              "year"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "sourceInfo": {
-                "type": "string"
-              },
-              "year": {
-                "type": "integer"
               }
             }
           },
@@ -1053,97 +615,18 @@
                 }
               }
             }
-          },
-          "question": {
-            "type": "string"
-          },
-          "questionDetail": {
-            "type": "string"
           }
         }
       },
-      "NewQuestions": {
+      "NewChapters": {
         "required": [
-          "questionType",
-          "optionB",
-          "optionC",
-          "optionD",
-          "optionE",
-          "answer",
-          "explanationType",
-          "activeStatus",
-          "question",
-          "questionDetail"
+          "name"
         ],
         "properties": {
-          "schools": {
+          "name": {
             "type": "string"
           },
-          "subject": {
-            "type": "string"
-          },
-          "questionType": {
-            "type": "string",
-            "enum": [
-              "image",
-              "text"
-            ]
-          },
-          "optionA": {
-            "type": "string"
-          },
-          "optionB": {
-            "type": "string"
-          },
-          "optionC": {
-            "type": "string"
-          },
-          "optionD": {
-            "type": "string"
-          },
-          "optionE": {
-            "type": "string"
-          },
-          "answer": {
-            "type": "string",
-            "enum": [
-              "A",
-              "B",
-              "C",
-              "D",
-              "E"
-            ]
-          },
-          "explanationType": {
-            "type": "string",
-            "enum": [
-              "image",
-              "text",
-              "pdf",
-              "video"
-            ]
-          },
-          "textExplanation": {
-            "type": "string"
-          },
-          "activeStatus": {
-            "type": "boolean"
-          },
-          "difficulties": {
-            "type": "string",
-            "enum": [
-              "Easy",
-              "Medium",
-              "Hard"
-            ]
-          },
-          "classes": {
-            "type": "string"
-          },
-          "contents": {
-            "type": "string"
-          },
-          "source": {
+          "curriculums": {
             "type": "string"
           },
           "quizzes": {
@@ -1151,12 +634,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "question": {
-            "type": "string"
-          },
-          "questionDetail": {
-            "type": "string"
           }
         }
       }
@@ -1164,7 +641,7 @@
   },
   "tags": [
     {
-      "name": "Questions"
+      "name": "Chapters"
     }
   ]
 }

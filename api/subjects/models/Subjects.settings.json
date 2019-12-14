@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "subClass": {
-      "model": "subclasses"
-    },
     "subjectLevel": {
       "type": "integer",
       "required": true
@@ -25,6 +22,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "subClass": {
+      "model": "subchapters"
     },
     "classes": {
       "model": "classes"

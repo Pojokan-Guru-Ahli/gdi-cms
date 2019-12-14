@@ -17,7 +17,8 @@
     },
     "studentNumber": {
       "required": true,
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "studentName": {
       "required": true,

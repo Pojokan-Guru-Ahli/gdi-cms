@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Subclasses` model.
+ * Lifecycle callbacks for the `Chapters` model.
  */
 
 module.exports = {

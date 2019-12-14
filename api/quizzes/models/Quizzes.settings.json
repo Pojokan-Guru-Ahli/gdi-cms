@@ -54,6 +54,26 @@
     },
     "quizStatus": {
       "type": "boolean"
+    },
+    "classes": {
+      "collection": "classes",
+      "via": "quizzes",
+      "dominant": true
+    },
+    "chapters": {
+      "collection": "chapters",
+      "via": "quizzes",
+      "dominant": true
+    },
+    "courses": {
+      "collection": "courses",
+      "via": "quizzes",
+      "dominant": true
+    },
+    "questions": {
+      "collection": "questions",
+      "dominant": true,
+      "via": "quizzes"
     }
   }
 }

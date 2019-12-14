@@ -510,7 +510,8 @@
     "schemas": {
       "Curriculums": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -522,6 +523,9 @@
         }
       },
       "NewCurriculums": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"

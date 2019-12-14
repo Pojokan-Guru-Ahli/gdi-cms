@@ -31,10 +31,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "questionText": {
-      "required": true,
-      "type": "richtext"
-    },
     "optionA": {
       "type": "string"
     },
@@ -110,14 +106,27 @@
       "via": "related",
       "plugin": "upload"
     },
-    "source": {
-      "model": "questionsources"
-    },
     "classes": {
       "model": "classes"
     },
     "contents": {
       "model": "courses"
+    },
+    "source": {
+      "model": "questionsources"
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "questions"
+    },
+    "question": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "questionDetail": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

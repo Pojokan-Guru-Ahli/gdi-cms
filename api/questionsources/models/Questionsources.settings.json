@@ -13,10 +13,16 @@
   },
   "attributes": {
     "sourceInfo": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "year": {
-      "type": "integer"
+      "type": "integer",
+      "max": 2100,
+      "required": true,
+      "unique": true,
+      "min": 2000
     }
   }
 }

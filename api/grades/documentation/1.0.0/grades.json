@@ -510,7 +510,8 @@
     "schemas": {
       "Grades": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -522,6 +523,9 @@
         }
       },
       "NewGrades": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"

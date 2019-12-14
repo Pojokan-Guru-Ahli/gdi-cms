@@ -1,16 +1,21 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "grades",
   "info": {
     "name": "grades",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }

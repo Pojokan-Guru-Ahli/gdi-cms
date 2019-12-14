@@ -555,8 +555,7 @@
               "required": [
                 "id",
                 "classLevel",
-                "className",
-                "description"
+                "className"
               ],
               "properties": {
                 "id": {
@@ -579,6 +578,12 @@
                 },
                 "grades": {
                   "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -587,7 +592,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -600,6 +606,12 @@
                   "type": "string"
                 },
                 "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"

@@ -21,7 +21,6 @@
       "type": "string"
     },
     "description": {
-      "required": true,
       "type": "richtext"
     },
     "contributors": {
@@ -30,6 +29,10 @@
     },
     "grades": {
       "model": "grades"
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "classes"
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "curriculums",
+  "collectionName": "chapters",
   "info": {
-    "name": "curriculums",
+    "name": "chapters",
     "description": ""
   },
   "options": {
@@ -16,6 +16,13 @@
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "curriculums": {
+      "model": "curriculums"
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "chapters"
     }
   }
 }

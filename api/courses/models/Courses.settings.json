@@ -13,7 +13,9 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "icon": {
       "model": "file",
@@ -24,6 +26,10 @@
       "collection": "contributors",
       "via": "courses",
       "dominant": true
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "courses"
     }
   }
 }

@@ -510,7 +510,9 @@
     "schemas": {
       "Questionsources": {
         "required": [
-          "id"
+          "id",
+          "sourceInfo",
+          "year"
         ],
         "properties": {
           "id": {
@@ -525,6 +527,10 @@
         }
       },
       "NewQuestionsources": {
+        "required": [
+          "sourceInfo",
+          "year"
+        ],
         "properties": {
           "sourceInfo": {
             "type": "string"
