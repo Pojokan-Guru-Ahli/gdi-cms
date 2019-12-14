@@ -18,9 +18,6 @@
     "subject": {
       "model": "subjects"
     },
-    "contents": {
-      "model": "contents"
-    },
     "contentfile": {
       "model": "contentfiles"
     },
@@ -121,6 +118,9 @@
     },
     "classes": {
       "model": "classes"
+    },
+    "contents": {
+      "model": "courses"
     }
   }
 }

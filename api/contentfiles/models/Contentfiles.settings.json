@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "contents": {
-      "model": "contents"
-    },
     "subContentTitle": {
       "required": true,
       "type": "string"
@@ -31,6 +28,9 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "contents": {
+      "model": "courses"
     }
   }
 }

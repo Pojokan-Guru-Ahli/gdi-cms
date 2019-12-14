@@ -603,34 +603,6 @@
               }
             }
           },
-          "contents": {
-            "required": [
-              "id",
-              "contentCode",
-              "contentTitle",
-              "description"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subject": {
-                "type": "string"
-              },
-              "contentCode": {
-                "type": "string"
-              },
-              "contentTitle": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "contributors": {
-                "type": "string"
-              }
-            }
-          },
           "contentfile": {
             "required": [
               "id",
@@ -638,9 +610,6 @@
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "contents": {
                 "type": "string"
               },
               "subContentTitle": {
@@ -653,6 +622,9 @@
                 "type": "string"
               },
               "description": {
+                "type": "string"
+              },
+              "contents": {
                 "type": "string"
               }
             }
@@ -991,6 +963,16 @@
                 "type": "string"
               }
             }
+          },
+          "contents": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1011,9 +993,6 @@
             "type": "string"
           },
           "subject": {
-            "type": "string"
-          },
-          "contents": {
             "type": "string"
           },
           "contentfile": {
@@ -1081,6 +1060,9 @@
             "type": "string"
           },
           "classes": {
+            "type": "string"
+          },
+          "contents": {
             "type": "string"
           }
         }

@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "contents",
+  "info": {
+    "name": "courses",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    
+  }
+}

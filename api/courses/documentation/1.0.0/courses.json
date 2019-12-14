@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contents": {
+    "/courses": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contents's records",
+        "description": "Find all the courses's records",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve courses document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contents"
+                    "$ref": "#/components/schemas/Courses"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contents record",
+        "description": "Create a new courses record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve courses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Courses"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewCourses"
               }
             }
           }
         }
       }
     },
-    "/contents/count": {
+    "/courses/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contents documents",
+        "description": "Retrieve the numver of courses documents",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve courses document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "parameters": []
       }
     },
-    "/contents/{id}": {
+    "/courses/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contents record",
+        "description": "Find one courses record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve courses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Courses"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contents record",
+        "description": "Update a single courses record",
         "responses": {
           "200": {
-            "description": "Retrieve contents document(s)",
+            "description": "Retrieve courses document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contents"
+                  "$ref": "#/components/schemas/Courses"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContents"
+                "$ref": "#/components/schemas/NewCourses"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contents record",
+        "description": "Delete a single courses record",
         "responses": {
           "200": {
-            "description": "deletes a single contents based on the ID supplied",
+            "description": "deletes a single courses based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contents"
+          "Courses"
         ],
         "parameters": [
           {
@@ -508,133 +508,24 @@
   },
   "components": {
     "schemas": {
-      "Contents": {
+      "Courses": {
         "required": [
-          "id",
-          "contentCode",
-          "contentTitle",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "subject": {
-            "required": [
-              "id",
-              "subjectLevel",
-              "subjectName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subClass": {
-                "type": "string"
-              },
-              "subjectLevel": {
-                "type": "integer"
-              },
-              "subjectName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              }
-            }
-          },
-          "contentCode": {
-            "type": "string"
-          },
-          "contentTitle": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "contributors": {
-            "required": [
-              "id",
-              "contibutorName",
-              "contributorEmail",
-              "contributorPassword"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "contibutorName": {
-                "type": "string"
-              },
-              "contributorEmail": {
-                "type": "string"
-              },
-              "contributorPassword": {
-                "type": "string"
-              },
-              "contributorBirthday": {
-                "type": "string"
-              },
-              "contributorAddress": {
-                "type": "string"
-              },
-              "contributorCity": {
-                "type": "string"
-              },
-              "contributorProvince": {
-                "type": "string"
-              },
-              "contributorPostCode": {
-                "type": "string"
-              },
-              "contributorPhoneNumber": {
-                "type": "string"
-              },
-              "contributorStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
-      "NewContents": {
-        "required": [
-          "contentCode",
-          "contentTitle",
-          "description"
-        ],
-        "properties": {
-          "subject": {
-            "type": "string"
-          },
-          "contentCode": {
-            "type": "string"
-          },
-          "contentTitle": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "contributors": {
-            "type": "string"
-          }
-        }
+      "NewCourses": {
+        "properties": {}
       }
     }
   },
   "tags": [
     {
-      "name": "Contents"
+      "name": "Courses"
     }
   ]
 }
