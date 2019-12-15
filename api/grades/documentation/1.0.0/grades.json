@@ -555,6 +555,12 @@
                 },
                 "class": {
                   "type": "string"
+                },
+                "userquizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

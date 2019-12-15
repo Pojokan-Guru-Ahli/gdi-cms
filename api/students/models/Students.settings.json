@@ -41,6 +41,10 @@
     "class": {
       "model": "classes",
       "via": "students"
+    },
+    "userquizzes": {
+      "collection": "userquizzes",
+      "via": "student"
     }
   }
 }

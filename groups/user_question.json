@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "userQuestion",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_user_questions",
+  "attributes": {
+    "questions": {
+      "model": "questions"
+    },
+    "questionNumber": {
+      "type": "integer"
+    }
+  }
+}

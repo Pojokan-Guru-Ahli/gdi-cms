@@ -1,0 +1,16 @@
+{
+  "info": {
+    "name": "UserAnswer",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "groups_user_answers",
+  "attributes": {
+    "answerNumber": {
+      "type": "integer"
+    },
+    "answer": {
+      "type": "json"
+    }
+  }
+}

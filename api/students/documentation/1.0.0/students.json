@@ -655,6 +655,28 @@
                 }
               }
             }
+          },
+          "userquizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "questions": {
+                  "type": "group"
+                },
+                "student": {
+                  "type": "string"
+                },
+                "Answers": {
+                  "type": "group"
+                }
+              }
+            }
           }
         }
       },
@@ -687,6 +709,12 @@
           },
           "class": {
             "type": "string"
+          },
+          "userquizzes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

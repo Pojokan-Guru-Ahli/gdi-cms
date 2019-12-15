@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "userquizzes",
+  "info": {
+    "name": "userquizzes",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "questions": {
+      "group": "user_question",
+      "repeatable": true,
+      "type": "group"
+    },
+    "student": {
+      "model": "students",
+      "via": "userquizzes"
+    },
+    "Answers": {
+      "group": "user_answer",
+      "type": "group",
+      "repeatable": true
+    }
+  }
+}
