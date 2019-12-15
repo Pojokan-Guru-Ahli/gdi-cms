@@ -50,6 +50,10 @@
     "courses": {
       "collection": "courses",
       "via": "contributors"
+    },
+    "questions": {
+      "collection": "questions",
+      "via": "contributor"
     }
   }
 }

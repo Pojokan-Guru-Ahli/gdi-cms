@@ -633,13 +633,13 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "courses": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -695,6 +695,12 @@
                   "type": "string"
                 },
                 "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"

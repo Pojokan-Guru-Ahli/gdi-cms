@@ -28,6 +28,10 @@
     "subchapters": {
       "collection": "subchapters",
       "via": "chapter"
+    },
+    "questions": {
+      "collection": "questions",
+      "via": "chapter"
     }
   }
 }

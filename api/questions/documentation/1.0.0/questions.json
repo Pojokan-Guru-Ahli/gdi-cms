@@ -512,13 +512,10 @@
         "required": [
           "id",
           "questionType",
+          "optionA",
           "optionB",
-          "optionC",
-          "optionD",
-          "optionE",
           "answer",
           "explanationType",
-          "activeStatus",
           "question",
           "questionDetail"
         ],
@@ -754,9 +751,6 @@
               }
             }
           },
-          "activeStatus": {
-            "type": "boolean"
-          },
           "difficulties": {
             "type": "string",
             "enum": [
@@ -878,13 +872,13 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "courses": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -922,19 +916,179 @@
                 }
               }
             }
+          },
+          "contributor": {
+            "required": [
+              "id",
+              "contibutorName",
+              "contributorEmail",
+              "contributorPassword"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "contibutorName": {
+                "type": "string"
+              },
+              "contributorEmail": {
+                "type": "string"
+              },
+              "contributorPassword": {
+                "type": "string"
+              },
+              "contributorBirthday": {
+                "type": "string"
+              },
+              "contributorAddress": {
+                "type": "string"
+              },
+              "contributorPostCode": {
+                "type": "string"
+              },
+              "contributorPhoneNumber": {
+                "type": "string"
+              },
+              "contributorStatus": {
+                "type": "boolean"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cities": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "subchapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "class": {
+            "required": [
+              "id",
+              "classLevel",
+              "className"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "string"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewQuestions": {
         "required": [
           "questionType",
+          "optionA",
           "optionB",
-          "optionC",
-          "optionD",
-          "optionE",
           "answer",
           "explanationType",
-          "activeStatus",
           "question",
           "questionDetail"
         ],
@@ -983,9 +1137,6 @@
           "textExplanation": {
             "type": "string"
           },
-          "activeStatus": {
-            "type": "boolean"
-          },
           "difficulties": {
             "type": "string",
             "enum": [
@@ -1008,6 +1159,37 @@
           },
           "questionsource": {
             "type": "string"
+          },
+          "contributor": {
+            "type": "string"
+          },
+          "chapter": {
+            "type": "string"
+          },
+          "class": {
+            "type": "string"
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              }
+            }
           }
         }
       }

@@ -62,11 +62,18 @@
     "image_url": {
       "type": "string"
     },
-    "user_teacher": {
-      "type": "json"
+    "contributor": {
+      "model": "contributors"
     },
-    "user_student": {
-      "type": "json"
+    "students": {
+      "model": "students"
+    },
+    "userType": {
+      "enum": [
+        "student",
+        "teacher"
+      ],
+      "type": "enumeration"
     }
   }
 }

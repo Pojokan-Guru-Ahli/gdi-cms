@@ -546,6 +546,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -573,6 +579,12 @@
                   "type": "string"
                 },
                 "subchapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"

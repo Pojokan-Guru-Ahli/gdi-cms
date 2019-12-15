@@ -33,6 +33,14 @@
     "contributors": {
       "collection": "contributors",
       "via": "classes"
+    },
+    "students": {
+      "collection": "students",
+      "via": "class"
+    },
+    "questions": {
+      "collection": "questions",
+      "via": "class"
     }
   }
 }

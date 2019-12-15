@@ -26,22 +26,20 @@
       "plugin": "upload"
     },
     "optionA": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "optionB": {
       "required": true,
       "type": "string"
     },
     "optionC": {
-      "required": true,
       "type": "string"
     },
     "optionD": {
-      "required": true,
       "type": "string"
     },
     "optionE": {
-      "required": true,
       "type": "string"
     },
     "answer": {
@@ -83,10 +81,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "activeStatus": {
-      "type": "boolean",
-      "required": true
-    },
     "difficulties": {
       "enum": [
         "Easy",
@@ -116,6 +110,22 @@
     "questionsource": {
       "model": "questionsources",
       "via": "questions"
+    },
+    "contributor": {
+      "model": "contributors",
+      "via": "questions"
+    },
+    "chapter": {
+      "model": "chapters",
+      "via": "questions"
+    },
+    "class": {
+      "model": "classes",
+      "via": "questions"
+    },
+    "Workflow": {
+      "group": "workflow",
+      "type": "group"
     }
   }
 }

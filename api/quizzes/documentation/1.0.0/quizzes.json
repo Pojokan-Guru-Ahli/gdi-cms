@@ -590,6 +590,18 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -677,6 +689,50 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -687,13 +743,10 @@
               "required": [
                 "id",
                 "questionType",
+                "optionA",
                 "optionB",
-                "optionC",
-                "optionD",
-                "optionE",
                 "answer",
                 "explanationType",
-                "activeStatus",
                 "question",
                 "questionDetail"
               ],
@@ -740,9 +793,6 @@
                 "videoExplanation": {
                   "type": "string"
                 },
-                "activeStatus": {
-                  "type": "boolean"
-                },
                 "difficulties": {
                   "type": "string"
                 },
@@ -763,44 +813,18 @@
                 },
                 "questionsource": {
                   "type": "string"
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
+                },
+                "contributor": {
                   "type": "string"
                 },
-                "name": {
+                "chapter": {
                   "type": "string"
                 },
-                "icon": {
+                "class": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "Workflow": {
+                  "type": "group"
                 }
               }
             }
@@ -868,13 +892,13 @@
               "type": "string"
             }
           },
-          "questions": {
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "courses": {
+          "questions": {
             "type": "array",
             "items": {
               "type": "string"

@@ -65,13 +65,13 @@
       "dominant": true,
       "via": "quizzes"
     },
-    "questions": {
-      "collection": "questions",
+    "courses": {
+      "collection": "courses",
       "dominant": true,
       "via": "quizzes"
     },
-    "courses": {
-      "collection": "courses",
+    "questions": {
+      "collection": "questions",
       "dominant": true,
       "via": "quizzes"
     }

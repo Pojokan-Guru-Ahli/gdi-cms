@@ -30,6 +30,17 @@
     "school": {
       "model": "schools",
       "via": "students"
+    },
+    "activeStatus": {
+      "type": "boolean"
+    },
+    "class": {
+      "model": "classes",
+      "via": "students"
+    },
+    "grade": {
+      "model": "grades",
+      "via": "students"
     }
   }
 }

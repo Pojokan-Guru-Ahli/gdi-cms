@@ -530,13 +530,10 @@
               "required": [
                 "id",
                 "questionType",
+                "optionA",
                 "optionB",
-                "optionC",
-                "optionD",
-                "optionE",
                 "answer",
                 "explanationType",
-                "activeStatus",
                 "question",
                 "questionDetail"
               ],
@@ -583,9 +580,6 @@
                 "videoExplanation": {
                   "type": "string"
                 },
-                "activeStatus": {
-                  "type": "boolean"
-                },
                 "difficulties": {
                   "type": "string"
                 },
@@ -606,6 +600,18 @@
                 },
                 "questionsource": {
                   "type": "string"
+                },
+                "contributor": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "Workflow": {
+                  "type": "group"
                 }
               }
             }

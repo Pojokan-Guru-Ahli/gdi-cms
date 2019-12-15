@@ -611,13 +611,13 @@
                   "type": "string"
                 }
               },
-              "questions": {
+              "courses": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "courses": {
+              "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -667,6 +667,15 @@
                   "type": "string"
                 },
                 "school": {
+                  "type": "string"
+                },
+                "activeStatus": {
+                  "type": "boolean"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "grade": {
                   "type": "string"
                 }
               }

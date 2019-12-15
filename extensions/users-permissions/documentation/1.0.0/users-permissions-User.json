@@ -1168,11 +1168,106 @@
           "image_url": {
             "type": "string"
           },
-          "user_teacher": {
-            "type": "object"
+          "contributor": {
+            "required": [
+              "id",
+              "contibutorName",
+              "contributorEmail",
+              "contributorPassword"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "contibutorName": {
+                "type": "string"
+              },
+              "contributorEmail": {
+                "type": "string"
+              },
+              "contributorPassword": {
+                "type": "string"
+              },
+              "contributorBirthday": {
+                "type": "string"
+              },
+              "contributorAddress": {
+                "type": "string"
+              },
+              "contributorPostCode": {
+                "type": "string"
+              },
+              "contributorPhoneNumber": {
+                "type": "string"
+              },
+              "contributorStatus": {
+                "type": "boolean"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cities": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "user_student": {
-            "type": "object"
+          "students": {
+            "required": [
+              "id",
+              "studentNumber",
+              "studentName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "studentNumber": {
+                "type": "string"
+              },
+              "studentName": {
+                "type": "string"
+              },
+              "studentBirthday": {
+                "type": "string"
+              },
+              "parentMobilePhone": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "activeStatus": {
+                "type": "boolean"
+              },
+              "class": {
+                "type": "string"
+              },
+              "grade": {
+                "type": "string"
+              }
+            }
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "student",
+              "teacher"
+            ]
           }
         }
       },
@@ -1217,11 +1312,18 @@
           "image_url": {
             "type": "string"
           },
-          "user_teacher": {
-            "type": "object"
+          "contributor": {
+            "type": "string"
           },
-          "user_student": {
-            "type": "object"
+          "students": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "student",
+              "teacher"
+            ]
           }
         }
       }

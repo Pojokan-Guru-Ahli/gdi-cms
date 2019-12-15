@@ -16,6 +16,10 @@
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "students": {
+      "collection": "students",
+      "via": "grade"
     }
   }
 }

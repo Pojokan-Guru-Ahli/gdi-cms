@@ -609,11 +609,14 @@
                 "image_url": {
                   "type": "string"
                 },
-                "user_teacher": {
-                  "type": "object"
+                "contributor": {
+                  "type": "string"
                 },
-                "user_student": {
-                  "type": "object"
+                "students": {
+                  "type": "string"
+                },
+                "userType": {
+                  "type": "string"
                 }
               }
             }

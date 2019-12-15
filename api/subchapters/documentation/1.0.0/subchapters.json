@@ -546,6 +546,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

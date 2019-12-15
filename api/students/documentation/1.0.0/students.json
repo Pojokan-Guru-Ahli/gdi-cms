@@ -581,6 +581,77 @@
                 }
               }
             }
+          },
+          "activeStatus": {
+            "type": "boolean"
+          },
+          "class": {
+            "required": [
+              "id",
+              "classLevel",
+              "className"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "string"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "grades": {
+                "type": "string"
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "grade": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -603,6 +674,15 @@
             "type": "string"
           },
           "school": {
+            "type": "string"
+          },
+          "activeStatus": {
+            "type": "boolean"
+          },
+          "class": {
+            "type": "string"
+          },
+          "grade": {
             "type": "string"
           }
         }
