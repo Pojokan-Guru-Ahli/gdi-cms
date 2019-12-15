@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/16/2019 4:21:02 AM"
+    "x-generation-date": "12/16/2019 4:46:42 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1544,511 +1544,6 @@
         "summary": "",
         "tags": [
           "Classes"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/contributors": {
-      "get": {
-        "deprecated": false,
-        "description": "Find all the contributors's records",
-        "responses": {
-          "200": {
-            "description": "Retrieve contributors document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Contributors"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new contributors record",
-        "responses": {
-          "200": {
-            "description": "Retrieve contributors document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Contributors"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewContributors"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/contributors/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of contributors documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve contributors document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
-        ],
-        "parameters": []
-      }
-    },
-    "/contributors/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Find one contributors record",
-        "responses": {
-          "200": {
-            "description": "Retrieve contributors document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Contributors"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a single contributors record",
-        "responses": {
-          "200": {
-            "description": "Retrieve contributors document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Contributors"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewContributors"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a single contributors record",
-        "responses": {
-          "200": {
-            "description": "deletes a single contributors based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Contributors"
         ],
         "parameters": [
           {
@@ -7114,6 +6609,511 @@
         ]
       }
     },
+    "/teachers": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the teachers's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve teachers document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Teachers"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new teachers record",
+        "responses": {
+          "200": {
+            "description": "Retrieve teachers document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teachers"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTeachers"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teachers/count": {
+      "get": {
+        "deprecated": false,
+        "description": "Retrieve the numver of teachers documents",
+        "responses": {
+          "200": {
+            "description": "Retrieve teachers document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "parameters": []
+      }
+    },
+    "/teachers/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one teachers record",
+        "responses": {
+          "200": {
+            "description": "Retrieve teachers document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teachers"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single teachers record",
+        "responses": {
+          "200": {
+            "description": "Retrieve teachers document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teachers"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTeachers"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single teachers record",
+        "responses": {
+          "200": {
+            "description": "deletes a single teachers based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Teachers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/email/": {
       "post": {
         "deprecated": false,
@@ -9195,88 +9195,6 @@
           "name": {
             "type": "string"
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "curriculum": {
             "required": [
               "id",
@@ -9388,12 +9306,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -9403,17 +9315,80 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "quiz": {
+            "required": [
+              "id",
+              "quizName",
+              "description",
+              "capacity",
+              "durationMinute",
+              "totalQuestions"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "quizName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "integer"
+              },
+              "durationMinute": {
+                "type": "integer"
+              },
+              "totalQuestions": {
+                "type": "integer"
+              },
+              "quizStatus": {
+                "type": "boolean"
+              },
+              "chapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -9427,12 +9402,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "curriculum": {
             "type": "string"
@@ -9448,6 +9417,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "quiz": {
+            "type": "string"
           }
         }
       },
@@ -9537,149 +9509,6 @@
               }
             }
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cities": {
-                  "type": "string"
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
@@ -9710,11 +9539,49 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
-                  "type": "string"
-                },
                 "grade": {
                   "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "teachers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "NUPTK"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "NUPTK": {
+                  "type": "string"
+                },
+                "Workflow": {
+                  "type": "group"
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -9781,12 +9648,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -9796,17 +9657,127 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "quizName",
+                "description",
+                "capacity",
+                "durationMinute",
+                "totalQuestions"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "quizName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "durationMinute": {
+                  "type": "integer"
+                },
+                "totalQuestions": {
+                  "type": "integer"
+                },
+                "quizStatus": {
+                  "type": "boolean"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -9831,306 +9802,23 @@
           "grades": {
             "type": "string"
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "students": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "questions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "Contributors": {
-        "required": [
-          "id",
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "contibutorName": {
-            "type": "string"
-          },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "classLevel",
-                "className"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classLevel": {
-                  "type": "string"
-                },
-                "className": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "grades": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "students": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "cities": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "province": {
-                "type": "string"
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "questions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "questionType",
-                "optionA",
-                "optionB",
-                "answer",
-                "explanationType",
-                "question",
-                "questionDetail"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "questionType": {
-                  "type": "string"
-                },
-                "questionImage": {
-                  "type": "string"
-                },
-                "optionA": {
-                  "type": "string"
-                },
-                "optionB": {
-                  "type": "string"
-                },
-                "optionC": {
-                  "type": "string"
-                },
-                "optionD": {
-                  "type": "string"
-                },
-                "optionE": {
-                  "type": "string"
-                },
-                "answer": {
-                  "type": "string"
-                },
-                "explanationType": {
-                  "type": "string"
-                },
-                "imageExplanation": {
-                  "type": "string"
-                },
-                "textExplanation": {
-                  "type": "string"
-                },
-                "pdfExplanation": {
-                  "type": "string"
-                },
-                "videoExplanation": {
-                  "type": "string"
-                },
-                "difficulties": {
-                  "type": "string"
-                },
-                "questionVideo": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "question": {
-                  "type": "string"
-                },
-                "questionDetail": {
-                  "type": "string"
-                },
-                "questionsource": {
-                  "type": "string"
-                },
-                "contributor": {
-                  "type": "string"
-                },
-                "chapter": {
-                  "type": "string"
-                },
-                "class": {
-                  "type": "string"
-                },
-                "Workflow": {
-                  "type": "group"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewContributors": {
-        "required": [
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
-        ],
-        "properties": {
-          "contibutorName": {
-            "type": "string"
-          },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
-          },
-          "classes": {
+          "teachers": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "cities": {
-            "type": "string"
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "courses": {
             "type": "array",
@@ -10138,7 +9826,7 @@
               "type": "string"
             }
           },
-          "questions": {
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"
@@ -10204,149 +9892,6 @@
               }
             }
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cities": {
-                  "type": "string"
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "curriculums": {
             "type": "array",
             "items": {
@@ -10378,6 +9923,161 @@
                 }
               }
             }
+          },
+          "teachers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "NUPTK"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "NUPTK": {
+                  "type": "string"
+                },
+                "Workflow": {
+                  "type": "group"
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "classLevel",
+                "className"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classLevel": {
+                  "type": "string"
+                },
+                "className": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "grades": {
+                  "type": "string"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "quizName",
+                "description",
+                "capacity",
+                "durationMinute",
+                "totalQuestions"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "quizName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "durationMinute": {
+                  "type": "integer"
+                },
+                "totalQuestions": {
+                  "type": "integer"
+                },
+                "quizStatus": {
+                  "type": "boolean"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -10389,19 +10089,25 @@
           "name": {
             "type": "string"
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "curriculums": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "teachers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"
@@ -10433,12 +10139,6 @@
               "name": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "curriculum": {
                 "type": "string"
               },
@@ -10453,6 +10153,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quiz": {
+                "type": "string"
               }
             }
           },
@@ -10470,12 +10173,6 @@
                 "name": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "curriculum": {
                   "type": "string"
                 },
@@ -10490,6 +10187,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "quiz": {
+                  "type": "string"
                 }
               }
             }
@@ -10511,19 +10211,25 @@
                 "icon": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10601,10 +10307,10 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
+                "grade": {
                   "type": "string"
                 },
-                "grade": {
+                "class": {
                   "type": "string"
                 }
               }
@@ -10975,88 +10681,6 @@
               }
             }
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "question": {
             "type": "string"
           },
@@ -11087,64 +10711,6 @@
               }
             }
           },
-          "contributor": {
-            "required": [
-              "id",
-              "contibutorName",
-              "contributorEmail",
-              "contributorPassword"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "contibutorName": {
-                "type": "string"
-              },
-              "contributorEmail": {
-                "type": "string"
-              },
-              "contributorPassword": {
-                "type": "string"
-              },
-              "contributorBirthday": {
-                "type": "string"
-              },
-              "contributorAddress": {
-                "type": "string"
-              },
-              "contributorPostCode": {
-                "type": "string"
-              },
-              "contributorPhoneNumber": {
-                "type": "string"
-              },
-              "contributorStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "cities": {
-                "type": "string"
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "chapter": {
             "required": [
               "id",
@@ -11156,12 +10722,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "curriculum": {
                 "type": "string"
@@ -11177,6 +10737,36 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quiz": {
+                "type": "string"
+              }
+            }
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "updatedBy"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
               }
             }
           },
@@ -11202,19 +10792,13 @@
               "grades": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teachers": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11225,28 +10809,113 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
-          "Workflow": {
-            "type": "object",
+          "teacher": {
             "required": [
-              "id"
+              "id",
+              "NUPTK"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "status": {
-                "type": "string",
-                "enum": [
-                  "pending",
-                  "rejected",
-                  "approved"
-                ]
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "noted": {
+              "NUPTK": {
                 "type": "string"
+              },
+              "Workflow": {
+                "type": "group"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "quizName",
+                "description",
+                "capacity",
+                "durationMinute",
+                "totalQuestions"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "quizName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "durationMinute": {
+                  "type": "integer"
+                },
+                "totalQuestions": {
+                  "type": "integer"
+                },
+                "quizStatus": {
+                  "type": "boolean"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -11315,12 +10984,6 @@
               "Hard"
             ]
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "question": {
             "type": "string"
           },
@@ -11330,19 +10993,15 @@
           "questionsource": {
             "type": "string"
           },
-          "contributor": {
-            "type": "string"
-          },
           "chapter": {
-            "type": "string"
-          },
-          "class": {
             "type": "string"
           },
           "Workflow": {
             "type": "object",
             "required": [
-              "id"
+              "id",
+              "status",
+              "updatedBy"
             ],
             "properties": {
               "id": {
@@ -11358,7 +11017,22 @@
               },
               "noted": {
                 "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
               }
+            }
+          },
+          "class": {
+            "type": "string"
+          },
+          "teacher": {
+            "type": "string"
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           }
         }
@@ -11441,12 +11115,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -11456,17 +11124,23 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -11499,12 +11173,8 @@
           "quizName",
           "description",
           "capacity",
-          "studentPerSchool",
-          "quizDate",
-          "durationHour",
           "durationMinute",
-          "totalQuestions",
-          "totalWinners"
+          "totalQuestions"
         ],
         "properties": {
           "id": {
@@ -11519,26 +11189,49 @@
           "capacity": {
             "type": "integer"
           },
-          "studentPerSchool": {
-            "type": "integer"
-          },
-          "quizDate": {
-            "type": "string"
-          },
-          "durationHour": {
-            "type": "integer"
-          },
           "durationMinute": {
             "type": "integer"
           },
           "totalQuestions": {
             "type": "integer"
           },
-          "totalWinners": {
-            "type": "integer"
-          },
           "quizStatus": {
             "type": "boolean"
+          },
+          "chapters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "curriculum": {
+                  "type": "string"
+                },
+                "subchapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quiz": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "classes": {
             "type": "array",
@@ -11564,19 +11257,13 @@
                 "grades": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -11587,133 +11274,14 @@
                   "items": {
                     "type": "string"
                   }
-                }
-              }
-            }
-          },
-          "schoolParticipant": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "schoolName",
-                "schoolEmail",
-                "schoolPassword",
-                "schoolPrefix",
-                "schoolAddress",
-                "schoolPostCode"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
                 },
-                "schoolName": {
-                  "type": "string"
-                },
-                "schoolEmail": {
-                  "type": "string"
-                },
-                "schoolPassword": {
-                  "type": "string"
-                },
-                "schoolPrefix": {
-                  "type": "string"
-                },
-                "schoolAddress": {
-                  "type": "string"
-                },
-                "schoolPostCode": {
-                  "type": "integer"
-                },
-                "schoolPhoneNumber": {
-                  "type": "string"
-                },
-                "schoolStatus": {
-                  "type": "boolean"
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "quizzes": {
-                  "type": "string"
-                },
-                "cities": {
-                  "type": "string"
-                },
-                "students": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "chapters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculum": {
-                  "type": "string"
-                },
-                "subchapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -11784,12 +11352,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -11799,17 +11361,67 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -11821,12 +11433,8 @@
           "quizName",
           "description",
           "capacity",
-          "studentPerSchool",
-          "quizDate",
-          "durationHour",
           "durationMinute",
-          "totalQuestions",
-          "totalWinners"
+          "totalQuestions"
         ],
         "properties": {
           "quizName": {
@@ -11838,38 +11446,14 @@
           "capacity": {
             "type": "integer"
           },
-          "studentPerSchool": {
-            "type": "integer"
-          },
-          "quizDate": {
-            "type": "string"
-          },
-          "durationHour": {
-            "type": "integer"
-          },
           "durationMinute": {
             "type": "integer"
           },
           "totalQuestions": {
             "type": "integer"
           },
-          "totalWinners": {
-            "type": "integer"
-          },
           "quizStatus": {
             "type": "boolean"
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "schoolParticipant": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "chapters": {
             "type": "array",
@@ -11877,13 +11461,19 @@
               "type": "string"
             }
           },
-          "courses": {
+          "classes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -11928,85 +11518,6 @@
           },
           "schoolStatus": {
             "type": "boolean"
-          },
-          "quizzes": {
-            "required": [
-              "id",
-              "quizName",
-              "description",
-              "capacity",
-              "studentPerSchool",
-              "quizDate",
-              "durationHour",
-              "durationMinute",
-              "totalQuestions",
-              "totalWinners"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "quizName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "integer"
-              },
-              "studentPerSchool": {
-                "type": "integer"
-              },
-              "quizDate": {
-                "type": "string"
-              },
-              "durationHour": {
-                "type": "integer"
-              },
-              "durationMinute": {
-                "type": "integer"
-              },
-              "totalQuestions": {
-                "type": "integer"
-              },
-              "totalWinners": {
-                "type": "integer"
-              },
-              "quizStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "schoolParticipant": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "chapters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "cities": {
             "required": [
@@ -12055,10 +11566,10 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
+                "grade": {
                   "type": "string"
                 },
-                "grade": {
+                "class": {
                   "type": "string"
                 }
               }
@@ -12099,9 +11610,6 @@
           },
           "schoolStatus": {
             "type": "boolean"
-          },
-          "quizzes": {
-            "type": "string"
           },
           "cities": {
             "type": "string"
@@ -12174,9 +11682,6 @@
               "schoolStatus": {
                 "type": "boolean"
               },
-              "quizzes": {
-                "type": "string"
-              },
               "cities": {
                 "type": "string"
               },
@@ -12190,6 +11695,26 @@
           },
           "activeStatus": {
             "type": "boolean"
+          },
+          "grade": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "class": {
             "required": [
@@ -12213,19 +11738,13 @@
               "grades": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teachers": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -12236,22 +11755,14 @@
                 "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "grade": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
-              "name": {
-                "type": "string"
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "students": {
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -12285,10 +11796,10 @@
           "activeStatus": {
             "type": "boolean"
           },
-          "class": {
+          "grade": {
             "type": "string"
           },
-          "grade": {
+          "class": {
             "type": "string"
           }
         }
@@ -12317,12 +11828,6 @@
               "name": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "curriculum": {
                 "type": "string"
               },
@@ -12337,6 +11842,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quiz": {
+                "type": "string"
               }
             }
           }
@@ -12352,6 +11860,295 @@
           },
           "chapter": {
             "type": "string"
+          }
+        }
+      },
+      "Teachers": {
+        "required": [
+          "id",
+          "NUPTK"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "classLevel",
+                "className"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classLevel": {
+                  "type": "string"
+                },
+                "className": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "grades": {
+                  "type": "string"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "NUPTK": {
+            "type": "string"
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "updatedBy"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
+              }
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "questionType",
+                "optionA",
+                "optionB",
+                "answer",
+                "explanationType",
+                "question",
+                "questionDetail"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "questionType": {
+                  "type": "string"
+                },
+                "questionImage": {
+                  "type": "string"
+                },
+                "optionA": {
+                  "type": "string"
+                },
+                "optionB": {
+                  "type": "string"
+                },
+                "optionC": {
+                  "type": "string"
+                },
+                "optionD": {
+                  "type": "string"
+                },
+                "optionE": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                },
+                "explanationType": {
+                  "type": "string"
+                },
+                "imageExplanation": {
+                  "type": "string"
+                },
+                "textExplanation": {
+                  "type": "string"
+                },
+                "pdfExplanation": {
+                  "type": "string"
+                },
+                "videoExplanation": {
+                  "type": "string"
+                },
+                "difficulties": {
+                  "type": "string"
+                },
+                "questionVideo": {
+                  "type": "string"
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionDetail": {
+                  "type": "string"
+                },
+                "questionsource": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
+                },
+                "Workflow": {
+                  "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewTeachers": {
+        "required": [
+          "NUPTK"
+        ],
+        "properties": {
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "NUPTK": {
+            "type": "string"
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "updatedBy"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
+              }
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -12451,13 +12248,13 @@
                 "image_url": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "students": {
                   "type": "string"
                 },
                 "userType": {
+                  "type": "string"
+                },
+                "contributor": {
                   "type": "string"
                 }
               }
@@ -12561,64 +12358,6 @@
           "image_url": {
             "type": "string"
           },
-          "contributor": {
-            "required": [
-              "id",
-              "contibutorName",
-              "contributorEmail",
-              "contributorPassword"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "contibutorName": {
-                "type": "string"
-              },
-              "contributorEmail": {
-                "type": "string"
-              },
-              "contributorPassword": {
-                "type": "string"
-              },
-              "contributorBirthday": {
-                "type": "string"
-              },
-              "contributorAddress": {
-                "type": "string"
-              },
-              "contributorPostCode": {
-                "type": "string"
-              },
-              "contributorPhoneNumber": {
-                "type": "string"
-              },
-              "contributorStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "cities": {
-                "type": "string"
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "students": {
             "required": [
               "id",
@@ -12647,10 +12386,10 @@
               "activeStatus": {
                 "type": "boolean"
               },
-              "class": {
+              "grade": {
                 "type": "string"
               },
-              "grade": {
+              "class": {
                 "type": "string"
               }
             }
@@ -12661,6 +12400,41 @@
               "student",
               "teacher"
             ]
+          },
+          "contributor": {
+            "required": [
+              "id",
+              "NUPTK"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "NUPTK": {
+                "type": "string"
+              },
+              "Workflow": {
+                "type": "group"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -12705,9 +12479,6 @@
           "image_url": {
             "type": "string"
           },
-          "contributor": {
-            "type": "string"
-          },
           "students": {
             "type": "string"
           },
@@ -12717,6 +12488,9 @@
               "student",
               "teacher"
             ]
+          },
+          "contributor": {
+            "type": "string"
           }
         }
       },
@@ -12755,9 +12529,6 @@
       "name": "Classes"
     },
     {
-      "name": "Contributors"
-    },
-    {
       "name": "Courses"
     },
     {
@@ -12786,6 +12557,9 @@
     },
     {
       "name": "Subchapters"
+    },
+    {
+      "name": "Teachers"
     },
     {
       "name": "Email - Email"

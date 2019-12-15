@@ -520,88 +520,6 @@
           "name": {
             "type": "string"
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "curriculum": {
             "required": [
               "id",
@@ -713,12 +631,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -728,17 +640,80 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "quiz": {
+            "required": [
+              "id",
+              "quizName",
+              "description",
+              "capacity",
+              "durationMinute",
+              "totalQuestions"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "quizName": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "capacity": {
+                "type": "integer"
+              },
+              "durationMinute": {
+                "type": "integer"
+              },
+              "totalQuestions": {
+                "type": "integer"
+              },
+              "quizStatus": {
+                "type": "boolean"
+              },
+              "chapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -752,12 +727,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "curriculum": {
             "type": "string"
@@ -773,6 +742,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "quiz": {
+            "type": "string"
           }
         }
       }

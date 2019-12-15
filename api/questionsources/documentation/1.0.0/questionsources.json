@@ -586,12 +586,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -601,17 +595,23 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

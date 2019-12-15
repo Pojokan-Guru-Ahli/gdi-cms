@@ -62,9 +62,6 @@
     "image_url": {
       "type": "string"
     },
-    "contributor": {
-      "model": "contributors"
-    },
     "students": {
       "model": "students"
     },
@@ -74,6 +71,9 @@
         "teacher"
       ],
       "type": "enumeration"
+    },
+    "contributor": {
+      "model": "teachers"
     }
   }
 }

@@ -547,149 +547,6 @@
               }
             }
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "studentPerSchool",
-                "quizDate",
-                "durationHour",
-                "durationMinute",
-                "totalQuestions",
-                "totalWinners"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "studentPerSchool": {
-                  "type": "integer"
-                },
-                "quizDate": {
-                  "type": "string"
-                },
-                "durationHour": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "totalWinners": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schoolParticipant": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "contibutorName",
-                "contributorEmail",
-                "contributorPassword"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "contibutorName": {
-                  "type": "string"
-                },
-                "contributorEmail": {
-                  "type": "string"
-                },
-                "contributorPassword": {
-                  "type": "string"
-                },
-                "contributorBirthday": {
-                  "type": "string"
-                },
-                "contributorAddress": {
-                  "type": "string"
-                },
-                "contributorPostCode": {
-                  "type": "string"
-                },
-                "contributorPhoneNumber": {
-                  "type": "string"
-                },
-                "contributorStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cities": {
-                  "type": "string"
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "students": {
             "type": "array",
             "items": {
@@ -720,11 +577,49 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
-                  "type": "string"
-                },
                 "grade": {
                   "type": "string"
+                },
+                "class": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "teachers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "NUPTK"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "NUPTK": {
+                  "type": "string"
+                },
+                "Workflow": {
+                  "type": "group"
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -791,12 +686,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -806,17 +695,127 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "quizName",
+                "description",
+                "capacity",
+                "durationMinute",
+                "totalQuestions"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "quizName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "capacity": {
+                  "type": "integer"
+                },
+                "durationMinute": {
+                  "type": "integer"
+                },
+                "totalQuestions": {
+                  "type": "integer"
+                },
+                "quizStatus": {
+                  "type": "boolean"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -841,25 +840,31 @@
           "grades": {
             "type": "string"
           },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contributors": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "students": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
+          "teachers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "quizzes": {
             "type": "array",
             "items": {
               "type": "string"

@@ -546,85 +546,6 @@
           "schoolStatus": {
             "type": "boolean"
           },
-          "quizzes": {
-            "required": [
-              "id",
-              "quizName",
-              "description",
-              "capacity",
-              "studentPerSchool",
-              "quizDate",
-              "durationHour",
-              "durationMinute",
-              "totalQuestions",
-              "totalWinners"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "quizName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "capacity": {
-                "type": "integer"
-              },
-              "studentPerSchool": {
-                "type": "integer"
-              },
-              "quizDate": {
-                "type": "string"
-              },
-              "durationHour": {
-                "type": "integer"
-              },
-              "durationMinute": {
-                "type": "integer"
-              },
-              "totalQuestions": {
-                "type": "integer"
-              },
-              "totalWinners": {
-                "type": "integer"
-              },
-              "quizStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "schoolParticipant": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "chapters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "cities": {
             "required": [
               "id",
@@ -672,10 +593,10 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
+                "grade": {
                   "type": "string"
                 },
-                "grade": {
+                "class": {
                   "type": "string"
                 }
               }
@@ -716,9 +637,6 @@
           },
           "schoolStatus": {
             "type": "boolean"
-          },
-          "quizzes": {
-            "type": "string"
           },
           "cities": {
             "type": "string"

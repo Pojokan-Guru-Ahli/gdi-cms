@@ -22,19 +22,23 @@
       "via": "related",
       "plugin": "upload"
     },
-    "quizzes": {
-      "collection": "quizzes",
-      "via": "courses"
-    },
-    "contributors": {
-      "collection": "contributors",
-      "via": "courses",
-      "dominant": true
-    },
     "curriculums": {
       "collection": "curriculums",
       "via": "courses",
       "dominant": true
+    },
+    "teachers": {
+      "collection": "teachers",
+      "via": "courses"
+    },
+    "classes": {
+      "collection": "classes",
+      "via": "courses",
+      "dominant": true
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "courses"
     }
   }
 }

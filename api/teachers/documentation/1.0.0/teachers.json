@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/contributors": {
+    "/teachers": {
       "get": {
         "deprecated": false,
-        "description": "Find all the contributors's records",
+        "description": "Find all the teachers's records",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve teachers document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contributors"
+                    "$ref": "#/components/schemas/Teachers"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "parameters": [
           {
@@ -188,14 +188,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new contributors record",
+        "description": "Create a new teachers record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve teachers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Teachers"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "requestBody": {
           "description": "",
@@ -241,20 +241,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributors"
+                "$ref": "#/components/schemas/NewTeachers"
               }
             }
           }
         }
       }
     },
-    "/contributors/count": {
+    "/teachers/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of contributors documents",
+        "description": "Retrieve the numver of teachers documents",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve teachers document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -300,22 +300,22 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "parameters": []
       }
     },
-    "/contributors/{id}": {
+    "/teachers/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one contributors record",
+        "description": "Find one teachers record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve teachers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Teachers"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "parameters": [
           {
@@ -370,14 +370,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single contributors record",
+        "description": "Update a single teachers record",
         "responses": {
           "200": {
-            "description": "Retrieve contributors document(s)",
+            "description": "Retrieve teachers document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributors"
+                  "$ref": "#/components/schemas/Teachers"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributors"
+                "$ref": "#/components/schemas/NewTeachers"
               }
             }
           }
@@ -443,10 +443,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single contributors record",
+        "description": "Delete a single teachers record",
         "responses": {
           "200": {
-            "description": "deletes a single contributors based on the ID supplied",
+            "description": "deletes a single teachers based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributors"
+          "Teachers"
         ],
         "parameters": [
           {
@@ -508,40 +508,14 @@
   },
   "components": {
     "schemas": {
-      "Contributors": {
+      "Teachers": {
         "required": [
           "id",
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
+          "NUPTK"
         ],
         "properties": {
           "id": {
             "type": "string"
-          },
-          "contibutorName": {
-            "type": "string"
-          },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
           },
           "classes": {
             "type": "array",
@@ -567,19 +541,13 @@
                 "grades": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -590,62 +558,49 @@
                   "items": {
                     "type": "string"
                   }
-                }
-              }
-            }
-          },
-          "cities": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "province": {
-                "type": "string"
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
                 },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
+              }
+            }
+          },
+          "NUPTK": {
+            "type": "string"
+          },
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "updatedBy"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
               }
             }
           },
@@ -711,12 +666,6 @@
                 "questionVideo": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "question": {
                   "type": "string"
                 },
@@ -726,70 +675,121 @@
                 "questionsource": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "chapter": {
-                  "type": "string"
-                },
-                "class": {
                   "type": "string"
                 },
                 "Workflow": {
                   "type": "group"
+                },
+                "class": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
           }
         }
       },
-      "NewContributors": {
+      "NewTeachers": {
         "required": [
-          "contibutorName",
-          "contributorEmail",
-          "contributorPassword"
+          "NUPTK"
         ],
         "properties": {
-          "contibutorName": {
-            "type": "string"
-          },
-          "contributorEmail": {
-            "type": "string"
-          },
-          "contributorPassword": {
-            "type": "string"
-          },
-          "contributorBirthday": {
-            "type": "string"
-          },
-          "contributorAddress": {
-            "type": "string"
-          },
-          "contributorPostCode": {
-            "type": "string"
-          },
-          "contributorPhoneNumber": {
-            "type": "string"
-          },
-          "contributorStatus": {
-            "type": "boolean"
-          },
           "classes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "cities": {
+          "NUPTK": {
             "type": "string"
           },
-          "courses": {
+          "Workflow": {
+            "type": "object",
+            "required": [
+              "id",
+              "status",
+              "updatedBy"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "pending",
+                  "rejected",
+                  "approved"
+                ]
+              },
+              "noted": {
+                "type": "string"
+              },
+              "updatedBy": {
+                "type": "string"
+              }
+            }
+          },
+          "questions": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "questions": {
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -801,7 +801,7 @@
   },
   "tags": [
     {
-      "name": "Contributors"
+      "name": "Teachers"
     }
   ]
 }

@@ -568,9 +568,6 @@
               "schoolStatus": {
                 "type": "boolean"
               },
-              "quizzes": {
-                "type": "string"
-              },
               "cities": {
                 "type": "string"
               },
@@ -584,6 +581,26 @@
           },
           "activeStatus": {
             "type": "boolean"
+          },
+          "grade": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "class": {
             "required": [
@@ -607,19 +624,13 @@
               "grades": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teachers": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -630,22 +641,14 @@
                 "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "grade": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
-              "name": {
-                "type": "string"
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "students": {
+              "quizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -679,10 +682,10 @@
           "activeStatus": {
             "type": "boolean"
           },
-          "class": {
+          "grade": {
             "type": "string"
           },
-          "grade": {
+          "class": {
             "type": "string"
           }
         }

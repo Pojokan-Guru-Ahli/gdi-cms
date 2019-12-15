@@ -17,10 +17,6 @@
       "unique": true,
       "required": true
     },
-    "quizzes": {
-      "collection": "quizzes",
-      "via": "chapters"
-    },
     "curriculum": {
       "model": "curriculums",
       "via": "chapters"
@@ -32,6 +28,10 @@
     "questions": {
       "collection": "questions",
       "via": "chapter"
+    },
+    "quiz": {
+      "model": "quizzes",
+      "via": "chapters"
     }
   }
 }

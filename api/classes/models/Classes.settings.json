@@ -26,21 +26,26 @@
     "grades": {
       "model": "grades"
     },
-    "quizzes": {
-      "collection": "quizzes",
-      "via": "classes"
-    },
-    "contributors": {
-      "collection": "contributors",
-      "via": "classes"
-    },
     "students": {
       "collection": "students",
       "via": "class"
     },
+    "teachers": {
+      "collection": "teachers",
+      "dominant": true,
+      "via": "classes"
+    },
     "questions": {
       "collection": "questions",
       "via": "class"
+    },
+    "courses": {
+      "collection": "courses",
+      "via": "classes"
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "classes"
     }
   }
 }

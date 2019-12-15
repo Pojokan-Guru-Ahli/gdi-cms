@@ -532,12 +532,6 @@
               "name": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "curriculum": {
                 "type": "string"
               },
@@ -552,6 +546,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quiz": {
+                "type": "string"
               }
             }
           }

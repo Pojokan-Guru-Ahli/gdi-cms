@@ -609,13 +609,13 @@
                 "image_url": {
                   "type": "string"
                 },
-                "contributor": {
-                  "type": "string"
-                },
                 "students": {
                   "type": "string"
                 },
                 "userType": {
+                  "type": "string"
+                },
+                "contributor": {
                   "type": "string"
                 }
               }

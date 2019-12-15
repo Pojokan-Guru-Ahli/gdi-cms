@@ -12,10 +12,15 @@
         "rejected",
         "approved"
       ],
-      "type": "enumeration"
+      "type": "enumeration",
+      "required": true
     },
     "noted": {
       "type": "text"
+    },
+    "updatedBy": {
+      "required": true,
+      "type": "string"
     }
   }
 }

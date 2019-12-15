@@ -24,18 +24,6 @@
       "type": "integer",
       "required": true
     },
-    "studentPerSchool": {
-      "type": "integer",
-      "required": true
-    },
-    "quizDate": {
-      "required": true,
-      "type": "date"
-    },
-    "durationHour": {
-      "type": "integer",
-      "required": true
-    },
     "durationMinute": {
       "type": "integer",
       "required": true
@@ -44,36 +32,27 @@
       "type": "integer",
       "required": true
     },
-    "totalWinners": {
-      "type": "integer",
-      "required": true
-    },
     "quizStatus": {
       "type": "boolean"
+    },
+    "chapters": {
+      "collection": "chapters",
+      "via": "quiz"
     },
     "classes": {
       "collection": "classes",
       "via": "quizzes",
       "dominant": true
     },
-    "schoolParticipant": {
-      "collection": "schools",
-      "via": "quizzes"
-    },
-    "chapters": {
-      "collection": "chapters",
-      "dominant": true,
-      "via": "quizzes"
+    "questions": {
+      "collection": "questions",
+      "via": "quizzes",
+      "dominant": true
     },
     "courses": {
       "collection": "courses",
-      "dominant": true,
-      "via": "quizzes"
-    },
-    "questions": {
-      "collection": "questions",
-      "dominant": true,
-      "via": "quizzes"
+      "via": "quizzes",
+      "dominant": true
     }
   }
 }

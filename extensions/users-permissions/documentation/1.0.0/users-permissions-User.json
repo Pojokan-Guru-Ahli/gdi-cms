@@ -1168,64 +1168,6 @@
           "image_url": {
             "type": "string"
           },
-          "contributor": {
-            "required": [
-              "id",
-              "contibutorName",
-              "contributorEmail",
-              "contributorPassword"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "contibutorName": {
-                "type": "string"
-              },
-              "contributorEmail": {
-                "type": "string"
-              },
-              "contributorPassword": {
-                "type": "string"
-              },
-              "contributorBirthday": {
-                "type": "string"
-              },
-              "contributorAddress": {
-                "type": "string"
-              },
-              "contributorPostCode": {
-                "type": "string"
-              },
-              "contributorPhoneNumber": {
-                "type": "string"
-              },
-              "contributorStatus": {
-                "type": "boolean"
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "cities": {
-                "type": "string"
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "students": {
             "required": [
               "id",
@@ -1254,10 +1196,10 @@
               "activeStatus": {
                 "type": "boolean"
               },
-              "class": {
+              "grade": {
                 "type": "string"
               },
-              "grade": {
+              "class": {
                 "type": "string"
               }
             }
@@ -1268,6 +1210,41 @@
               "student",
               "teacher"
             ]
+          },
+          "contributor": {
+            "required": [
+              "id",
+              "NUPTK"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "NUPTK": {
+                "type": "string"
+              },
+              "Workflow": {
+                "type": "group"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1312,9 +1289,6 @@
           "image_url": {
             "type": "string"
           },
-          "contributor": {
-            "type": "string"
-          },
           "students": {
             "type": "string"
           },
@@ -1324,6 +1298,9 @@
               "student",
               "teacher"
             ]
+          },
+          "contributor": {
+            "type": "string"
           }
         }
       }

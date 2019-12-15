@@ -34,12 +34,12 @@
     "activeStatus": {
       "type": "boolean"
     },
-    "class": {
-      "model": "classes",
-      "via": "students"
-    },
     "grade": {
       "model": "grades",
+      "via": "students"
+    },
+    "class": {
+      "model": "classes",
       "via": "students"
     }
   }

@@ -550,10 +550,10 @@
                 "activeStatus": {
                   "type": "boolean"
                 },
-                "class": {
+                "grade": {
                   "type": "string"
                 },
-                "grade": {
+                "class": {
                   "type": "string"
                 }
               }

@@ -532,12 +532,6 @@
               "name": {
                 "type": "string"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "curriculum": {
                 "type": "string"
               },
@@ -552,6 +546,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "quiz": {
+                "type": "string"
               }
             }
           },
@@ -569,12 +566,6 @@
                 "name": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "curriculum": {
                   "type": "string"
                 },
@@ -589,6 +580,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "quiz": {
+                  "type": "string"
                 }
               }
             }
@@ -610,19 +604,25 @@
                 "icon": {
                   "type": "string"
                 },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teachers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
                   "type": "array",
                   "items": {
                     "type": "string"

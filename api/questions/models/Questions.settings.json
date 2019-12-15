@@ -94,10 +94,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "quizzes": {
-      "collection": "quizzes",
-      "via": "questions"
-    },
     "question": {
       "type": "string",
       "unique": true,
@@ -111,21 +107,25 @@
       "model": "questionsources",
       "via": "questions"
     },
-    "contributor": {
-      "model": "contributors",
-      "via": "questions"
-    },
     "chapter": {
       "model": "chapters",
-      "via": "questions"
-    },
-    "class": {
-      "model": "classes",
       "via": "questions"
     },
     "Workflow": {
       "group": "workflow",
       "type": "group"
+    },
+    "class": {
+      "model": "classes",
+      "via": "questions"
+    },
+    "teacher": {
+      "model": "teachers",
+      "via": "questions"
+    },
+    "quizzes": {
+      "collection": "quizzes",
+      "via": "questions"
     }
   }
 }

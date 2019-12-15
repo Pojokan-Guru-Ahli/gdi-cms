@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Contributors` model.
+ * Lifecycle callbacks for the `Teachers` model.
  */
 
 module.exports = {
