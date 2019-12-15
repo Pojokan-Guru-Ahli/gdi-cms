@@ -811,60 +811,6 @@
               }
             }
           },
-          "classes": {
-            "required": [
-              "id",
-              "classLevel",
-              "className"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classLevel": {
-                "type": "string"
-              },
-              "className": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "source": {
-            "required": [
-              "id",
-              "sourceInfo",
-              "year"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "sourceInfo": {
-                "type": "string"
-              },
-              "year": {
-                "type": "integer"
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -920,18 +866,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -939,6 +873,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -953,34 +899,23 @@
           "questionDetail": {
             "type": "string"
           },
-          "contents": {
+          "questionsource": {
             "required": [
               "id",
-              "name"
+              "sourceInfo",
+              "year"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "sourceInfo": {
                 "type": "string"
               },
-              "icon": {
-                "type": "string"
+              "year": {
+                "type": "integer"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "curriculums": {
+              "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -1059,12 +994,6 @@
               "Hard"
             ]
           },
-          "classes": {
-            "type": "string"
-          },
-          "source": {
-            "type": "string"
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -1077,7 +1006,7 @@
           "questionDetail": {
             "type": "string"
           },
-          "contents": {
+          "questionsource": {
             "type": "string"
           }
         }

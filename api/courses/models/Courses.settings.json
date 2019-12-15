@@ -33,8 +33,8 @@
     },
     "curriculums": {
       "collection": "curriculums",
-      "dominant": true,
-      "via": "courses"
+      "via": "courses",
+      "dominant": true
     }
   }
 }

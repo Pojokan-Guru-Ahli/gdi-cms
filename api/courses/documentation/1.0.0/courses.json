@@ -621,18 +621,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -640,6 +628,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -717,16 +717,16 @@
                 "name": {
                   "type": "string"
                 },
-                "courses": {
+                "chapter": {
+                  "type": "string"
+                },
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "chapter": {
-                  "type": "string"
-                },
-                "chapters": {
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"

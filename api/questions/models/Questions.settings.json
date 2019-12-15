@@ -100,12 +100,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "classes": {
-      "model": "classes"
-    },
-    "source": {
-      "model": "questionsources"
-    },
     "quizzes": {
       "collection": "quizzes",
       "via": "questions"
@@ -119,8 +113,9 @@
       "type": "richtext",
       "required": true
     },
-    "contents": {
-      "model": "courses"
+    "questionsource": {
+      "model": "questionsources",
+      "via": "questions"
     }
   }
 }

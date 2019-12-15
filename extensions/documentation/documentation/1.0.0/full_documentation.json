@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/15/2019 8:23:13 PM"
+    "x-generation-date": "12/15/2019 8:46:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9250,18 +9250,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -9269,6 +9257,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9289,16 +9289,16 @@
               "name": {
                 "type": "string"
               },
-              "courses": {
+              "chapter": {
+                "type": "string"
+              },
+              "chapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "chapter": {
-                "type": "string"
-              },
-              "chapters": {
+              "courses": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -9488,18 +9488,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -9507,6 +9495,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9896,18 +9896,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -9915,6 +9903,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9992,16 +9992,16 @@
                 "name": {
                   "type": "string"
                 },
-                "courses": {
+                "chapter": {
+                  "type": "string"
+                },
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "chapter": {
-                  "type": "string"
-                },
-                "chapters": {
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10051,44 +10051,6 @@
           },
           "name": {
             "type": "string"
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           },
           "chapter": {
             "required": [
@@ -10150,6 +10112,44 @@
                 }
               }
             }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -10161,16 +10161,16 @@
           "name": {
             "type": "string"
           },
-          "courses": {
+          "chapter": {
+            "type": "string"
+          },
+          "chapters": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "chapter": {
-            "type": "string"
-          },
-          "chapters": {
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -10555,60 +10555,6 @@
               }
             }
           },
-          "classes": {
-            "required": [
-              "id",
-              "classLevel",
-              "className"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classLevel": {
-                "type": "string"
-              },
-              "className": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "source": {
-            "required": [
-              "id",
-              "sourceInfo",
-              "year"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "sourceInfo": {
-                "type": "string"
-              },
-              "year": {
-                "type": "integer"
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -10664,18 +10610,6 @@
                     "type": "string"
                   }
                 },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "schoolParticipant": {
                   "type": "array",
                   "items": {
@@ -10683,6 +10617,18 @@
                   }
                 },
                 "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "questions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10697,34 +10643,23 @@
           "questionDetail": {
             "type": "string"
           },
-          "contents": {
+          "questionsource": {
             "required": [
               "id",
-              "name"
+              "sourceInfo",
+              "year"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "sourceInfo": {
                 "type": "string"
               },
-              "icon": {
-                "type": "string"
+              "year": {
+                "type": "integer"
               },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "curriculums": {
+              "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -10803,12 +10738,6 @@
               "Hard"
             ]
           },
-          "classes": {
-            "type": "string"
-          },
-          "source": {
-            "type": "string"
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -10821,7 +10750,7 @@
           "questionDetail": {
             "type": "string"
           },
-          "contents": {
+          "questionsource": {
             "type": "string"
           }
         }
@@ -10841,6 +10770,92 @@
           },
           "year": {
             "type": "integer"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "questionType",
+                "optionB",
+                "optionC",
+                "optionD",
+                "optionE",
+                "answer",
+                "explanationType",
+                "activeStatus",
+                "question",
+                "questionDetail"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "questionType": {
+                  "type": "string"
+                },
+                "questionImage": {
+                  "type": "string"
+                },
+                "optionA": {
+                  "type": "string"
+                },
+                "optionB": {
+                  "type": "string"
+                },
+                "optionC": {
+                  "type": "string"
+                },
+                "optionD": {
+                  "type": "string"
+                },
+                "optionE": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                },
+                "explanationType": {
+                  "type": "string"
+                },
+                "imageExplanation": {
+                  "type": "string"
+                },
+                "textExplanation": {
+                  "type": "string"
+                },
+                "pdfExplanation": {
+                  "type": "string"
+                },
+                "videoExplanation": {
+                  "type": "string"
+                },
+                "activeStatus": {
+                  "type": "boolean"
+                },
+                "difficulties": {
+                  "type": "string"
+                },
+                "questionVideo": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionDetail": {
+                  "type": "string"
+                },
+                "questionsource": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -10855,6 +10870,12 @@
           },
           "year": {
             "type": "integer"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -10936,136 +10957,6 @@
                   }
                 },
                 "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "questions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "questionType",
-                "optionB",
-                "optionC",
-                "optionD",
-                "optionE",
-                "answer",
-                "explanationType",
-                "activeStatus",
-                "question",
-                "questionDetail"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "questionType": {
-                  "type": "string"
-                },
-                "questionImage": {
-                  "type": "string"
-                },
-                "optionA": {
-                  "type": "string"
-                },
-                "optionB": {
-                  "type": "string"
-                },
-                "optionC": {
-                  "type": "string"
-                },
-                "optionD": {
-                  "type": "string"
-                },
-                "optionE": {
-                  "type": "string"
-                },
-                "answer": {
-                  "type": "string"
-                },
-                "explanationType": {
-                  "type": "string"
-                },
-                "imageExplanation": {
-                  "type": "string"
-                },
-                "textExplanation": {
-                  "type": "string"
-                },
-                "pdfExplanation": {
-                  "type": "string"
-                },
-                "videoExplanation": {
-                  "type": "string"
-                },
-                "activeStatus": {
-                  "type": "boolean"
-                },
-                "difficulties": {
-                  "type": "string"
-                },
-                "questionVideo": {
-                  "type": "string"
-                },
-                "classes": {
-                  "type": "string"
-                },
-                "source": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "question": {
-                  "type": "string"
-                },
-                "questionDetail": {
-                  "type": "string"
-                },
-                "contents": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "curriculums": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -11160,6 +11051,130 @@
                 }
               }
             }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "questionType",
+                "optionB",
+                "optionC",
+                "optionD",
+                "optionE",
+                "answer",
+                "explanationType",
+                "activeStatus",
+                "question",
+                "questionDetail"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "questionType": {
+                  "type": "string"
+                },
+                "questionImage": {
+                  "type": "string"
+                },
+                "optionA": {
+                  "type": "string"
+                },
+                "optionB": {
+                  "type": "string"
+                },
+                "optionC": {
+                  "type": "string"
+                },
+                "optionD": {
+                  "type": "string"
+                },
+                "optionE": {
+                  "type": "string"
+                },
+                "answer": {
+                  "type": "string"
+                },
+                "explanationType": {
+                  "type": "string"
+                },
+                "imageExplanation": {
+                  "type": "string"
+                },
+                "textExplanation": {
+                  "type": "string"
+                },
+                "pdfExplanation": {
+                  "type": "string"
+                },
+                "videoExplanation": {
+                  "type": "string"
+                },
+                "activeStatus": {
+                  "type": "boolean"
+                },
+                "difficulties": {
+                  "type": "string"
+                },
+                "questionVideo": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "question": {
+                  "type": "string"
+                },
+                "questionDetail": {
+                  "type": "string"
+                },
+                "questionsource": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -11212,18 +11227,6 @@
               "type": "string"
             }
           },
-          "questions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "schoolParticipant": {
             "type": "array",
             "items": {
@@ -11231,6 +11234,18 @@
             }
           },
           "chapters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -11329,18 +11344,6 @@
                   "type": "string"
                 }
               },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "schoolParticipant": {
                 "type": "array",
                 "items": {
@@ -11348,6 +11351,18 @@
                 }
               },
               "chapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
                 "type": "array",
                 "items": {
                   "type": "string"
