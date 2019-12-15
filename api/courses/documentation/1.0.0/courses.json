@@ -621,7 +621,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -633,7 +633,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -691,13 +691,39 @@
                     "type": "string"
                   }
                 },
+                "cities": {
+                  "type": "string"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "curriculums": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
                 "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "cities": {
+                "chapter": {
                   "type": "string"
                 }
               }
@@ -720,6 +746,12 @@
             }
           },
           "contributors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "curriculums": {
             "type": "array",
             "items": {
               "type": "string"

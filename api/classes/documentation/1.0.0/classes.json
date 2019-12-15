@@ -596,7 +596,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -608,7 +608,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -666,14 +666,14 @@
                     "type": "string"
                   }
                 },
+                "cities": {
+                  "type": "string"
+                },
                 "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "cities": {
-                  "type": "string"
                 }
               }
             }

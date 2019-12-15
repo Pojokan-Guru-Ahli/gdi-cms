@@ -526,33 +526,6 @@
           "id": {
             "type": "string"
           },
-          "subject": {
-            "required": [
-              "id",
-              "subjectLevel",
-              "subjectName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subjectLevel": {
-                "type": "integer"
-              },
-              "subjectName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "subClass": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              }
-            }
-          },
           "questionType": {
             "type": "string",
             "enum": [
@@ -874,35 +847,6 @@
               }
             }
           },
-          "contents": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "source": {
             "required": [
               "id",
@@ -976,7 +920,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -988,7 +932,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -1009,49 +953,38 @@
           "questionDetail": {
             "type": "string"
           },
-          "schools": {
+          "contents": {
             "required": [
               "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolPostCode"
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "schoolName": {
+              "name": {
                 "type": "string"
               },
-              "schoolEmail": {
+              "icon": {
                 "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
               },
               "quizzes": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "cities": {
-                "type": "string"
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculums": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -1071,9 +1004,6 @@
           "questionDetail"
         ],
         "properties": {
-          "subject": {
-            "type": "string"
-          },
           "questionType": {
             "type": "string",
             "enum": [
@@ -1132,9 +1062,6 @@
           "classes": {
             "type": "string"
           },
-          "contents": {
-            "type": "string"
-          },
           "source": {
             "type": "string"
           },
@@ -1150,7 +1077,7 @@
           "questionDetail": {
             "type": "string"
           },
-          "schools": {
+          "contents": {
             "type": "string"
           }
         }

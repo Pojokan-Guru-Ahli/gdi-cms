@@ -599,7 +599,7 @@
                   "type": "string"
                 }
               },
-              "chapters": {
+              "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -611,7 +611,7 @@
                   "type": "string"
                 }
               },
-              "questions": {
+              "chapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -639,6 +639,36 @@
               },
               "province": {
                 "type": "string"
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "studentNumber",
+                "studentName"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "studentNumber": {
+                  "type": "string"
+                },
+                "studentName": {
+                  "type": "string"
+                },
+                "studentBirthday": {
+                  "type": "string"
+                },
+                "parentMobilePhone": {
+                  "type": "string"
+                },
+                "school": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -683,6 +713,12 @@
           },
           "cities": {
             "type": "string"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

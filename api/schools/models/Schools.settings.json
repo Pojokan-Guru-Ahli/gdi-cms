@@ -48,6 +48,10 @@
     },
     "cities": {
       "model": "cities"
+    },
+    "students": {
+      "collection": "students",
+      "via": "school"
     }
   }
 }

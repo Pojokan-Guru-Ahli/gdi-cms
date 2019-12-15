@@ -582,6 +582,23 @@
               }
             }
           },
+          "cities": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
+              }
+            }
+          },
           "courses": {
             "type": "array",
             "items": {
@@ -610,24 +627,13 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              }
-            }
-          },
-          "cities": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "province": {
-                "type": "string"
               }
             }
           }
@@ -670,14 +676,14 @@
               "type": "string"
             }
           },
+          "cities": {
+            "type": "string"
+          },
           "courses": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "cities": {
-            "type": "string"
           }
         }
       }

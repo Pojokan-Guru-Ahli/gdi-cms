@@ -532,10 +532,45 @@
               "name": {
                 "type": "string"
               },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "curriculums": {
                 "type": "string"
               },
+              "subchapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
               "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculums": {
+                "type": "string"
+              },
+              "subchapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -554,6 +589,9 @@
             "type": "string"
           },
           "chapters": {
+            "type": "string"
+          },
+          "chapter": {
             "type": "string"
           }
         }

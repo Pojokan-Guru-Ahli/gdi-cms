@@ -12,9 +12,6 @@
     ]
   },
   "attributes": {
-    "subject": {
-      "model": "subjects"
-    },
     "questionType": {
       "required": true,
       "enum": [
@@ -106,9 +103,6 @@
     "classes": {
       "model": "classes"
     },
-    "contents": {
-      "model": "courses"
-    },
     "source": {
       "model": "questionsources"
     },
@@ -125,8 +119,8 @@
       "type": "richtext",
       "required": true
     },
-    "schools": {
-      "model": "schools"
+    "contents": {
+      "model": "courses"
     }
   }
 }

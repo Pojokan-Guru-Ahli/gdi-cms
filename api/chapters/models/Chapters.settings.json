@@ -17,12 +17,16 @@
       "unique": true,
       "required": true
     },
-    "curriculums": {
-      "model": "curriculums"
-    },
     "quizzes": {
       "collection": "quizzes",
       "via": "chapters"
+    },
+    "curriculums": {
+      "model": "curriculums"
+    },
+    "subchapters": {
+      "collection": "subchapters",
+      "via": "chapter"
     }
   }
 }

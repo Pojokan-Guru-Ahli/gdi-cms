@@ -594,64 +594,6 @@
               }
             }
           },
-          "chapters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "curriculums": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "questions": {
             "type": "array",
             "items": {
@@ -670,9 +612,6 @@
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "subject": {
                   "type": "string"
                 },
                 "questionType": {
@@ -726,9 +665,6 @@
                 "classes": {
                   "type": "string"
                 },
-                "contents": {
-                  "type": "string"
-                },
                 "source": {
                   "type": "string"
                 },
@@ -744,8 +680,78 @@
                 "questionDetail": {
                   "type": "string"
                 },
-                "schools": {
+                "contents": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "chapters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "string"
+                },
+                "subchapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -795,6 +801,12 @@
                 },
                 "cities": {
                   "type": "string"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -850,7 +862,7 @@
               "type": "string"
             }
           },
-          "chapters": {
+          "questions": {
             "type": "array",
             "items": {
               "type": "string"
@@ -862,7 +874,7 @@
               "type": "string"
             }
           },
-          "questions": {
+          "chapters": {
             "type": "array",
             "items": {
               "type": "string"

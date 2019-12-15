@@ -28,6 +28,11 @@
     },
     "contributors": {
       "collection": "contributors",
+      "via": "courses",
+      "dominant": true
+    },
+    "curriculums": {
+      "collection": "curriculums",
       "dominant": true,
       "via": "courses"
     }

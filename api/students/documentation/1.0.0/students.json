@@ -573,6 +573,12 @@
               },
               "cities": {
                 "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }

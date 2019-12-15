@@ -520,20 +520,6 @@
           "name": {
             "type": "string"
           },
-          "curriculums": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -589,7 +575,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -601,7 +587,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -612,6 +598,52 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "curriculums": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "chapter": {
+                "type": "string"
+              }
+            }
+          },
+          "subchapters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "chapters": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
                 }
               }
             }
@@ -626,10 +658,16 @@
           "name": {
             "type": "string"
           },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "curriculums": {
             "type": "string"
           },
-          "quizzes": {
+          "subchapters": {
             "type": "array",
             "items": {
               "type": "string"

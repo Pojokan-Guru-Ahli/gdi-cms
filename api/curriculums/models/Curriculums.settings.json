@@ -16,6 +16,13 @@
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "courses": {
+      "collection": "courses",
+      "via": "curriculums"
+    },
+    "chapter": {
+      "model": "chapters"
     }
   }
 }

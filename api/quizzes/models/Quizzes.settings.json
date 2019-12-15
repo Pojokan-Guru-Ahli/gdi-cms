@@ -56,18 +56,18 @@
       "via": "quizzes",
       "dominant": true
     },
-    "chapters": {
-      "collection": "chapters",
-      "via": "quizzes",
-      "dominant": true
+    "questions": {
+      "collection": "questions",
+      "dominant": true,
+      "via": "quizzes"
     },
     "courses": {
       "collection": "courses",
-      "via": "quizzes",
-      "dominant": true
+      "dominant": true,
+      "via": "quizzes"
     },
-    "questions": {
-      "collection": "questions",
+    "chapters": {
+      "collection": "chapters",
       "dominant": true,
       "via": "quizzes"
     },

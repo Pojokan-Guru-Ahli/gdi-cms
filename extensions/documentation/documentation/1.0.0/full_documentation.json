@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/14/2019 4:43:17 PM"
+    "x-generation-date": "12/15/2019 8:07:46 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7114,511 +7114,6 @@
         ]
       }
     },
-    "/subjects": {
-      "get": {
-        "deprecated": false,
-        "description": "Find all the subjects's records",
-        "responses": {
-          "200": {
-            "description": "Retrieve subjects document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Subjects"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array"
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new subjects record",
-        "responses": {
-          "200": {
-            "description": "Retrieve subjects document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Subjects"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewSubjects"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/subjects/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of subjects documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve subjects document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "parameters": []
-      }
-    },
-    "/subjects/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Find one subjects record",
-        "responses": {
-          "200": {
-            "description": "Retrieve subjects document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Subjects"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a single subjects record",
-        "responses": {
-          "200": {
-            "description": "Retrieve subjects document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Subjects"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewSubjects"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a single subjects record",
-        "responses": {
-          "200": {
-            "description": "deletes a single subjects based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Subjects"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
     "/email/": {
       "post": {
         "deprecated": false,
@@ -9700,20 +9195,6 @@
           "name": {
             "type": "string"
           },
-          "curriculums": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              }
-            }
-          },
           "quizzes": {
             "type": "array",
             "items": {
@@ -9769,7 +9250,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9781,7 +9262,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9792,6 +9273,52 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "curriculums": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "chapter": {
+                "type": "string"
+              }
+            }
+          },
+          "subchapters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "chapters": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
                 }
               }
             }
@@ -9806,10 +9333,16 @@
           "name": {
             "type": "string"
           },
+          "quizzes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "curriculums": {
             "type": "string"
           },
-          "quizzes": {
+          "subchapters": {
             "type": "array",
             "items": {
               "type": "string"
@@ -9952,7 +9485,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -9964,7 +9497,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10022,14 +9555,14 @@
                     "type": "string"
                   }
                 },
+                "cities": {
+                  "type": "string"
+                },
                 "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "cities": {
-                  "type": "string"
                 }
               }
             }
@@ -10142,6 +9675,23 @@
               }
             }
           },
+          "cities": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "province": {
+                "type": "string"
+              }
+            }
+          },
           "courses": {
             "type": "array",
             "items": {
@@ -10170,24 +9720,13 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              }
-            }
-          },
-          "cities": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "province": {
-                "type": "string"
               }
             }
           }
@@ -10230,14 +9769,14 @@
               "type": "string"
             }
           },
+          "cities": {
+            "type": "string"
+          },
           "courses": {
             "type": "array",
             "items": {
               "type": "string"
             }
-          },
-          "cities": {
-            "type": "string"
           }
         }
       },
@@ -10354,7 +9893,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10366,7 +9905,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10424,13 +9963,39 @@
                     "type": "string"
                   }
                 },
+                "cities": {
+                  "type": "string"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "curriculums": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
                 "courses": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "cities": {
+                "chapter": {
                   "type": "string"
                 }
               }
@@ -10457,6 +10022,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "curriculums": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -10471,6 +10042,73 @@
           },
           "name": {
             "type": "string"
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculums": {
+                "type": "string"
+              },
+              "subchapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -10480,6 +10118,15 @@
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "chapter": {
             "type": "string"
           }
         }
@@ -10575,33 +10222,6 @@
         "properties": {
           "id": {
             "type": "string"
-          },
-          "subject": {
-            "required": [
-              "id",
-              "subjectLevel",
-              "subjectName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "subjectLevel": {
-                "type": "integer"
-              },
-              "subjectName": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "subClass": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              }
-            }
           },
           "questionType": {
             "type": "string",
@@ -10924,35 +10544,6 @@
               }
             }
           },
-          "contents": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "source": {
             "required": [
               "id",
@@ -11026,7 +10617,7 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -11038,7 +10629,7 @@
                     "type": "string"
                   }
                 },
-                "questions": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -11059,49 +10650,38 @@
           "questionDetail": {
             "type": "string"
           },
-          "schools": {
+          "contents": {
             "required": [
               "id",
-              "schoolName",
-              "schoolEmail",
-              "schoolPassword",
-              "schoolPrefix",
-              "schoolAddress",
-              "schoolPostCode"
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "schoolName": {
+              "name": {
                 "type": "string"
               },
-              "schoolEmail": {
+              "icon": {
                 "type": "string"
-              },
-              "schoolPassword": {
-                "type": "string"
-              },
-              "schoolPrefix": {
-                "type": "string"
-              },
-              "schoolAddress": {
-                "type": "string"
-              },
-              "schoolPostCode": {
-                "type": "integer"
-              },
-              "schoolPhoneNumber": {
-                "type": "string"
-              },
-              "schoolStatus": {
-                "type": "boolean"
               },
               "quizzes": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "cities": {
-                "type": "string"
+              "contributors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculums": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -11121,9 +10701,6 @@
           "questionDetail"
         ],
         "properties": {
-          "subject": {
-            "type": "string"
-          },
           "questionType": {
             "type": "string",
             "enum": [
@@ -11182,9 +10759,6 @@
           "classes": {
             "type": "string"
           },
-          "contents": {
-            "type": "string"
-          },
           "source": {
             "type": "string"
           },
@@ -11200,7 +10774,7 @@
           "questionDetail": {
             "type": "string"
           },
-          "schools": {
+          "contents": {
             "type": "string"
           }
         }
@@ -11323,64 +10897,6 @@
               }
             }
           },
-          "chapters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "curriculums": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "contributors": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "questions": {
             "type": "array",
             "items": {
@@ -11399,9 +10915,6 @@
               ],
               "properties": {
                 "id": {
-                  "type": "string"
-                },
-                "subject": {
                   "type": "string"
                 },
                 "questionType": {
@@ -11455,9 +10968,6 @@
                 "classes": {
                   "type": "string"
                 },
-                "contents": {
-                  "type": "string"
-                },
                 "source": {
                   "type": "string"
                 },
@@ -11473,8 +10983,78 @@
                 "questionDetail": {
                   "type": "string"
                 },
-                "schools": {
+                "contents": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "contributors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "chapters": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "curriculums": {
+                  "type": "string"
+                },
+                "subchapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -11524,6 +11104,12 @@
                 },
                 "cities": {
                   "type": "string"
+                },
+                "students": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -11579,7 +11165,7 @@
               "type": "string"
             }
           },
-          "chapters": {
+          "questions": {
             "type": "array",
             "items": {
               "type": "string"
@@ -11591,7 +11177,7 @@
               "type": "string"
             }
           },
-          "questions": {
+          "chapters": {
             "type": "array",
             "items": {
               "type": "string"
@@ -11696,7 +11282,7 @@
                   "type": "string"
                 }
               },
-              "chapters": {
+              "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11708,7 +11294,7 @@
                   "type": "string"
                 }
               },
-              "questions": {
+              "chapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11736,6 +11322,36 @@
               },
               "province": {
                 "type": "string"
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "studentNumber",
+                "studentName"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "studentNumber": {
+                  "type": "string"
+                },
+                "studentName": {
+                  "type": "string"
+                },
+                "studentBirthday": {
+                  "type": "string"
+                },
+                "parentMobilePhone": {
+                  "type": "string"
+                },
+                "school": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -11780,6 +11396,12 @@
           },
           "cities": {
             "type": "string"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -11848,6 +11470,12 @@
               },
               "cities": {
                 "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -11900,10 +11528,45 @@
               "name": {
                 "type": "string"
               },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "curriculums": {
                 "type": "string"
               },
+              "subchapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
               "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "curriculums": {
+                "type": "string"
+              },
+              "subchapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -11923,102 +11586,8 @@
           },
           "chapters": {
             "type": "string"
-          }
-        }
-      },
-      "Subjects": {
-        "required": [
-          "id",
-          "subjectLevel",
-          "subjectName"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
           },
-          "subjectLevel": {
-            "type": "integer"
-          },
-          "subjectName": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "subClass": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "chapters": {
-                "type": "string"
-              }
-            }
-          },
-          "classes": {
-            "required": [
-              "id",
-              "classLevel",
-              "className"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "classLevel": {
-                "type": "string"
-              },
-              "className": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "grades": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "contributors": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      },
-      "NewSubjects": {
-        "required": [
-          "subjectLevel",
-          "subjectName"
-        ],
-        "properties": {
-          "subjectLevel": {
-            "type": "integer"
-          },
-          "subjectName": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "subClass": {
-            "type": "string"
-          },
-          "classes": {
+          "chapter": {
             "type": "string"
           }
         }
@@ -12349,9 +11918,6 @@
     },
     {
       "name": "Subchapters"
-    },
-    {
-      "name": "Subjects"
     },
     {
       "name": "Email - Email"

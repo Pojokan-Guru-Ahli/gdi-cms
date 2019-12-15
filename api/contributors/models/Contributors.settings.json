@@ -44,12 +44,12 @@
       "via": "contributors",
       "dominant": true
     },
+    "cities": {
+      "model": "cities"
+    },
     "courses": {
       "collection": "courses",
       "via": "contributors"
-    },
-    "cities": {
-      "model": "cities"
     }
   }
 }
