@@ -587,13 +587,13 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "schoolParticipant": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "schoolParticipant": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -602,7 +602,7 @@
               }
             }
           },
-          "curriculums": {
+          "curriculum": {
             "required": [
               "id",
               "name"
@@ -622,6 +622,12 @@
               },
               "chapter": {
                 "type": "string"
+              },
+              "chapters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -637,9 +643,6 @@
                   "type": "string"
                 },
                 "name": {
-                  "type": "string"
-                },
-                "chapters": {
                   "type": "string"
                 },
                 "chapter": {
@@ -664,7 +667,7 @@
               "type": "string"
             }
           },
-          "curriculums": {
+          "curriculum": {
             "type": "string"
           },
           "subchapters": {

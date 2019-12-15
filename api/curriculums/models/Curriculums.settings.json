@@ -23,6 +23,10 @@
     },
     "chapter": {
       "model": "chapters"
+    },
+    "chapters": {
+      "collection": "chapters",
+      "via": "curriculum"
     }
   }
 }

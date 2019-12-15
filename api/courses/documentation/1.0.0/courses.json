@@ -633,13 +633,13 @@
                     "type": "string"
                   }
                 },
-                "chapters": {
+                "schoolParticipant": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "schoolParticipant": {
+                "chapters": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -725,6 +725,12 @@
                 },
                 "chapter": {
                   "type": "string"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

@@ -520,35 +520,6 @@
           "name": {
             "type": "string"
           },
-          "chapters": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "curriculums": {
-                "type": "string"
-              },
-              "subchapters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "chapter": {
             "required": [
               "id",
@@ -567,7 +538,7 @@
                   "type": "string"
                 }
               },
-              "curriculums": {
+              "curriculum": {
                 "type": "string"
               },
               "subchapters": {
@@ -586,9 +557,6 @@
         ],
         "properties": {
           "name": {
-            "type": "string"
-          },
-          "chapters": {
             "type": "string"
           },
           "chapter": {

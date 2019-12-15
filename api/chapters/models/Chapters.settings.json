@@ -21,8 +21,9 @@
       "collection": "quizzes",
       "via": "chapters"
     },
-    "curriculums": {
-      "model": "curriculums"
+    "curriculum": {
+      "model": "curriculums",
+      "via": "chapters"
     },
     "subchapters": {
       "collection": "subchapters",

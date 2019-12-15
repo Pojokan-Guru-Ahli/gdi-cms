@@ -66,13 +66,13 @@
       "dominant": true,
       "via": "quizzes"
     },
+    "schoolParticipant": {
+      "collection": "schools",
+      "via": "quizzes"
+    },
     "chapters": {
       "collection": "chapters",
       "dominant": true,
-      "via": "quizzes"
-    },
-    "schoolParticipant": {
-      "collection": "schools",
       "via": "quizzes"
     }
   }
