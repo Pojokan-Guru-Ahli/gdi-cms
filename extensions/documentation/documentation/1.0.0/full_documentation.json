@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/16/2019 5:01:13 AM"
+    "x-generation-date": "12/18/2019 12:01:24 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9242,6 +9242,77 @@
         "parameters": []
       }
     },
+    "/auth/send-email-confirmation": {
+      "post": {
+        "deprecated": false,
+        "description": "Send a confirmation email to user",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Users-Permissions - User"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/users": {
       "get": {
         "deprecated": false,
@@ -9824,7 +9895,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "class": {
                   "type": "string"
@@ -10080,7 +10151,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "questions": {
                   "type": "array",
@@ -10172,7 +10243,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "class": {
                   "type": "string"
@@ -10387,7 +10458,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -10456,7 +10527,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "questions": {
                   "type": "array",
@@ -10953,7 +11024,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -11033,7 +11104,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -11082,7 +11153,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -11128,7 +11199,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -11182,7 +11253,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -11360,7 +11431,7 @@
                 "type": "string"
               },
               "Workflow": {
-                "type": "group"
+                "type": "component"
               },
               "questions": {
                 "type": "array",
@@ -11645,7 +11716,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "class": {
                   "type": "string"
@@ -11882,7 +11953,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "class": {
                   "type": "string"
@@ -12304,13 +12375,13 @@
                   "type": "string"
                 },
                 "questions": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "student": {
                   "type": "string"
                 },
                 "Answers": {
-                  "type": "group"
+                  "type": "component"
                 }
               }
             }
@@ -12585,7 +12656,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "class": {
                   "type": "string"
@@ -12795,7 +12866,7 @@
                       "type": "string"
                     },
                     "Workflow": {
-                      "type": "group"
+                      "type": "component"
                     },
                     "class": {
                       "type": "string"
@@ -12967,7 +13038,7 @@
                       "type": "string"
                     },
                     "Workflow": {
-                      "type": "group"
+                      "type": "component"
                     },
                     "class": {
                       "type": "string"
@@ -13288,7 +13359,7 @@
                 "type": "string"
               },
               "Workflow": {
-                "type": "group"
+                "type": "component"
               },
               "questions": {
                 "type": "array",

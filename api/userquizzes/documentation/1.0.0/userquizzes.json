@@ -600,7 +600,7 @@
                       "type": "string"
                     },
                     "Workflow": {
-                      "type": "group"
+                      "type": "component"
                     },
                     "class": {
                       "type": "string"
@@ -772,7 +772,7 @@
                       "type": "string"
                     },
                     "Workflow": {
-                      "type": "group"
+                      "type": "component"
                     },
                     "class": {
                       "type": "string"
