@@ -4,7 +4,7 @@
     "description": ""
   },
   "connection": "default",
-  "collectionName": "groups_workflows",
+  "collectionName": "components_workflows",
   "attributes": {
     "status": {
       "enum": [

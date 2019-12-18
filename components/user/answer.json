@@ -4,7 +4,7 @@
     "description": ""
   },
   "connection": "default",
-  "collectionName": "groups_user_answers",
+  "collectionName": "components_user_answers",
   "attributes": {
     "answerNumber": {
       "type": "integer"
