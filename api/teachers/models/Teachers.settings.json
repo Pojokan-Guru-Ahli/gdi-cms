@@ -21,8 +21,8 @@
       "required": true
     },
     "Workflow": {
-      "group": "workflow",
-      "type": "group"
+      "component": "workflow.data",
+      "type": "component"
     },
     "questions": {
       "collection": "questions",

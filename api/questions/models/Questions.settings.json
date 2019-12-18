@@ -112,8 +112,8 @@
       "via": "questions"
     },
     "Workflow": {
-      "group": "workflow",
-      "type": "group"
+      "component": "workflow.data",
+      "type": "component"
     },
     "class": {
       "model": "classes",

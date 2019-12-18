@@ -550,7 +550,7 @@
                 "type": "string"
               },
               "size": {
-                "type": "string"
+                "type": "number"
               },
               "url": {
                 "type": "string"
@@ -619,7 +619,7 @@
                   "type": "string"
                 },
                 "Workflow": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "questions": {
                   "type": "array",

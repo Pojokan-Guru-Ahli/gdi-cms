@@ -667,13 +667,13 @@
                   "type": "string"
                 },
                 "questions": {
-                  "type": "group"
+                  "type": "component"
                 },
                 "student": {
                   "type": "string"
                 },
                 "Answers": {
-                  "type": "group"
+                  "type": "component"
                 }
               }
             }

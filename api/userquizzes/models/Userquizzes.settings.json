@@ -13,17 +13,17 @@
   },
   "attributes": {
     "questions": {
-      "group": "user_question",
-      "repeatable": true,
-      "type": "group"
+      "component": "user.question",
+      "type": "component",
+      "repeatable": true
     },
     "student": {
       "model": "students",
       "via": "userquizzes"
     },
     "Answers": {
-      "group": "user_answer",
-      "type": "group",
+      "component": "user.answer",
+      "type": "component",
       "repeatable": true
     }
   }
