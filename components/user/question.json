@@ -1,10 +1,11 @@
 {
-  "info": {
-    "name": "userQuestion",
-    "description": ""
-  },
   "connection": "default",
   "collectionName": "components_user_questions",
+  "info": {
+    "name": "user Question",
+    "description": "",
+    "icon": "question-circle"
+  },
   "attributes": {
     "questions": {
       "model": "questions"

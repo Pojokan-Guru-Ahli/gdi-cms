@@ -1,10 +1,11 @@
 {
-  "info": {
-    "name": "Workflow",
-    "description": ""
-  },
   "connection": "default",
   "collectionName": "components_workflows",
+  "info": {
+    "name": "Workflow",
+    "description": "",
+    "icon": "align-justify"
+  },
   "attributes": {
     "status": {
       "enum": [
