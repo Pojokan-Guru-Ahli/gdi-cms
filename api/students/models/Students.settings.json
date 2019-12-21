@@ -43,8 +43,8 @@
       "via": "students"
     },
     "userquizzes": {
-      "collection": "userquizzes",
-      "via": "student"
+      "via": "student",
+      "collection": "userquizzes"
     }
   }
 }

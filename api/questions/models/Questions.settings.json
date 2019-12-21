@@ -104,8 +104,8 @@
       "required": true
     },
     "questionsource": {
-      "model": "questionsources",
-      "via": "questions"
+      "via": "questions",
+      "model": "questionsources"
     },
     "chapter": {
       "model": "chapters",

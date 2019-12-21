@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "source",
   "info": {
-    "name": "questionsources",
+    "name": "Question Sources",
     "description": ""
   },
   "options": {
