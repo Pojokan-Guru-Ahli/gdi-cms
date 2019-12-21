@@ -3165,7 +3165,7 @@ debug@*, debug@4.1.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
+debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
@@ -6460,6 +6460,16 @@ node-schedule@^1.2.0:
     long-timeout "0.1.1"
     sorted-array-functions "^1.0.0"
 
+node-ses@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/node-ses/-/node-ses-2.2.1.tgz#41b113b2a4561fc0e9ede1f72705821a172b73b0"
+  integrity sha512-+vfOKdvb99LgbEKmL7rTw9GbNZ71fetJ4vseYsoHkfdzRXWsBalepf7LEn5Wsg/swoLM3dzxvWfOigm9KtkYgQ==
+  dependencies:
+    aws4 "^1.8.0"
+    debug "^2.6.9"
+    request "^2.88.0"
+    xml2js "^0.4.19"
+
 node-uuid@~1.4.0:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
@@ -7992,7 +8002,7 @@ request@2.60.0:
     tough-cookie ">=0.12.0"
     tunnel-agent "~0.4.0"
 
-request@^2.83.0:
+request@^2.83.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==
@@ -9032,6 +9042,14 @@ strapi-plugin-users-permissions@3.0.0-beta.18.2:
     strapi-helper-plugin "3.0.0-beta.18.2"
     strapi-utils "3.0.0-beta.18.2"
     uuid "^3.1.0"
+
+strapi-provider-email-amazon-ses@^3.0.0-beta.18.2:
+  version "3.0.0-beta.18.2"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-amazon-ses/-/strapi-provider-email-amazon-ses-3.0.0-beta.18.2.tgz#e27bba0cbf84532847593832b461d10f1d4c78f4"
+  integrity sha512-TME0kvI0c8R22LLTZeH3o8fup0l2/p7KdTtwdBRcxGt4Sl39IY+J9U+R38Oc3m0cso3zXNr9+Siy4jai1P2q3g==
+  dependencies:
+    lodash "^4.17.11"
+    node-ses "^2.2.0"
 
 strapi-provider-email-sendmail@3.0.0-beta.18.2:
   version "3.0.0-beta.18.2"
@@ -10103,6 +10121,19 @@ xml2js@0.4.19:
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~9.0.1"
+
+xml2js@^0.4.19:
+  version "0.4.23"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.23.tgz#a0c69516752421eb2ac758ee4d4ccf58843eac66"
+  integrity sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==
+  dependencies:
+    sax ">=0.6.0"
+    xmlbuilder "~11.0.0"
+
+xmlbuilder@~11.0.0:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
+  integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
 
 xmlbuilder@~9.0.1:
   version "9.0.7"
