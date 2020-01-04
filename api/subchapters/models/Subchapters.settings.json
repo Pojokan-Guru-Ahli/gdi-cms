@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "subclasses",
+  "info": {
+    "name": "Sub Chapters",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "chapter": {
+      "model": "chapters",
+      "via": "subchapters"
+    }
+  }
+}
