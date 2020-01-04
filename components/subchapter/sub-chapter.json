@@ -1,0 +1,15 @@
+{
+  "info": {
+    "name": "SubChapter",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "connection": "default",
+  "collectionName": "components_subchapter_sub_chapters"
+}

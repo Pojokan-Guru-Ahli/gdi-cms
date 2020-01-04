@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/curriculums": {
+    "/kompetensi-dasars": {
       "get": {
         "deprecated": false,
-        "description": "Find all the curriculums's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve curriculums document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Curriculums"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Curriculums"
+          "Kompetensi-dasar"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new curriculums record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve curriculums document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Curriculums"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Curriculums"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewCurriculums"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/curriculums/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of curriculums documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve curriculums document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Curriculums"
+          "Kompetensi-dasar"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewKompetensi-dasar"
+              }
+            }
+          }
+        }
       }
     },
-    "/curriculums/{id}": {
+    "/kompetensi-dasars/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one curriculums record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve curriculums document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Curriculums"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Curriculums"
+          "Kompetensi-dasar"
+        ],
+        "parameters": []
+      }
+    },
+    "/kompetensi-dasars/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Kompetensi-dasar"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single curriculums record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve curriculums document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Curriculums"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Curriculums"
+          "Kompetensi-dasar"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCurriculums"
+                "$ref": "#/components/schemas/NewKompetensi-dasar"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single curriculums record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single curriculums based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Curriculums"
+          "Kompetensi-dasar"
         ],
         "parameters": [
           {
@@ -514,10 +527,11 @@
   },
   "components": {
     "schemas": {
-      "Curriculums": {
+      "Kompetensi-dasar": {
         "required": [
           "id",
-          "name"
+          "name",
+          "description"
         ],
         "properties": {
           "id": {
@@ -526,7 +540,10 @@
           "name": {
             "type": "string"
           },
-          "chapter": {
+          "description": {
+            "type": "string"
+          },
+          "curriculum": {
             "required": [
               "id",
               "name"
@@ -538,131 +555,87 @@
               "name": {
                 "type": "string"
               },
-              "curriculum": {
+              "chapter": {
                 "type": "string"
               },
-              "questions": {
+              "chapters": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "quiz": {
-                "type": "string"
-              },
-              "SubChapter": {
-                "type": "component"
-              }
-            }
-          },
-          "chapters": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
+              "courses": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "curriculum": {
-                  "type": "string"
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quiz": {
-                  "type": "string"
-                },
-                "SubChapter": {
-                  "type": "component"
                 }
               }
             }
           },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
+          "course": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "curriculums": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
+                }
+              },
+              "teachers": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "icon": {
+                }
+              },
+              "classes": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
           }
         }
       },
-      "NewCurriculums": {
+      "NewKompetensi-dasar": {
         "required": [
-          "name"
+          "name",
+          "description"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "chapter": {
+          "description": {
             "type": "string"
           },
-          "chapters": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "curriculum": {
+            "type": "string"
           },
-          "courses": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "course": {
+            "type": "string"
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Curriculums"
-    }
-  ]
+  "tags": []
 }

@@ -108,8 +108,8 @@
       "model": "questionsources"
     },
     "chapter": {
-      "model": "chapters",
-      "via": "questions"
+      "via": "questions",
+      "model": "chapters"
     },
     "Workflow": {
       "component": "workflow.data",

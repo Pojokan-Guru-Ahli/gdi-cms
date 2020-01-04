@@ -21,8 +21,8 @@
       "model": "chapters"
     },
     "chapters": {
-      "collection": "chapters",
-      "via": "curriculum"
+      "via": "curriculum",
+      "collection": "chapters"
     },
     "courses": {
       "collection": "courses",
