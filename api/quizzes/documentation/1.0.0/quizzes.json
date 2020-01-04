@@ -562,12 +562,6 @@
                 "curriculum": {
                   "type": "string"
                 },
-                "subchapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "questions": {
                   "type": "array",
                   "items": {
@@ -576,6 +570,9 @@
                 },
                 "quiz": {
                   "type": "string"
+                },
+                "SubChapter": {
+                  "type": "component"
                 }
               }
             }

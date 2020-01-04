@@ -21,10 +21,6 @@
       "model": "curriculums",
       "via": "chapters"
     },
-    "subchapters": {
-      "via": "chapter",
-      "collection": "subchapters"
-    },
     "questions": {
       "collection": "questions",
       "via": "chapter"
@@ -32,6 +28,11 @@
     "quiz": {
       "model": "quizzes",
       "via": "chapters"
+    },
+    "SubChapter": {
+      "type": "component",
+      "repeatable": true,
+      "component": "subchapter.sub-chapter"
     }
   }
 }
