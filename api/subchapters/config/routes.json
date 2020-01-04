@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/subchapters",
+      "handler": "Subchapters.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subchapters/count",
+      "handler": "Subchapters.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/subchapters/:id",
+      "handler": "Subchapters.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/subchapters",
+      "handler": "Subchapters.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/subchapters/:id",
+      "handler": "Subchapters.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/subchapters/:id",
+      "handler": "Subchapters.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
