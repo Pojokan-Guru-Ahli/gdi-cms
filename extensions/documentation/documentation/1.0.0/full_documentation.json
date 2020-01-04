@@ -22,7 +22,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337",
+      "url": "http://cms.gdi.pojokan.io",
       "description": "Development server"
     },
     {
