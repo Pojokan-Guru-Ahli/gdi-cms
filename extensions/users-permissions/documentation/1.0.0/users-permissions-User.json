@@ -1326,12 +1326,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           }

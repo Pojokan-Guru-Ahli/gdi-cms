@@ -40,8 +40,8 @@
       "via": "class"
     },
     "courses": {
-      "collection": "courses",
-      "via": "classes"
+      "via": "classes",
+      "collection": "courses"
     },
     "quizzes": {
       "collection": "quizzes",

@@ -749,12 +749,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -766,6 +760,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }

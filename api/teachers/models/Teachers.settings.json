@@ -27,11 +27,6 @@
     "questions": {
       "collection": "questions",
       "via": "teacher"
-    },
-    "courses": {
-      "collection": "courses",
-      "dominant": true,
-      "via": "teachers"
     }
   }
 }

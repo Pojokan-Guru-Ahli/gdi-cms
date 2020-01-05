@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/04/2020 4:41:43 PM"
+    "x-generation-date": "01/05/2020 4:47:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -30,7 +30,7 @@
       "description": "Staging server"
     },
     {
-      "url": "https://cms.gdi.pojokan.io",
+      "url": "YOUR_PRODUCTION_SERVER",
       "description": "Production server"
     }
   ],
@@ -10289,12 +10289,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -10414,12 +10408,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -10431,6 +10419,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
@@ -10637,44 +10628,6 @@
               }
             }
           },
-          "teachers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "NUPTK"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "NUPTK": {
-                  "type": "string"
-                },
-                "Workflow": {
-                  "type": "component"
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "classes": {
             "type": "array",
             "items": {
@@ -10791,6 +10744,57 @@
                 }
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "contributor": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10808,12 +10812,6 @@
               "type": "string"
             }
           },
-          "teachers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "classes": {
             "type": "array",
             "items": {
@@ -10825,6 +10823,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -10924,12 +10925,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -10941,6 +10936,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
@@ -11113,12 +11111,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "classes": {
                 "type": "array",
                 "items": {
@@ -11130,6 +11122,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
               }
             }
           }
@@ -11664,12 +11659,6 @@
                 "type": "component"
               },
               "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -12220,12 +12209,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -12237,6 +12220,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
@@ -12840,50 +12826,6 @@
                 }
               }
             }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           }
         }
       },
@@ -12929,12 +12871,6 @@
             }
           },
           "questions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "courses": {
             "type": "array",
             "items": {
               "type": "string"
@@ -13530,12 +13466,6 @@
                 "type": "component"
               },
               "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
                 "type": "array",
                 "items": {
                   "type": "string"
