@@ -35,9 +35,7 @@
       "path": "/courses",
       "handler": "Courses.create",
       "config": {
-        "policies": [
-          "global.isMe"
-        ]
+        "policies": []
       }
     },
     {
