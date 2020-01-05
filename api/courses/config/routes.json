@@ -35,7 +35,9 @@
       "path": "/courses",
       "handler": "Courses.create",
       "config": {
-        "policies": []
+        "policies": [
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -43,7 +45,9 @@
       "path": "/courses/:id",
       "handler": "Courses.update",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -51,7 +55,9 @@
       "path": "/courses/:id",
       "handler": "Courses.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     }
   ]
