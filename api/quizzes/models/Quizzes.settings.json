@@ -50,8 +50,8 @@
       "dominant": true
     },
     "courses": {
-      "collection": "courses",
       "via": "quizzes",
+      "collection": "courses",
       "dominant": true
     }
   }

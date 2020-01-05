@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "contents",
+  "collectionName": "courses",
   "info": {
     "name": "courses",
     "description": ""
@@ -20,16 +20,13 @@
     "icon": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "curriculums": {
       "collection": "curriculums",
       "via": "courses",
       "dominant": true
-    },
-    "teachers": {
-      "collection": "teachers",
-      "via": "courses"
     },
     "classes": {
       "collection": "classes",
@@ -39,6 +36,10 @@
     "quizzes": {
       "collection": "quizzes",
       "via": "courses"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
