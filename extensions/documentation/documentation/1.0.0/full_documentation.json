@@ -30,7 +30,7 @@
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://cms.gdi.pojokan.io",
       "description": "Production server"
     }
   ],
