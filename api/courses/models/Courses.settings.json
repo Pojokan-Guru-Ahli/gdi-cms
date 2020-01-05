@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "contents",
+  "collectionName": "courses",
   "info": {
     "name": "courses",
     "description": ""
