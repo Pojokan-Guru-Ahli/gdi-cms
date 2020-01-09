@@ -867,6 +867,9 @@
               },
               "SubChapter": {
                 "type": "component"
+              },
+              "user": {
+                "type": "string"
               }
             }
           },

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/05/2020 4:47:10 PM"
+    "x-generation-date": "01/09/2020 5:14:22 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -30,7 +30,7 @@
       "description": "Staging server"
     },
     {
-      "url": "http://cms.gdi.pojokan.io",
+      "url": "YOUR_PRODUCTION_SERVER",
       "description": "Production server"
     }
   ],
@@ -10087,6 +10087,57 @@
                 }
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "contributor": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10127,6 +10178,9 @@
                 }
               }
             }
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -10867,6 +10921,9 @@
               },
               "SubChapter": {
                 "type": "component"
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
@@ -10898,6 +10955,9 @@
                 },
                 "SubChapter": {
                   "type": "component"
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
@@ -11553,6 +11613,9 @@
               },
               "SubChapter": {
                 "type": "component"
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
@@ -12033,6 +12096,9 @@
                 },
                 "SubChapter": {
                   "type": "component"
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
