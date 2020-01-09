@@ -5,7 +5,9 @@
       "path": "/chapters",
       "handler": "Chapters.find",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/chapters/count",
       "handler": "Chapters.count",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/chapters/:id",
       "handler": "Chapters.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -29,7 +35,9 @@
       "path": "/chapters",
       "handler": "Chapters.create",
       "config": {
-        "policies": []
+        "policies": [
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -37,7 +45,9 @@
       "path": "/chapters/:id",
       "handler": "Chapters.update",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -45,7 +55,9 @@
       "path": "/chapters/:id",
       "handler": "Chapters.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     }
   ]
