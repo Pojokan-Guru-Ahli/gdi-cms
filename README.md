@@ -57,15 +57,15 @@ mongorestore
 
 If you already restore a database, access url `http://localhost:1337/blogs`
 
-
 # Production
+
 - `yarn install`
 - `NODE_ENV=production yarn build`
 - `NODE_ENV=production APP_HOST=your-domain.com yarn start`
   - Access Admin : `/gdidashboard`
 
-
 ## Strapi CLI
+
 - `node_modules/.bin/strapi`
 - Ref: https://strapi.io/documentation/3.0.0-beta.x/cli/CLI.html
 
