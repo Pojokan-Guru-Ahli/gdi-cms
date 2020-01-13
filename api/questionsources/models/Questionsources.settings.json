@@ -21,7 +21,6 @@
       "type": "integer",
       "max": 2100,
       "required": true,
-      "unique": true,
       "min": 2000
     },
     "questions": {
