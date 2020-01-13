@@ -141,3 +141,9 @@ Reference :
 
 - https://strapi.io/documentation/3.0.0-beta.x/getting-started/introduction.html#strapi-documentation
 - https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/
+
+
+# Token Decrypt
+POST /token/decrypt
+- form : token
+- header : bearer token
