@@ -6,22 +6,24 @@
 
 module.exports = async (ctx, next) => {
 
-  const user = ctx.state.user;
+  const { role, id } = ctx.state.user;
 
-  if (user.role.name == "Teacher") {
-    const { body } = ctx.request;
+  if (role.name == "Teacher") {
+    const { body } = ctx.request
 
     const fieldId = body.id
-
-    const check = await Courses.findOne({
+    
+    Kompetensidasar.findOne({
       id: fieldId,
-      user: user.id
+      user: id
+    }).then(result => {
+      if(!result) {
+        return ctx.unauthorized(`You're not allowed to perform this action!`)
+      }
     })
 
-    if (!check) {
-      ctx.unauthorized(`You're not allowed to perform this action!`);
-    }
-
-    await next();
+    await next()
+  } else {
+    ctx.unauthorized(`You're not allowed to perform this action!`)
   }
 };
