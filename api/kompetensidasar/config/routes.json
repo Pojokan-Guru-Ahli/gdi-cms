@@ -1,0 +1,64 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kompetensidasars",
+      "handler": "kompetensidasar.find",
+      "config": {
+        "policies": [
+          "global.isMe"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kompetensidasars/count",
+      "handler": "kompetensidasar.count",
+      "config": {
+        "policies": [
+          "global.isMe"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.findOne",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kompetensidasars",
+      "handler": "kompetensidasar.create",
+      "config": {
+        "policies": [
+          "global.setOwner"
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.update",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.delete",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    }
+  ]
+}

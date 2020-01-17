@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "kompetensidasars",
+  "info": {
+    "name": "Kompetensi Dasar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "curriculum": {
+      "model": "curriculums"
+    },
+    "course": {
+      "model": "courses"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
