@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `kompetensi-dasar` model.
+ * Lifecycle callbacks for the `kompetensidasar` model.
  */
 
 module.exports = {

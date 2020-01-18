@@ -26,8 +26,8 @@
       "via": "chapter"
     },
     "quiz": {
-      "model": "quizzes",
-      "via": "chapters"
+      "via": "chapters",
+      "model": "quizzes"
     },
     "SubChapter": {
       "type": "component",

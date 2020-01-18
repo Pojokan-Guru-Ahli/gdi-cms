@@ -44,8 +44,8 @@
       "collection": "courses"
     },
     "quizzes": {
-      "collection": "quizzes",
-      "via": "classes"
+      "via": "classes",
+      "collection": "quizzes"
     }
   }
 }

@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "kompetensidasars",
   "info": {
     "name": "Kompetensi Dasar"
   },
@@ -20,8 +22,10 @@
     },
     "course": {
       "model": "courses"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
-  },
-  "connection": "default",
-  "collectionName": "kompetensi_dasars"
+  }
 }

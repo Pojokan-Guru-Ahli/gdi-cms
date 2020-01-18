@@ -2,8 +2,8 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/quizzes",
-      "handler": "Quizzes.find",
+      "path": "/kompetensidasars",
+      "handler": "kompetensidasar.find",
       "config": {
         "policies": [
           "global.isMe"
@@ -12,8 +12,8 @@
     },
     {
       "method": "GET",
-      "path": "/quizzes/count",
-      "handler": "Quizzes.count",
+      "path": "/kompetensidasars/count",
+      "handler": "kompetensidasar.count",
       "config": {
         "policies": [
           "global.isMe"
@@ -22,8 +22,8 @@
     },
     {
       "method": "GET",
-      "path": "/quizzes/:id",
-      "handler": "Quizzes.findOne",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.findOne",
       "config": {
         "policies": [
           "checkOwner"
@@ -32,8 +32,8 @@
     },
     {
       "method": "POST",
-      "path": "/quizzes",
-      "handler": "Quizzes.create",
+      "path": "/kompetensidasars",
+      "handler": "kompetensidasar.create",
       "config": {
         "policies": [
           "global.setOwner"
@@ -42,8 +42,8 @@
     },
     {
       "method": "PUT",
-      "path": "/quizzes/:id",
-      "handler": "Quizzes.update",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.update",
       "config": {
         "policies": [
           "checkOwner"
@@ -52,8 +52,8 @@
     },
     {
       "method": "DELETE",
-      "path": "/quizzes/:id",
-      "handler": "Quizzes.delete",
+      "path": "/kompetensidasars/:id",
+      "handler": "kompetensidasar.delete",
       "config": {
         "policies": [
           "checkOwner"

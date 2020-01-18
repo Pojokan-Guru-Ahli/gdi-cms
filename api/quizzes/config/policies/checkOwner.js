@@ -13,7 +13,7 @@ module.exports = async (ctx, next) => {
 
     const fieldId = body.id
     
-    Kompetensidasar.findOne({
+    Quizzes.findOne({
       id: fieldId,
       user: id
     }).then(result => {

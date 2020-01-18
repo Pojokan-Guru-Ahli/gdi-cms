@@ -34,8 +34,8 @@
       "dominant": true
     },
     "quizzes": {
-      "collection": "quizzes",
-      "via": "courses"
+      "via": "courses",
+      "collection": "quizzes"
     },
     "user": {
       "plugin": "users-permissions",

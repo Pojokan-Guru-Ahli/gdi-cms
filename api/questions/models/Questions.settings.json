@@ -124,8 +124,8 @@
       "via": "questions"
     },
     "quizzes": {
-      "collection": "quizzes",
-      "via": "questions"
+      "via": "questions",
+      "collection": "quizzes"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/kompetensi-dasars": {
+    "/kompetensidasars": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kompetensidasar"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Kompetensidasar"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewKompetensi-dasar"
+                "$ref": "#/components/schemas/NewKompetensidasar"
               }
             }
           }
         }
       }
     },
-    "/kompetensi-dasars/count": {
+    "/kompetensidasars/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "parameters": []
       }
     },
-    "/kompetensi-dasars/{id}": {
+    "/kompetensidasars/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Kompetensidasar"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Kompetensidasar"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewKompetensi-dasar"
+                "$ref": "#/components/schemas/NewKompetensidasar"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Kompetensi-dasar"
+          "Kompetensidasar"
         ],
         "parameters": [
           {
@@ -527,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Kompetensi-dasar": {
+      "Kompetensidasar": {
         "required": [
           "id",
           "name",
@@ -609,10 +596,61 @@
                 "type": "string"
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "contributor": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewKompetensi-dasar": {
+      "NewKompetensidasar": {
         "required": [
           "name",
           "description"
@@ -629,10 +667,17 @@
           },
           "course": {
             "type": "string"
+          },
+          "user": {
+            "type": "string"
           }
         }
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Kompetensidasar"
+    }
+  ]
 }
