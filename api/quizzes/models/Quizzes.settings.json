@@ -36,8 +36,8 @@
       "type": "boolean"
     },
     "chapters": {
-      "via": "quiz",
-      "collection": "chapters"
+      "collection": "chapters",
+      "via": "quiz"
     },
     "classes": {
       "collection": "classes",
@@ -50,9 +50,13 @@
       "dominant": true
     },
     "courses": {
-      "via": "quizzes",
       "collection": "courses",
+      "via": "quizzes",
       "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

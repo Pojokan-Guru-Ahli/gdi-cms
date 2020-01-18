@@ -5,7 +5,9 @@
       "path": "/quizzes",
       "handler": "Quizzes.find",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/quizzes/count",
       "handler": "Quizzes.count",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/quizzes/:id",
       "handler": "Quizzes.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -29,7 +35,9 @@
       "path": "/quizzes",
       "handler": "Quizzes.create",
       "config": {
-        "policies": []
+        "policies": [
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -37,7 +45,9 @@
       "path": "/quizzes/:id",
       "handler": "Quizzes.update",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -45,7 +55,9 @@
       "path": "/quizzes/:id",
       "handler": "Quizzes.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     }
   ]
