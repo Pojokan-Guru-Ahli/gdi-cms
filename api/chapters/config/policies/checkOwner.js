@@ -13,15 +13,17 @@ module.exports = async (ctx, next) => {
 
     const fieldId = body.id
 
-    const check = await Chapters.findOne({
+    Chapters.findOne({
       id: fieldId,
-      user: user.id
+      user: id
+    }).then(result => {
+      if (!result) {
+        return ctx.unauthorized(`You're not allowed to perform this action!`)
+      }
     })
 
-    if (!check) {
-      ctx.unauthorized(`You're not allowed to perform this action!`);
-    }
-
     await next();
+  } else {
+    ctx.unauthorized(`You're not allowed to perform this action!`)
   }
 };
