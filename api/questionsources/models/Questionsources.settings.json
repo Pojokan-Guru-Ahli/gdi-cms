@@ -18,14 +18,16 @@
       "required": true
     },
     "year": {
-      "type": "integer",
-      "max": 2100,
-      "required": true,
-      "min": 2000
+      "type": "string",
+      "required": true
     },
     "questions": {
       "collection": "questions",
       "via": "questionsource"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

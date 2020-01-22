@@ -831,13 +831,16 @@
                 "type": "string"
               },
               "year": {
-                "type": "integer"
+                "type": "string"
               },
               "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
@@ -876,9 +879,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -886,6 +887,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -1126,9 +1128,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -1136,6 +1136,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
