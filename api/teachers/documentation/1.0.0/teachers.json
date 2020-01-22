@@ -586,9 +586,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -596,6 +594,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -721,9 +720,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -731,6 +728,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",

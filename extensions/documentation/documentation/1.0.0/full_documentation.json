@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/17/2020 10:56:22 PM"
+    "x-generation-date": "01/22/2020 9:35:53 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11627,13 +11627,16 @@
                 "type": "string"
               },
               "year": {
-                "type": "integer"
+                "type": "string"
               },
               "questions": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
@@ -11672,9 +11675,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -11682,6 +11683,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -11922,9 +11924,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -11932,6 +11932,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -11974,7 +11975,7 @@
             "type": "string"
           },
           "year": {
-            "type": "integer"
+            "type": "string"
           },
           "questions": {
             "type": "array",
@@ -12067,6 +12068,57 @@
                 }
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "contributor": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -12080,13 +12132,16 @@
             "type": "string"
           },
           "year": {
-            "type": "integer"
+            "type": "string"
           },
           "questions": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -12884,9 +12939,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -12894,6 +12947,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -13019,9 +13073,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -13029,6 +13081,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
