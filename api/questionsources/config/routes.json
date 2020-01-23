@@ -5,7 +5,9 @@
       "path": "/questionsources",
       "handler": "Questionsources.find",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/questionsources/count",
       "handler": "Questionsources.count",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/questionsources/:id",
       "handler": "Questionsources.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -29,7 +35,9 @@
       "path": "/questionsources",
       "handler": "Questionsources.create",
       "config": {
-        "policies": []
+        "policies": [
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -37,7 +45,9 @@
       "path": "/questionsources/:id",
       "handler": "Questionsources.update",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -45,7 +55,9 @@
       "path": "/questionsources/:id",
       "handler": "Questionsources.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     }
   ]
