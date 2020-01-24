@@ -6,9 +6,9 @@
 
 module.exports = async (ctx, next) => {
 
-  const user = ctx.state.user;
+  const { role, id } = ctx.state.user;
 
-  if (user.role.name == "Teacher") {
+  if (role.name == "Teacher") {
     const { body } = ctx.request;
 
     const fieldId = body.id
