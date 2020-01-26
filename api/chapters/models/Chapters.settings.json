@@ -22,8 +22,8 @@
       "via": "chapters"
     },
     "questions": {
-      "collection": "questions",
-      "via": "chapter"
+      "via": "chapter",
+      "collection": "questions"
     },
     "quiz": {
       "via": "chapters",

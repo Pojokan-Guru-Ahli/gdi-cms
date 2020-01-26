@@ -23,7 +23,8 @@
     "questionImage": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "optionA": {
       "type": "string",
@@ -66,7 +67,8 @@
     "imageExplanation": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "textExplanation": {
       "type": "richtext"
@@ -74,12 +76,14 @@
     "pdfExplanation": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "videoExplanation": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "difficulties": {
       "enum": [
@@ -92,7 +96,8 @@
     "questionVideo": {
       "model": "file",
       "via": "related",
-      "plugin": "upload"
+      "plugin": "upload",
+      "required": false
     },
     "question": {
       "type": "string",
@@ -104,12 +109,12 @@
       "required": true
     },
     "questionsource": {
-      "via": "questions",
-      "model": "questionsources"
+      "model": "questionsources",
+      "via": "questions"
     },
     "chapter": {
-      "via": "questions",
-      "model": "chapters"
+      "model": "chapters",
+      "via": "questions"
     },
     "Workflow": {
       "component": "workflow.data",
@@ -124,8 +129,12 @@
       "via": "questions"
     },
     "quizzes": {
-      "via": "questions",
-      "collection": "quizzes"
+      "collection": "quizzes",
+      "via": "questions"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

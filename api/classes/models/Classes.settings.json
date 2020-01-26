@@ -36,8 +36,8 @@
       "via": "classes"
     },
     "questions": {
-      "collection": "questions",
-      "via": "class"
+      "via": "class",
+      "collection": "questions"
     },
     "courses": {
       "via": "classes",
