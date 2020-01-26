@@ -6,12 +6,32 @@
 
 module.exports = async (ctx, next) => {
 
-  const user = ctx.state.user;
+  const { role, id } = ctx.state.user
 
-  if (user.role.name == "Teacher") {
-    const { body } = ctx.request;
+  if (role.name == "Teacher") {
 
-    body.user = user.id;
+    const { body } = ctx.request
+
+    if(body.data) {
+      
+      // parse data string to object
+      const parseData = JSON.parse(body.data)
+
+      // inject userid to object
+      const injectData = {
+        ...parseData,
+        user: id
+      }
+
+      // parse object to data string
+      const newData = JSON.stringify(injectData)
+
+      // set body
+      body.data = newData
+
+    } else {
+      body.user = id
+    }
 
     return await next();
   }
