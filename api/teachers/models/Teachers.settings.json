@@ -25,8 +25,8 @@
       "type": "component"
     },
     "questions": {
-      "collection": "questions",
-      "via": "teacher"
+      "via": "teacher",
+      "collection": "questions"
     }
   }
 }
