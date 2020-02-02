@@ -1,0 +1,14 @@
+module.exports = {
+    resolver: {
+        Query: {
+            questions: {
+                policies: ["global.isMe"],
+                resolver: "Questions.find"
+            },
+            question: {
+                policies: ["global.gqlQuestionCheckOwner"],
+                resolver: "Questions.findOne"
+            }
+        },
+    },
+};
