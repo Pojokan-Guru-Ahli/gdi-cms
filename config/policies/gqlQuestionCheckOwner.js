@@ -17,7 +17,7 @@ module.exports = async (ctx, next) => {
       id: fieldId
     })
 
-    if(query.user.id !== id) {
+    if(!query.user || query.user.id !== id) {
       ctx.unauthorized(`You're not allowed to perform this action!`)
     } else {
       await next()
