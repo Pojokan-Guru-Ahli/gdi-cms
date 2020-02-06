@@ -72,7 +72,8 @@
       ],
       "type": "enumeration"
     },
-    "contributor": {
+    "teacher": {
+      "via": "user",
       "model": "teachers"
     }
   }
