@@ -610,12 +610,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "questions": {
                   "type": "array",
                   "items": {
@@ -819,7 +813,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }

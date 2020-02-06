@@ -636,12 +636,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "questions": {
                 "type": "array",
                 "items": {
