@@ -22,12 +22,8 @@
       "required": true
     },
     "questions": {
-      "via": "questionsource",
-      "collection": "questions"
-    },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
+      "collection": "questions",
+      "via": "questionsource"
     }
   }
 }
