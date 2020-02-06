@@ -125,8 +125,8 @@
       "via": "questions"
     },
     "teacher": {
-      "model": "teachers",
-      "via": "questions"
+      "via": "questions",
+      "model": "teachers"
     },
     "quizzes": {
       "collection": "quizzes",

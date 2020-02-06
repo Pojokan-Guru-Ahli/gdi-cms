@@ -927,12 +927,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "questions": {
                 "type": "array",
                 "items": {
@@ -956,17 +950,15 @@
           "teacher": {
             "required": [
               "id",
+              "name",
               "NUPTK"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "name": {
+                "type": "string"
               },
               "NUPTK": {
                 "type": "string"
@@ -979,6 +971,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
               }
             }
           },
@@ -1091,7 +1092,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }

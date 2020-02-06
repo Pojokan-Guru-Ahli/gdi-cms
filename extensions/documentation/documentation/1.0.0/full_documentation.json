@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/05/2020 10:36:16 PM"
+    "x-generation-date": "02/07/2020 2:50:59 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -10127,7 +10127,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -10300,38 +10300,6 @@
                   "type": "string"
                 },
                 "userquizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "teachers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "NUPTK"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "NUPTK": {
-                  "type": "string"
-                },
-                "Workflow": {
-                  "type": "component"
-                },
-                "questions": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -10565,12 +10533,6 @@
               "type": "string"
             }
           },
-          "teachers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "questions": {
             "type": "array",
             "items": {
@@ -10711,12 +10673,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "questions": {
                   "type": "array",
                   "items": {
@@ -10847,7 +10803,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -11236,7 +11192,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -11729,12 +11685,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "questions": {
                 "type": "array",
                 "items": {
@@ -11758,17 +11708,15 @@
           "teacher": {
             "required": [
               "id",
+              "name",
               "NUPTK"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "name": {
+                "type": "string"
               },
               "NUPTK": {
                 "type": "string"
@@ -11781,6 +11729,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
               }
             }
           },
@@ -11893,7 +11850,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -12247,12 +12204,6 @@
                     "type": "string"
                   }
                 },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "questions": {
                   "type": "array",
                   "items": {
@@ -12456,7 +12407,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -12788,12 +12739,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "questions": {
                 "type": "array",
                 "items": {
@@ -12879,68 +12824,15 @@
       "Teachers": {
         "required": [
           "id",
+          "name",
           "NUPTK"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "classLevel",
-                "className"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classLevel": {
-                  "type": "string"
-                },
-                "className": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "grades": {
-                  "type": "string"
-                },
-                "students": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "name": {
+            "type": "string"
           },
           "NUPTK": {
             "type": "string"
@@ -13065,19 +12957,154 @@
                 }
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "teacher": {
+                "type": "string"
+              }
+            }
+          },
+          "classes": {
+            "required": [
+              "id",
+              "classLevel",
+              "className"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "string"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "grades": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "curriculums": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewTeachers": {
         "required": [
+          "name",
           "NUPTK"
         ],
         "properties": {
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "name": {
+            "type": "string"
           },
           "NUPTK": {
             "type": "string"
@@ -13113,6 +13140,15 @@
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
+          },
+          "classes": {
+            "type": "string"
+          },
+          "courses": {
+            "type": "string"
           }
         }
       },
@@ -13535,7 +13571,7 @@
                 "userType": {
                   "type": "string"
                 },
-                "contributor": {
+                "teacher": {
                   "type": "string"
                 }
               }
@@ -13688,20 +13724,18 @@
               "teacher"
             ]
           },
-          "contributor": {
+          "teacher": {
             "required": [
               "id",
+              "name",
               "NUPTK"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "name": {
+                "type": "string"
               },
               "NUPTK": {
                 "type": "string"
@@ -13714,6 +13748,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
               }
             }
           }
@@ -13770,7 +13813,7 @@
               "teacher"
             ]
           },
-          "contributor": {
+          "teacher": {
             "type": "string"
           }
         }

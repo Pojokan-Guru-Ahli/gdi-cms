@@ -517,68 +517,15 @@
       "Teachers": {
         "required": [
           "id",
+          "name",
           "NUPTK"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "classLevel",
-                "className"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classLevel": {
-                  "type": "string"
-                },
-                "className": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "grades": {
-                  "type": "string"
-                },
-                "students": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "teachers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "name": {
+            "type": "string"
           },
           "NUPTK": {
             "type": "string"
@@ -703,19 +650,154 @@
                 }
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "teacher": {
+                "type": "string"
+              }
+            }
+          },
+          "classes": {
+            "required": [
+              "id",
+              "classLevel",
+              "className"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "classLevel": {
+                "type": "string"
+              },
+              "className": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "grades": {
+                "type": "string"
+              },
+              "students": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "curriculums": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewTeachers": {
         "required": [
+          "name",
           "NUPTK"
         ],
         "properties": {
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "name": {
+            "type": "string"
           },
           "NUPTK": {
             "type": "string"
@@ -751,6 +833,15 @@
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
+          },
+          "classes": {
+            "type": "string"
+          },
+          "courses": {
+            "type": "string"
           }
         }
       }
