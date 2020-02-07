@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/07/2020 2:50:59 AM"
+    "x-generation-date": "02/07/2020 3:57:44 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13720,6 +13720,7 @@
           "userType": {
             "type": "string",
             "enum": [
+              "admin",
               "student",
               "teacher"
             ]
@@ -13809,6 +13810,7 @@
           "userType": {
             "type": "string",
             "enum": [
+              "admin",
               "student",
               "teacher"
             ]

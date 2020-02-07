@@ -18,8 +18,8 @@
       "required": true
     },
     "students": {
-      "collection": "students",
-      "via": "grade"
+      "via": "grade",
+      "collection": "students"
     }
   }
 }

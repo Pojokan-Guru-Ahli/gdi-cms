@@ -27,8 +27,8 @@
       "model": "grades"
     },
     "students": {
-      "collection": "students",
-      "via": "class"
+      "via": "class",
+      "collection": "students"
     },
     "questions": {
       "via": "class",
