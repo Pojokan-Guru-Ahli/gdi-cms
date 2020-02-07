@@ -831,7 +831,7 @@
                 "type": "string"
               },
               "year": {
-                "type": "integer"
+                "type": "string"
               },
               "questions": {
                 "type": "array",
@@ -876,9 +876,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -886,6 +884,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -928,12 +927,6 @@
                   "type": "string"
                 }
               },
-              "teachers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "questions": {
                 "type": "array",
                 "items": {
@@ -957,17 +950,15 @@
           "teacher": {
             "required": [
               "id",
+              "name",
               "NUPTK"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "name": {
+                "type": "string"
               },
               "NUPTK": {
                 "type": "string"
@@ -980,6 +971,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
               }
             }
           },
@@ -1043,6 +1043,57 @@
                 "user": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "students": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "teacher": {
+                "type": "string"
               }
             }
           }
@@ -1126,9 +1177,7 @@
           "Workflow": {
             "type": "object",
             "required": [
-              "id",
-              "status",
-              "updatedBy"
+              "id"
             ],
             "properties": {
               "id": {
@@ -1136,6 +1185,7 @@
               },
               "status": {
                 "type": "string",
+                "default": "pending",
                 "enum": [
                   "pending",
                   "rejected",
@@ -1161,6 +1211,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "user": {
+            "type": "string"
           }
         }
       }

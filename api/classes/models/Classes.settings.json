@@ -30,14 +30,9 @@
       "collection": "students",
       "via": "class"
     },
-    "teachers": {
-      "collection": "teachers",
-      "dominant": true,
-      "via": "classes"
-    },
     "questions": {
-      "collection": "questions",
-      "via": "class"
+      "via": "class",
+      "collection": "questions"
     },
     "courses": {
       "via": "classes",

@@ -5,7 +5,9 @@
       "path": "/questions",
       "handler": "Questions.find",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -13,7 +15,9 @@
       "path": "/questions/count",
       "handler": "Questions.count",
       "config": {
-        "policies": []
+        "policies": [
+          "global.isMe"
+        ]
       }
     },
     {
@@ -21,7 +25,9 @@
       "path": "/questions/:id",
       "handler": "Questions.findOne",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -29,7 +35,9 @@
       "path": "/questions",
       "handler": "Questions.create",
       "config": {
-        "policies": []
+        "policies": [
+          "global.setOwner"
+        ]
       }
     },
     {
@@ -37,7 +45,9 @@
       "path": "/questions/:id",
       "handler": "Questions.update",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     },
     {
@@ -45,7 +55,9 @@
       "path": "/questions/:id",
       "handler": "Questions.delete",
       "config": {
-        "policies": []
+        "policies": [
+          "checkOwner"
+        ]
       }
     }
   ]

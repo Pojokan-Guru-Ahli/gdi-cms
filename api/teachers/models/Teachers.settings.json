@@ -12,9 +12,9 @@
     ]
   },
   "attributes": {
-    "classes": {
-      "collection": "classes",
-      "via": "teachers"
+    "name": {
+      "type": "string",
+      "required": true
     },
     "NUPTK": {
       "type": "string",
@@ -27,6 +27,17 @@
     "questions": {
       "collection": "questions",
       "via": "teacher"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "teacher"
+    },
+    "classes": {
+      "collection": "classes"
+    },
+    "courses": {
+      "collection": "courses"
     }
   }
 }

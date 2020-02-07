@@ -643,7 +643,7 @@
               "userType": {
                 "type": "string"
               },
-              "contributor": {
+              "teacher": {
                 "type": "string"
               }
             }

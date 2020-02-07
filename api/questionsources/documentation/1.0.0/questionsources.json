@@ -528,7 +528,7 @@
             "type": "string"
           },
           "year": {
-            "type": "integer"
+            "type": "string"
           },
           "questions": {
             "type": "array",
@@ -618,6 +618,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "user": {
+                  "type": "string"
                 }
               }
             }
@@ -634,7 +637,7 @@
             "type": "string"
           },
           "year": {
-            "type": "integer"
+            "type": "string"
           },
           "questions": {
             "type": "array",

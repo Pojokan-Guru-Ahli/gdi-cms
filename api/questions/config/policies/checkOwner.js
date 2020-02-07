@@ -9,20 +9,20 @@ module.exports = async (ctx, next) => {
   const { role, id } = ctx.state.user;
 
   if (role.name == "Teacher") {
-    const { body } = ctx.request;
+    const { body } = ctx.request
 
     const fieldId = body.id
-
-    Chapters.findOne({
+    
+    Questions.findOne({
       id: fieldId,
       user: id
     }).then(result => {
-      if (!result) {
+      if(!result) {
         return ctx.unauthorized(`You're not allowed to perform this action!`)
       }
     })
 
-    await next();
+    await next()
   } else {
     ctx.unauthorized(`You're not allowed to perform this action!`)
   }

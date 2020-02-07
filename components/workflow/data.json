@@ -14,13 +14,14 @@
         "approved"
       ],
       "type": "enumeration",
-      "required": true
+      "required": false,
+      "default": "pending"
     },
     "noted": {
       "type": "text"
     },
     "updatedBy": {
-      "required": true,
+      "required": false,
       "type": "string"
     }
   }

@@ -619,6 +619,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "user": {
+                      "type": "string"
                     }
                   }
                 },
@@ -791,6 +794,9 @@
                       "items": {
                         "type": "string"
                       }
+                    },
+                    "user": {
+                      "type": "string"
                     }
                   }
                 },

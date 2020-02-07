@@ -45,8 +45,8 @@
       "dominant": true
     },
     "questions": {
-      "collection": "questions",
       "via": "quizzes",
+      "collection": "questions",
       "dominant": true
     },
     "courses": {
