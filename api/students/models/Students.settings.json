@@ -45,6 +45,11 @@
     "userquizzes": {
       "collection": "userquizzes",
       "via": "student"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "student"
     }
   }
 }

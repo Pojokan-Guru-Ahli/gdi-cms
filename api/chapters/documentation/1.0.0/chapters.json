@@ -776,6 +776,9 @@
               },
               "teacher": {
                 "type": "string"
+              },
+              "student": {
+                "type": "string"
               }
             }
           }

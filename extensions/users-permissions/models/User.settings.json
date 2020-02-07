@@ -76,6 +76,10 @@
     "teacher": {
       "model": "teachers",
       "via": "user"
+    },
+    "student": {
+      "via": "user",
+      "model": "students"
     }
   }
 }
