@@ -190,7 +190,7 @@ Resources:
               - codebuild:StartBuild
               - codebuild:BatchGetBuilds
             Resource:
-              - !GetAtt [rCodeBuildCICD, Arn]
+              - !GetAtt [rCodeRestartCICDStaging, Arn]
               - !GetAtt [rCodeRestartCICD, Arn]
           - Effect: "Allow"
             Action:
@@ -268,21 +268,6 @@ Resources:
                 PollForSourceChanges: false
                 OAuthToken: !Ref pGitHubOAuthToken
               RunOrder: 1
-        - Name: build
-          Actions:
-            - Name: build
-              ActionTypeId:
-                Category: Build
-                Owner: AWS
-                Version: "1"
-                Provider: CodeBuild
-              Configuration:
-                ProjectName: !Ref rCodeBuildCICD
-              RunOrder: 1
-              InputArtifacts:
-                - Name: SourceOutput
-              OutputArtifacts:
-                - Name: BuildCICDOutput
         - Name: upload
           Actions:
             - Name: upload-to-s3
@@ -352,43 +337,6 @@ Resources:
       TargetPipeline: !Ref rCodePipelineStack
       TargetAction: source
       TargetPipelineVersion: !GetAtt rCodePipelineStack.Version
-
-  rCodeBuildCICD:
-    Type: AWS::CodeBuild::Project
-    DependsOn:
-      - rArtifactStoreBucket
-    Properties:
-      Name: !Sub ${pSolutionNaming}-cicd-package-cb
-      Description: "Package artifact for CICD Pipeline"
-      ServiceRole: !GetAtt [rCodeBuildRole, Arn]
-      Artifacts:
-        Type: CODEPIPELINE
-      Environment:
-        Type: LINUX_CONTAINER
-        ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/standard:2.0
-      Source:
-        Type: CODEPIPELINE
-        BuildSpec: |
-          version: 0.2
-          phases:
-            install:
-              runtime-versions:
-                nodejs: 10
-            build:
-              commands:
-                - set -ex
-                - printenv
-                - ls -R
-                - npm install -g yarn
-                - yarn install
-                - NODE_ENV=production yarn build
-          artifacts:
-            files: "**/*"
-      TimeoutInMinutes: 10
-      Tags:
-        - Key: Name
-          Value: !Sub ${pSolutionNaming}-cicd-package-cb
 
   rCodeRestartCICD:
     Type: AWS::CodeBuild::Project
