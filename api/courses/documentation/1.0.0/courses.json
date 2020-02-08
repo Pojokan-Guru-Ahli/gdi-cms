@@ -809,6 +809,36 @@
                 }
               }
             }
+          },
+          "kompetensi_dasar": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -842,6 +872,9 @@
             "type": "string"
           },
           "chapter": {
+            "type": "string"
+          },
+          "kompetensi_dasar": {
             "type": "string"
           }
         }

@@ -44,6 +44,10 @@
     "chapter": {
       "via": "courses",
       "model": "chapters"
+    },
+    "kompetensi_dasar": {
+      "via": "courses",
+      "model": "kompetensidasar"
     }
   }
 }

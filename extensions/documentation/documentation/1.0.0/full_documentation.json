@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/08/2020 4:59:05 PM"
+    "x-generation-date": "02/08/2020 5:02:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -10175,6 +10175,9 @@
                 },
                 "chapter": {
                   "type": "string"
+                },
+                "kompetensi_dasar": {
+                  "type": "string"
                 }
               }
             }
@@ -10498,6 +10501,9 @@
                   "type": "string"
                 },
                 "chapter": {
+                  "type": "string"
+                },
+                "kompetensi_dasar": {
                   "type": "string"
                 }
               }
@@ -10907,6 +10913,36 @@
                 }
               }
             }
+          },
+          "kompetensi_dasar": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10940,6 +10976,9 @@
             "type": "string"
           },
           "chapter": {
+            "type": "string"
+          },
+          "kompetensi_dasar": {
             "type": "string"
           }
         }
@@ -11074,6 +11113,9 @@
                   "type": "string"
                 },
                 "chapter": {
+                  "type": "string"
+                },
+                "kompetensi_dasar": {
                   "type": "string"
                 }
               }
@@ -11229,44 +11271,50 @@
               }
             }
           },
-          "course": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "curriculums": {
-                "type": "array",
-                "items": {
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "user": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
+                },
+                "kompetensi_dasar": {
                   "type": "string"
                 }
-              },
-              "classes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "quizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "chapter": {
-                "type": "string"
               }
             }
           },
@@ -11341,8 +11389,11 @@
           "curriculum": {
             "type": "string"
           },
-          "course": {
-            "type": "string"
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "user": {
             "type": "string"
@@ -12502,6 +12553,9 @@
                 },
                 "chapter": {
                   "type": "string"
+                },
+                "kompetensi_dasar": {
+                  "type": "string"
                 }
               }
             }
@@ -13305,6 +13359,9 @@
                 "type": "string"
               },
               "chapter": {
+                "type": "string"
+              },
+              "kompetensi_dasar": {
                 "type": "string"
               }
             }

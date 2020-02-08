@@ -791,6 +791,9 @@
               },
               "chapter": {
                 "type": "string"
+              },
+              "kompetensi_dasar": {
+                "type": "string"
               }
             }
           }
