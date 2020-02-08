@@ -190,7 +190,8 @@ Resources:
               - codebuild:StartBuild
               - codebuild:BatchGetBuilds
             Resource:
-              - !GetAtt [rCodeRestartCICDStaging, Arn]
+              - !GetAtt [rCodeBuildCICD, Arn]
+              - !GetAtt [rCodeBuildCICDStaging, Arn]
               - !GetAtt [rCodeRestartCICD, Arn]
           - Effect: "Allow"
             Action:
@@ -268,9 +269,51 @@ Resources:
                 PollForSourceChanges: false
                 OAuthToken: !Ref pGitHubOAuthToken
               RunOrder: 1
+        - Name: build
+          Actions:
+            - Name: build-staging
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: "1"
+                Provider: CodeBuild
+              Configuration:
+                ProjectName: !Ref rCodeBuildCICDStaging
+              RunOrder: 1
+              InputArtifacts:
+                - Name: SourceOutput
+              OutputArtifacts:
+                - Name: BuildCICDOutputStaging
+            - Name: build-prod
+              ActionTypeId:
+                Category: Build
+                Owner: AWS
+                Version: "1"
+                Provider: CodeBuild
+              Configuration:
+                ProjectName: !Ref rCodeBuildCICD
+              RunOrder: 1
+              InputArtifacts:
+                - Name: SourceOutput
+              OutputArtifacts:
+                - Name: BuildCICDOutput
         - Name: upload
           Actions:
-            - Name: upload-to-s3
+            - Name: upload-to-s3-staging
+              RoleArn: !GetAtt [rCloudFormationRole, Arn]
+              ActionTypeId:
+                Category: Deploy
+                Owner: AWS
+                Version: "1"
+                Provider: S3
+              Configuration:
+                Extract: false
+                ObjectKey: artifact-staging.zip
+                BucketName: !Ref rCmsArtifactBucket
+              InputArtifacts:
+                - Name: BuildCICDOutput
+              RunOrder: 1
+            - Name: upload-to-s3-prod
               RoleArn: !GetAtt [rCloudFormationRole, Arn]
               ActionTypeId:
                 Category: Deploy
@@ -282,7 +325,7 @@ Resources:
                 ObjectKey: artifact.zip
                 BucketName: !Ref rCmsArtifactBucket
               InputArtifacts:
-                - Name: SourceOutput
+                - Name: BuildCICDOutput
               RunOrder: 1
         - Name: deploy-to-staging
           Actions:
@@ -296,7 +339,7 @@ Resources:
                 ProjectName: !Ref rCodeRestartCICDStaging
               RunOrder: 1
               InputArtifacts:
-                - Name: SourceOutput
+                - Name: BuildCICDOutput
         - Name: manual-approval
           Actions:
             - Name: production-approval
@@ -322,7 +365,7 @@ Resources:
                 ProjectName: !Ref rCodeRestartCICD
               RunOrder: 1
               InputArtifacts:
-                - Name: SourceOutput
+                - Name: BuildCICDOutput
 
   rGithubWebhook:
     Type: AWS::CodePipeline::Webhook
@@ -337,6 +380,74 @@ Resources:
       TargetPipeline: !Ref rCodePipelineStack
       TargetAction: source
       TargetPipelineVersion: !GetAtt rCodePipelineStack.Version
+
+  rCodeBuildCICDStaging:
+    Type: AWS::CodeBuild::Project
+    DependsOn:
+      - rArtifactStoreBucket
+    Properties:
+      Name: !Sub ${pSolutionNaming}-cicd-package-staging-cb
+      Description: "Staging package artifact for CICD Pipeline"
+      ServiceRole: !GetAtt [rCodeBuildRole, Arn]
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:2.0
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: |
+          version: 0.2
+          phases:
+            install:
+              runtime-versions:
+                nodejs: 10
+            build:
+              commands:
+                - set -ex
+                - printenv
+                - ls -R
+                - npm install -g yarn
+                - yarn install
+                - NODE_ENV=staging yarn build
+          artifacts:
+            files: "**/*"
+      TimeoutInMinutes: 10
+
+  rCodeBuildCICD:
+    Type: AWS::CodeBuild::Project
+    DependsOn:
+      - rArtifactStoreBucket
+    Properties:
+      Name: !Sub ${pSolutionNaming}-cicd-package-cb
+      Description: "Package artifact for CICD Pipeline"
+      ServiceRole: !GetAtt [rCodeBuildRole, Arn]
+      Artifacts:
+        Type: CODEPIPELINE
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: aws/codebuild/standard:2.0
+      Source:
+        Type: CODEPIPELINE
+        BuildSpec: |
+          version: 0.2
+          phases:
+            install:
+              runtime-versions:
+                nodejs: 10
+            build:
+              commands:
+                - set -ex
+                - printenv
+                - ls -R
+                - npm install -g yarn
+                - yarn install
+                - NODE_ENV=production yarn build
+          artifacts:
+            files: "**/*"
+      TimeoutInMinutes: 10
 
   rCodeRestartCICD:
     Type: AWS::CodeBuild::Project

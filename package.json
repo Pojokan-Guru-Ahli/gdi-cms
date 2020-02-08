@@ -7,8 +7,7 @@
     "develop": "strapi develop",
     "start": "yarn install && strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "build-start": "yarn install && strapi build && strapi start"
+    "strapi": "strapi"
   },
   "devDependencies": {
     "log4js": "^6.1.1"
