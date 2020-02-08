@@ -6,6 +6,9 @@ check-aws-profile:
 ifndef AWS_PROFILE
 	$(error AWS_PROFILE is undefined E.G export AWS_PROFILE=default)
 endif
+ifndef GITHUB_AUTH_TOKEN
+	$(error GITHUB_AUTH_TOKEN is undefined E.G export GITHUB_AUTH_TOKEN=xxxxxx)
+endif
 
 branch=`git rev-parse --abbrev-ref HEAD`
 
@@ -33,13 +36,10 @@ update: check-aws-profile test
 	--stack-name ${SolutionNaming}-cicd-pipeline-cf \
 	--template-body file://pipeline.yaml \
 	--parameters ParameterKey=pSolutionNaming,ParameterValue=$(SolutionNaming) \
-	ParameterKey=pGitHubOAuthToken,ParameterValue=$(GitHubOAuthToken) \
+	ParameterKey=pGitHubOAuthToken,ParameterValue=$(GITHUB_AUTH_TOKEN) \
 	ParameterKey=pLocale,ParameterValue=$(Locale) \
 	ParameterKey=pBranchName,ParameterValue=$(BRANCH_NAME) \
 	ParameterKey=pRepositoyName,ParameterValue=$(RepositoyName) \
-	ParameterKey=pSlackChannel,ParameterValue=$(SlackChannel) \
-	ParameterKey=pSlackURL,ParameterValue=$(SlackURL) \
-	ParameterKey=pSlackIcon,ParameterValue=$(SlackIcon) \
 	--capabilities CAPABILITY_NAMED_IAM --region ap-southeast-1 --profile $(AWS_PROFILE)
 
 .PHONY: deploy
@@ -48,13 +48,10 @@ deploy: check-aws-profile test
 	--stack-name ${SolutionNaming}-cicd-pipeline-cf \
 	--template-body file://pipeline.yaml \
 	--parameters ParameterKey=pSolutionNaming,ParameterValue=$(SolutionNaming) \
-	ParameterKey=pGitHubOAuthToken,ParameterValue=$(GitHubOAuthToken) \
+	ParameterKey=pGitHubOAuthToken,ParameterValue=$(GITHUB_AUTH_TOKEN) \
 	ParameterKey=pLocale,ParameterValue=$(Locale) \
 	ParameterKey=pBranchName,ParameterValue=$(BRANCH_NAME) \
 	ParameterKey=pRepositoyName,ParameterValue=$(RepositoyName) \
-	ParameterKey=pSlackChannel,ParameterValue=$(SlackChannel) \
-	ParameterKey=pSlackURL,ParameterValue=$(SlackURL) \
-	ParameterKey=pSlackIcon,ParameterValue=$(SlackIcon) \
 	--capabilities CAPABILITY_NAMED_IAM --region ap-southeast-1 --profile $(AWS_PROFILE)
 
 .PHONY: destroy

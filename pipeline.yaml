@@ -25,18 +25,6 @@ Parameters:
     Type: String
     Description: "Name of source code repository in CICD account"
 
-  pSlackChannel:
-    Type: String
-    Description: "Slack channel to use"
-
-  pSlackURL:
-    Type: String
-    Description: "Slack URL to use"
-
-  pSlackIcon:
-    Type: String
-    Description: "Slack icon to use"
-
 ########## Stack Resources #########
 Resources:
   rArtifactStoreBucket:
@@ -57,10 +45,6 @@ Resources:
 
   rArtifactStoreBucketPolicy:
     Type: "AWS::S3::BucketPolicy"
-    DependsOn:
-      - rCodeBuildRole
-      - rCodePipelineRole
-      - rCloudFormationRole
     Properties:
       Bucket: !Ref rArtifactStoreBucket
       PolicyDocument:
@@ -256,7 +240,6 @@ Resources:
   rCodePipelineStack:
     Type: AWS::CodePipeline::Pipeline
     DependsOn:
-      - rCodeBuildCICD
       - rCodePipelineRolePolicy
     Properties:
       Name: !Sub ${pSolutionNaming}-cicd-pl
@@ -373,7 +356,6 @@ Resources:
   rCodeBuildCICD:
     Type: AWS::CodeBuild::Project
     DependsOn:
-      - rCodeBuildRole
       - rArtifactStoreBucket
     Properties:
       Name: !Sub ${pSolutionNaming}-cicd-package-cb
