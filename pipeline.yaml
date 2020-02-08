@@ -318,7 +318,7 @@ Resources:
               RunOrder: 1
         - Name: deploy-to-staging
           Actions:
-            - Name: restart-strapi-service-staging
+            - Name: restart-strapi-service-stg
               ActionTypeId:
                 Category: Build
                 Owner: AWS
@@ -329,7 +329,7 @@ Resources:
               RunOrder: 1
               InputArtifacts:
                 - Name: BuildCICDOutput
-        - Name: production-approval
+        - Name: manual-approval
           Actions:
             - Name: production-approval
               ActionTypeId:
@@ -339,6 +339,8 @@ Resources:
                 Provider: Manual
               InputArtifacts: []
               OutputArtifacts: []
+              Configuration:
+                CustomData: Manual approval for production deployment
               RunOrder: 1
         - Name: deploy-to-prod
           Actions:
@@ -380,7 +382,7 @@ Resources:
       Artifacts:
         Type: CODEPIPELINE
       Environment:
-        Type: linuxContainer
+        Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
         Image: aws/codebuild/standard:2.0
       Source:
@@ -438,7 +440,7 @@ Resources:
     DependsOn:
       - rArtifactStoreBucket
     Properties:
-      Name: !Sub ${pSolutionNaming}-cicd-restart-cb
+      Name: !Sub ${pSolutionNaming}-cicd-restart-stg-cb
       Description: "Restart Strapi Service as part of the CICD Pipeline in the Staging environment"
       ServiceRole: !GetAtt [rCodeBuildRole, Arn]
       Artifacts:
