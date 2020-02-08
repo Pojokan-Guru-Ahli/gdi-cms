@@ -20,17 +20,16 @@
     "path": "/documentation",
     "showGeneratedFiles": true
   },
-  "servers": [
-    {
+  "servers": [{
       "url": "http://localhost:1337",
       "description": "Development server"
     },
     {
-      "url": "YOUR_STAGING_SERVER",
+      "url": "https://cms-staging.gdi.pojokan.io",
       "description": "Staging server"
     },
     {
-      "url": "YOUR_PRODUCTION_SERVER",
+      "url": "https://cms.gdi.pojokan.io",
       "description": "Production server"
     }
   ],
@@ -38,11 +37,9 @@
     "description": "Find out more",
     "url": "https://strapi.io/documentation/3.0.0-beta.x/"
   },
-  "security": [
-    {
-      "bearerAuth": []
-    }
-  ],
+  "security": [{
+    "bearerAuth": []
+  }],
   "paths": {
     "/chapters": {
       "get": {
@@ -97,8 +94,7 @@
         "tags": [
           "Chapters"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -405,18 +401,16 @@
         "tags": [
           "Chapters"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -478,18 +472,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -541,18 +533,16 @@
         "tags": [
           "Chapters"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/cities": {
@@ -608,8 +598,7 @@
         "tags": [
           "Cities"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -916,18 +905,16 @@
         "tags": [
           "Cities"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -989,18 +976,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -1052,18 +1037,16 @@
         "tags": [
           "Cities"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/classes": {
@@ -1119,8 +1102,7 @@
         "tags": [
           "Classes"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -1427,18 +1409,16 @@
         "tags": [
           "Classes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -1500,18 +1480,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -1563,18 +1541,16 @@
         "tags": [
           "Classes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/courses": {
@@ -1630,8 +1606,7 @@
         "tags": [
           "Courses"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -1938,18 +1913,16 @@
         "tags": [
           "Courses"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -2011,18 +1984,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -2074,18 +2045,16 @@
         "tags": [
           "Courses"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/curriculums": {
@@ -2141,8 +2110,7 @@
         "tags": [
           "Curriculums"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -2449,18 +2417,16 @@
         "tags": [
           "Curriculums"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -2522,18 +2488,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -2585,18 +2549,16 @@
         "tags": [
           "Curriculums"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/grades": {
@@ -2652,8 +2614,7 @@
         "tags": [
           "Grades"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -2960,18 +2921,16 @@
         "tags": [
           "Grades"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -3033,18 +2992,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -3096,18 +3053,16 @@
         "tags": [
           "Grades"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/kompetensidasars": {
@@ -3163,8 +3118,7 @@
         "tags": [
           "Kompetensidasar"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -3471,18 +3425,16 @@
         "tags": [
           "Kompetensidasar"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -3544,18 +3496,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -3607,18 +3557,16 @@
         "tags": [
           "Kompetensidasar"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/provinces": {
@@ -3674,8 +3622,7 @@
         "tags": [
           "Provinces"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -3982,18 +3929,16 @@
         "tags": [
           "Provinces"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -4055,18 +4000,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -4118,18 +4061,16 @@
         "tags": [
           "Provinces"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/questions": {
@@ -4185,8 +4126,7 @@
         "tags": [
           "Questions"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -4493,18 +4433,16 @@
         "tags": [
           "Questions"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -4566,18 +4504,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -4629,18 +4565,16 @@
         "tags": [
           "Questions"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/questionsources": {
@@ -4696,8 +4630,7 @@
         "tags": [
           "Questionsources"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -5004,18 +4937,16 @@
         "tags": [
           "Questionsources"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -5077,18 +5008,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -5140,18 +5069,16 @@
         "tags": [
           "Questionsources"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/quizzes": {
@@ -5207,8 +5134,7 @@
         "tags": [
           "Quizzes"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -5515,18 +5441,16 @@
         "tags": [
           "Quizzes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -5588,18 +5512,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -5651,18 +5573,16 @@
         "tags": [
           "Quizzes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/schools": {
@@ -5718,8 +5638,7 @@
         "tags": [
           "Schools"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -6026,18 +5945,16 @@
         "tags": [
           "Schools"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -6099,18 +6016,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -6162,18 +6077,16 @@
         "tags": [
           "Schools"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/students": {
@@ -6229,8 +6142,7 @@
         "tags": [
           "Students"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -6537,18 +6449,16 @@
         "tags": [
           "Students"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -6610,18 +6520,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -6673,18 +6581,16 @@
         "tags": [
           "Students"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/teachers": {
@@ -6740,8 +6646,7 @@
         "tags": [
           "Teachers"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -7048,18 +6953,16 @@
         "tags": [
           "Teachers"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -7121,18 +7024,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -7184,18 +7085,16 @@
         "tags": [
           "Teachers"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/userquizzes": {
@@ -7251,8 +7150,7 @@
         "tags": [
           "Userquizzes"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -7559,18 +7457,16 @@
         "tags": [
           "Userquizzes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -7632,18 +7528,16 @@
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -7695,18 +7589,16 @@
         "tags": [
           "Userquizzes"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/email/": {
@@ -8019,18 +7911,16 @@
         "tags": [
           "Upload - File"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "delete": {
         "deprecated": false,
@@ -8085,18 +7975,16 @@
         "tags": [
           "Upload - File"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/upload/search/{id}": {
@@ -8153,18 +8041,16 @@
         "tags": [
           "Upload - File"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/users-permissions/init": {
@@ -8274,18 +8160,16 @@
         "tags": [
           "Users-Permissions - Role"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/users-permissions/roles": {
@@ -8341,8 +8225,7 @@
         "tags": [
           "Users-Permissions - Role"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -8592,18 +8475,16 @@
         "tags": [
           "Users-Permissions - Role"
         ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "role",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ],
+        }],
         "requestBody": {
           "description": "",
           "required": true,
@@ -8669,18 +8550,16 @@
         "tags": [
           "Users-Permissions - Role"
         ],
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "role",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/users-permissions/search/{id}": {
@@ -8736,8 +8615,7 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "id",
             "in": "path",
             "description": "",
@@ -9131,18 +9009,16 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
-            "name": "provider",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "provider",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     },
     "/auth/forgot-password": {
@@ -9468,8 +9344,7 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
+        "parameters": [{
             "name": "_limit",
             "in": "query",
             "required": false,
@@ -9711,18 +9586,16 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       },
       "put": {
         "deprecated": false,
@@ -9773,18 +9646,16 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ],
+        }],
         "requestBody": {
           "description": "",
           "required": true,
@@ -9850,18 +9721,16 @@
         "tags": [
           "Users-Permissions - User"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "description": "",
+          "deprecated": false,
+          "required": true,
+          "schema": {
+            "type": "string"
           }
-        ]
+        }]
       }
     }
   },
@@ -14172,8 +14041,7 @@
       }
     }
   },
-  "tags": [
-    {
+  "tags": [{
       "name": "Chapters"
     },
     {
