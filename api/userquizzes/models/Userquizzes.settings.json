@@ -18,8 +18,8 @@
       "repeatable": true
     },
     "student": {
-      "model": "students",
-      "via": "userquizzes"
+      "via": "userquizzes",
+      "model": "students"
     },
     "Answers": {
       "component": "user.answer",

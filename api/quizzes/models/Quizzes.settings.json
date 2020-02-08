@@ -36,8 +36,8 @@
       "type": "boolean"
     },
     "chapters": {
-      "collection": "chapters",
-      "via": "quiz"
+      "via": "quiz",
+      "collection": "chapters"
     },
     "classes": {
       "collection": "classes",

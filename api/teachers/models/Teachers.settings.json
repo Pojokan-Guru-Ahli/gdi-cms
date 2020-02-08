@@ -29,9 +29,9 @@
       "via": "teacher"
     },
     "user": {
+      "via": "teacher",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "teacher"
+      "model": "user"
     },
     "classes": {
       "collection": "classes"

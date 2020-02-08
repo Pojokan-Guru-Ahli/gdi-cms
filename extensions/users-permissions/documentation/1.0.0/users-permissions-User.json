@@ -1290,12 +1290,16 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
           "userType": {
             "type": "string",
             "enum": [
+              "admin",
               "student",
               "teacher"
             ]
@@ -1332,6 +1336,51 @@
                 "type": "string"
               },
               "courses": {
+                "type": "string"
+              }
+            }
+          },
+          "student": {
+            "required": [
+              "id",
+              "studentNumber",
+              "studentName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "studentNumber": {
+                "type": "string"
+              },
+              "studentName": {
+                "type": "string"
+              },
+              "studentBirthday": {
+                "type": "string"
+              },
+              "parentMobilePhone": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "activeStatus": {
+                "type": "boolean"
+              },
+              "grade": {
+                "type": "string"
+              },
+              "class": {
+                "type": "string"
+              },
+              "userquizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
                 "type": "string"
               }
             }
@@ -1385,11 +1434,15 @@
           "userType": {
             "type": "string",
             "enum": [
+              "admin",
               "student",
               "teacher"
             ]
           },
           "teacher": {
+            "type": "string"
+          },
+          "student": {
             "type": "string"
           }
         }

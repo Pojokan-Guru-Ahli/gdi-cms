@@ -46,8 +46,8 @@
       "model": "cities"
     },
     "students": {
-      "collection": "students",
-      "via": "school"
+      "via": "school",
+      "collection": "students"
     }
   }
 }

@@ -20,8 +20,9 @@
     "curriculum": {
       "model": "curriculums"
     },
-    "course": {
-      "model": "courses"
+    "courses": {
+      "collection": "courses",
+      "via": "kompetensi_dasar"
     },
     "user": {
       "plugin": "users-permissions",

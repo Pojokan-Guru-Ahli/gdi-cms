@@ -776,6 +776,56 @@
               },
               "teacher": {
                 "type": "string"
+              },
+              "student": {
+                "type": "string"
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "user": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
+                },
+                "kompetensi_dasar": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -821,6 +871,12 @@
           },
           "user": {
             "type": "string"
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

@@ -67,14 +67,19 @@
     },
     "userType": {
       "enum": [
+        "admin",
         "student",
         "teacher"
       ],
       "type": "enumeration"
     },
     "teacher": {
+      "model": "teachers",
+      "via": "user"
+    },
+    "student": {
       "via": "user",
-      "model": "teachers"
+      "model": "students"
     }
   }
 }

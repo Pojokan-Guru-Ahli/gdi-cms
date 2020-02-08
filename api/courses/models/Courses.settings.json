@@ -40,6 +40,14 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "chapter": {
+      "via": "courses",
+      "model": "chapters"
+    },
+    "kompetensi_dasar": {
+      "via": "courses",
+      "model": "kompetensidasar"
     }
   }
 }

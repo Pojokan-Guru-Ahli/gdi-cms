@@ -766,6 +766,77 @@
               },
               "teacher": {
                 "type": "string"
+              },
+              "student": {
+                "type": "string"
+              }
+            }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quiz": {
+                "type": "string"
+              },
+              "SubChapter": {
+                "type": "component"
+              },
+              "user": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "kompetensi_dasar": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "user": {
+                "type": "string"
               }
             }
           }
@@ -798,6 +869,12 @@
             }
           },
           "user": {
+            "type": "string"
+          },
+          "chapter": {
+            "type": "string"
+          },
+          "kompetensi_dasar": {
             "type": "string"
           }
         }

@@ -699,6 +699,9 @@
               },
               "teacher": {
                 "type": "string"
+              },
+              "student": {
+                "type": "string"
               }
             }
           },
@@ -784,6 +787,12 @@
                 }
               },
               "user": {
+                "type": "string"
+              },
+              "chapter": {
+                "type": "string"
+              },
+              "kompetensi_dasar": {
                 "type": "string"
               }
             }
