@@ -576,6 +576,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -762,6 +768,9 @@
                   }
                 },
                 "user": {
+                  "type": "string"
+                },
+                "chapter": {
                   "type": "string"
                 }
               }

@@ -771,6 +771,44 @@
                 "type": "string"
               }
             }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quiz": {
+                "type": "string"
+              },
+              "SubChapter": {
+                "type": "component"
+              },
+              "user": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -801,6 +839,9 @@
             }
           },
           "user": {
+            "type": "string"
+          },
+          "chapter": {
             "type": "string"
           }
         }

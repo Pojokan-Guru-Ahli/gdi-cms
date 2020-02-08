@@ -594,6 +594,9 @@
               },
               "user": {
                 "type": "string"
+              },
+              "chapter": {
+                "type": "string"
               }
             }
           },

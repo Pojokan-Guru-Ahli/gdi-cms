@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/07/2020 4:04:45 PM"
+    "x-generation-date": "02/08/2020 4:59:05 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -10134,6 +10134,50 @@
                 "type": "string"
               }
             }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "curriculums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "classes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "quizzes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "user": {
+                  "type": "string"
+                },
+                "chapter": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -10177,6 +10221,12 @@
           },
           "user": {
             "type": "string"
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -10445,6 +10495,9 @@
                   }
                 },
                 "user": {
+                  "type": "string"
+                },
+                "chapter": {
                   "type": "string"
                 }
               }
@@ -10816,6 +10869,44 @@
                 "type": "string"
               }
             }
+          },
+          "chapter": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "curriculum": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "quiz": {
+                "type": "string"
+              },
+              "SubChapter": {
+                "type": "component"
+              },
+              "user": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -10846,6 +10937,9 @@
             }
           },
           "user": {
+            "type": "string"
+          },
+          "chapter": {
             "type": "string"
           }
         }
@@ -10891,6 +10985,12 @@
               },
               "user": {
                 "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -10925,6 +11025,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -10965,6 +11071,9 @@
                   }
                 },
                 "user": {
+                  "type": "string"
+                },
+                "chapter": {
                   "type": "string"
                 }
               }
@@ -11154,6 +11263,9 @@
                 }
               },
               "user": {
+                "type": "string"
+              },
+              "chapter": {
                 "type": "string"
               }
             }
@@ -11643,6 +11755,12 @@
               },
               "user": {
                 "type": "string"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -12188,6 +12306,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -12374,6 +12498,9 @@
                   }
                 },
                 "user": {
+                  "type": "string"
+                },
+                "chapter": {
                   "type": "string"
                 }
               }
@@ -13175,6 +13302,9 @@
                 }
               },
               "user": {
+                "type": "string"
+              },
+              "chapter": {
                 "type": "string"
               }
             }

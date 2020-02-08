@@ -22,12 +22,12 @@
       "via": "chapters"
     },
     "questions": {
-      "via": "chapter",
-      "collection": "questions"
+      "collection": "questions",
+      "via": "chapter"
     },
     "quiz": {
-      "via": "chapters",
-      "model": "quizzes"
+      "model": "quizzes",
+      "via": "chapters"
     },
     "SubChapter": {
       "type": "component",
@@ -37,6 +37,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "courses": {
+      "collection": "courses",
+      "via": "chapter"
     }
   }
 }
