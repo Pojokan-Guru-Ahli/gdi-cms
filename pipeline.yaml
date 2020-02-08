@@ -193,6 +193,7 @@ Resources:
               - !GetAtt [rCodeBuildCICD, Arn]
               - !GetAtt [rCodeBuildCICDStaging, Arn]
               - !GetAtt [rCodeRestartCICD, Arn]
+              - !GetAtt [rCodeRestartCICDStaging, Arn]
           - Effect: "Allow"
             Action:
               - s3:*
