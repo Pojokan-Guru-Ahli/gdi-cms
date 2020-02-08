@@ -282,7 +282,7 @@ Resources:
                 ObjectKey: artifact.zip
                 BucketName: !Ref rCmsArtifactBucket
               InputArtifacts:
-                - Name: BuildCICDOutput
+                - Name: SourceOutput
               RunOrder: 1
         - Name: deploy-to-staging
           Actions:
@@ -296,7 +296,7 @@ Resources:
                 ProjectName: !Ref rCodeRestartCICDStaging
               RunOrder: 1
               InputArtifacts:
-                - Name: BuildCICDOutput
+                - Name: SourceOutput
         - Name: manual-approval
           Actions:
             - Name: production-approval
@@ -322,7 +322,7 @@ Resources:
                 ProjectName: !Ref rCodeRestartCICD
               RunOrder: 1
               InputArtifacts:
-                - Name: BuildCICDOutput
+                - Name: SourceOutput
 
   rGithubWebhook:
     Type: AWS::CodePipeline::Webhook
