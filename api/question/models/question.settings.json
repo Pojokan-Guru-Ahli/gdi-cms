@@ -1,0 +1,139 @@
+{
+  "connection": "default",
+  "collectionName": "questions",
+  "info": {
+    "name": "question"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "questionDetail": {
+      "type": "richtext",
+      "required": true
+    },
+    "questionType": {
+      "required": true,
+      "enum": [
+        "image",
+        "text"
+      ],
+      "type": "enumeration"
+    },
+    "questionImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "questionVideo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "optionA": {
+      "type": "string",
+      "required": true
+    },
+    "optionB": {
+      "required": true,
+      "type": "string"
+    },
+    "optionC": {
+      "type": "string"
+    },
+    "optionD": {
+      "type": "string"
+    },
+    "optionE": {
+      "type": "string"
+    },
+    "answer": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "difficulties": {
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ],
+      "type": "enumeration"
+    },
+    "explanationType": {
+      "enum": [
+        "image",
+        "text",
+        "pdf",
+        "video"
+      ],
+      "type": "enumeration",
+      "required": true
+    },
+    "textExplanation": {
+      "type": "richtext"
+    },
+    "imageExplanation": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "pdfExplanation": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "videoExplanation": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "workflow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "workflow.data"
+    },
+    "questionsource": {
+      "model": "questionsource",
+      "via": "questions"
+    },
+    "chapter": {
+      "via": "questions",
+      "model": "chapter"
+    },
+    "class": {
+      "via": "questions",
+      "model": "classe"
+    },
+    "teacher": {
+      "via": "questions",
+      "model": "teacher"
+    },
+    "quizzes": {
+      "via": "questions",
+      "collection": "quiz",
+      "dominant": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

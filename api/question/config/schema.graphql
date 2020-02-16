@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            questions: {
+                policies: ["global.isMe"],
+                resolver: "Question.find"
+            },
+            question: {
+                policies: ["checkOwner"],
+                resolver: "Question.findOne"
+            }
+        },
+        Mutation: {
+            createQuestion: {
+                policies: ["global.setOwner"],
+                resolver: "Question.create"
+            },
+            updateQuestion: {
+                policies: ["checkOwner"],
+                resolver: "Question.update"
+            },
+            deleteQuestion: {
+                policies: ["checkOwner"],
+                resolver: "Question.delete"
+            }
+        }
+    },
+};
