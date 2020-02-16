@@ -1,0 +1,44 @@
+{
+  "connection": "default",
+  "collectionName": "classes",
+  "info": {
+    "name": "classe"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "classLevel": {
+      "type": "string"
+    },
+    "className": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "grades": {
+      "model": "grade"
+    },
+    "students": {
+      "collection": "student",
+      "via": "class"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "class"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "classes",
+      "dominant": true
+    },
+    "quizzes": {
+      "collection": "quiz",
+      "via": "classes",
+      "dominant": true
+    }
+  }
+}
