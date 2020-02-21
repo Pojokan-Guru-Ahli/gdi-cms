@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            chapters: {
+                policies: ["global.isMe"],
+                resolver: "Chapter.find"
+            },
+            chapter: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Chapter.findOne"
+            }
+        },
+        Mutation: {
+            createChapter: {
+                policies: ["global.setOwner"],
+                resolver: "Chapter.create"
+            },
+            updateChapter: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Chapter.update"
+            },
+            deleteChapter: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Chapter.delete"
+            }
+        }
+    },
+};
