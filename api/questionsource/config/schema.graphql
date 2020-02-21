@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            questionsources: {
+                policies: [],
+                resolver: "Questionsource.find"
+            },
+            questionsource: {
+                policies: [],
+                resolver: "Questionsource.findOne"
+            }
+        },
+        Mutation: {
+            createQuestionsource: {
+                policies: [],
+                resolver: "Questionsource.create"
+            },
+            updateQuestionsource: {
+                policies: [],
+                resolver: "Questionsource.update"
+            },
+            deleteQuestionsource: {
+                policies: [],
+                resolver: "Questionsource.delete"
+            }
+        }
+    },
+};

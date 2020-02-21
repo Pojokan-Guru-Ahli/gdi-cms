@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "courses",
+  "info": {
+    "name": "course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "classes": {
+      "via": "courses",
+      "collection": "classe"
+    },
+    "quizzes": {
+      "via": "courses",
+      "collection": "quiz",
+      "dominant": true
+    },
+    "chapter": {
+      "via": "courses",
+      "model": "chapter"
+    },
+    "kompetensidasar": {
+      "via": "courses",
+      "model": "kompetensidasar"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "kurikulums": {
+      "via": "courses",
+      "collection": "kurikulum"
+    }
+  }
+}

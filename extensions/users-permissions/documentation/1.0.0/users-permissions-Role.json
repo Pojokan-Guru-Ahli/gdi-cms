@@ -615,16 +615,13 @@
                 "image_url": {
                   "type": "string"
                 },
-                "students": {
-                  "type": "string"
-                },
                 "userType": {
                   "type": "string"
                 },
-                "teacher": {
+                "student": {
                   "type": "string"
                 },
-                "student": {
+                "teacher": {
                   "type": "string"
                 }
               }

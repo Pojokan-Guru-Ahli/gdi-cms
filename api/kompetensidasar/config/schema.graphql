@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            kompetensidasars: {
+                policies: ["global.isMe"],
+                resolver: "Kompetensidasar.find"
+            },
+            kompetensidasar: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Kompetensidasar.findOne"
+            }
+        },
+        Mutation: {
+            createKompetensidasar: {
+                policies: ["global.setOwner"],
+                resolver: "Kompetensidasar.create"
+            },
+            updateKompetensidasar: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Kompetensidasar.update"
+            },
+            deleteKompetensidasar: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Kompetensidasar.delete"
+            }
+        }
+    },
+};

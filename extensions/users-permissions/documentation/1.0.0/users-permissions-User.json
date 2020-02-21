@@ -1251,51 +1251,6 @@
           "image_url": {
             "type": "string"
           },
-          "students": {
-            "required": [
-              "id",
-              "studentNumber",
-              "studentName"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "studentNumber": {
-                "type": "string"
-              },
-              "studentName": {
-                "type": "string"
-              },
-              "studentBirthday": {
-                "type": "string"
-              },
-              "parentMobilePhone": {
-                "type": "string"
-              },
-              "school": {
-                "type": "string"
-              },
-              "activeStatus": {
-                "type": "boolean"
-              },
-              "grade": {
-                "type": "string"
-              },
-              "class": {
-                "type": "string"
-              },
-              "userquizzes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
           "userType": {
             "type": "string",
             "enum": [
@@ -1303,42 +1258,6 @@
               "student",
               "teacher"
             ]
-          },
-          "teacher": {
-            "required": [
-              "id",
-              "name",
-              "NUPTK"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "NUPTK": {
-                "type": "string"
-              },
-              "Workflow": {
-                "type": "component"
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              },
-              "classes": {
-                "type": "string"
-              },
-              "courses": {
-                "type": "string"
-              }
-            }
           },
           "student": {
             "required": [
@@ -1362,23 +1281,59 @@
               "parentMobilePhone": {
                 "type": "string"
               },
-              "school": {
-                "type": "string"
-              },
               "activeStatus": {
                 "type": "boolean"
-              },
-              "grade": {
-                "type": "string"
-              },
-              "class": {
-                "type": "string"
               },
               "userquizzes": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
+              },
+              "class": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "grade": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              }
+            }
+          },
+          "teacher": {
+            "required": [
+              "id",
+              "name",
+              "NUPTK"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "NUPTK": {
+                "type": "string"
+              },
+              "workflow": {
+                "type": "component"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
               },
               "user": {
                 "type": "string"
@@ -1428,9 +1383,6 @@
           "image_url": {
             "type": "string"
           },
-          "students": {
-            "type": "string"
-          },
           "userType": {
             "type": "string",
             "enum": [
@@ -1439,10 +1391,10 @@
               "teacher"
             ]
           },
-          "teacher": {
+          "student": {
             "type": "string"
           },
-          "student": {
+          "teacher": {
             "type": "string"
           }
         }

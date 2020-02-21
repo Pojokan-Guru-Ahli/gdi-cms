@@ -4,7 +4,10 @@
     "client": "cookie",
     "key": "gdi.sid",
     "prefix": "gdi:sess:",
-    "secretKeys": ["Z2dhZBNfyaeuTEYN", "MPJVwTv7Mfrrjx4K"],
+    "secretKeys": [
+      "${process.env.SECRET_KEY1 || 'Z2dhZBNfyaeuTEYN'}",
+      "${process.env.SECRET_KEY2 || 'MPJVwTv7Mfrrjx4K'}"
+    ],
     "httpOnly": true,
     "maxAge": 86400000,
     "overwrite": true,

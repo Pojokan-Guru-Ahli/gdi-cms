@@ -1,29 +1,20 @@
 'use strict';
 
+const gdiQuery = require('../../../../config/policies/checkOwner')
+const _ = require('lodash')
+
 /**
  * `checkOwner` policy.
  */
 
 module.exports = async (ctx, next) => {
-
-  const { role, id } = ctx.state.user;
-
-  if (role.name == "Teacher") {
-    const { body } = ctx.request
-
-    const fieldId = body.id
-    
-    Kompetensidasar.findOne({
-      id: fieldId,
-      user: id
-    }).then(result => {
-      if(!result) {
-        return ctx.unauthorized(`You're not allowed to perform this action!`)
-      }
-    })
-
-    await next()
-  } else {
+  // check user permission from onefiles global policy
+  const checkUser = await gdiQuery('kompetensidasar', strapi, ctx)
+  
+  // continue if found, and unauthorized if null or empty
+  if(_.isEmpty(checkUser)) {
     ctx.unauthorized(`You're not allowed to perform this action!`)
+  } else {
+    await next()
   }
 };

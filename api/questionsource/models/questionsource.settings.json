@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "questionsources",
+  "info": {
+    "name": "question source"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "sourceInfo": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "questionsource"
+    }
+  }
+}
