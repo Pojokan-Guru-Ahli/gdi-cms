@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "userquizs",
+  "info": {
+    "name": "userquiz"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.question"
+    },
+    "answer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "user.answer"
+    },
+    "student": {
+      "via": "userquizzes",
+      "model": "student"
+    }
+  }
+}
