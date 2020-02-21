@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "questionsources",
   "info": {
-    "name": "questionsource"
+    "name": "question source"
   },
   "options": {
     "increments": true,
@@ -16,8 +16,8 @@
       "type": "string"
     },
     "questions": {
-      "via": "questionsource",
-      "collection": "question"
+      "collection": "question",
+      "via": "questionsource"
     }
   }
 }
