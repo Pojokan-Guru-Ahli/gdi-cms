@@ -62,9 +62,6 @@
     "image_url": {
       "type": "string"
     },
-    "students": {
-      "model": "students"
-    },
     "userType": {
       "enum": [
         "admin",
@@ -73,13 +70,11 @@
       ],
       "type": "enumeration"
     },
-    "teacher": {
-      "model": "teachers",
-      "via": "user"
-    },
     "student": {
-      "via": "user",
-      "model": "students"
+      "model": "student"
+    },
+    "teacher": {
+      "model": "teacher"
     }
   }
 }
