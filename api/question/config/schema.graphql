@@ -6,7 +6,7 @@ module.exports = {
                 resolver: "Question.find"
             },
             question: {
-                policies: ["checkOwner"],
+                policies: ["checkOwnerGQL"],
                 resolver: "Question.findOne"
             }
         },
@@ -16,11 +16,11 @@ module.exports = {
                 resolver: "Question.create"
             },
             updateQuestion: {
-                policies: ["checkOwner"],
+                policies: ["checkOwnerGQL"],
                 resolver: "Question.update"
             },
             deleteQuestion: {
-                policies: ["checkOwner"],
+                policies: ["checkOwnerGQL"],
                 resolver: "Question.delete"
             }
         }
