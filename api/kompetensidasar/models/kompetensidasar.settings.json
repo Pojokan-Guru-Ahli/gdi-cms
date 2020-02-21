@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "kompetensidasars",
   "info": {
-    "name": "Kompetensi Dasar"
+    "name": "kompetensidasar"
   },
   "options": {
     "increments": true,
@@ -10,19 +10,14 @@
   },
   "attributes": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
-      "type": "richtext",
-      "required": true
-    },
-    "curriculum": {
-      "model": "curriculums"
+      "type": "richtext"
     },
     "courses": {
-      "collection": "courses",
-      "via": "kompetensi_dasar"
+      "collection": "course",
+      "via": "kompetensidasar"
     },
     "user": {
       "plugin": "users-permissions",

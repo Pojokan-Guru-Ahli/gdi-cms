@@ -516,9 +516,7 @@
     "schemas": {
       "Kompetensidasar": {
         "required": [
-          "id",
-          "name",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
@@ -530,41 +528,11 @@
           "description": {
             "type": "string"
           },
-          "curriculum": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "chapter": {
-                "type": "string"
-              },
-              "chapters": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "courses": {
             "type": "array",
             "items": {
               "required": [
-                "id",
-                "name"
+                "id"
               ],
               "properties": {
                 "id": {
@@ -575,12 +543,6 @@
                 },
                 "icon": {
                   "type": "string"
-                },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "classes": {
                   "type": "array",
@@ -594,14 +556,20 @@
                     "type": "string"
                   }
                 },
-                "user": {
-                  "type": "string"
-                },
                 "chapter": {
                   "type": "string"
                 },
-                "kompetensi_dasar": {
+                "kompetensidasar": {
                   "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "kurikulums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -646,16 +614,13 @@
               "image_url": {
                 "type": "string"
               },
-              "students": {
-                "type": "string"
-              },
               "userType": {
                 "type": "string"
               },
-              "teacher": {
+              "student": {
                 "type": "string"
               },
-              "student": {
+              "teacher": {
                 "type": "string"
               }
             }
@@ -663,18 +628,11 @@
         }
       },
       "NewKompetensidasar": {
-        "required": [
-          "name",
-          "description"
-        ],
         "properties": {
           "name": {
             "type": "string"
           },
           "description": {
-            "type": "string"
-          },
-          "curriculum": {
             "type": "string"
           },
           "courses": {
