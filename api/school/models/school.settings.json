@@ -1,0 +1,49 @@
+{
+  "connection": "default",
+  "collectionName": "schools",
+  "info": {
+    "name": "school"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "schoolName": {
+      "type": "string"
+    },
+    "schoolEmail": {
+      "required": true,
+      "type": "email"
+    },
+    "schoolPassword": {
+      "required": true,
+      "type": "password"
+    },
+    "schoolPrefix": {
+      "required": true,
+      "type": "string"
+    },
+    "schoolAddress": {
+      "required": true,
+      "type": "text"
+    },
+    "schoolPostCode": {
+      "type": "integer",
+      "required": true
+    },
+    "schoolPhoneNumber": {
+      "type": "string"
+    },
+    "schoolStatus": {
+      "type": "boolean"
+    },
+    "cities": {
+      "model": "city"
+    },
+    "students": {
+      "via": "school",
+      "collection": "student"
+    }
+  }
+}
