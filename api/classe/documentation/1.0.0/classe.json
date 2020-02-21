@@ -710,12 +710,6 @@
                 "icon": {
                   "type": "string"
                 },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -736,6 +730,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "kurikulums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -745,6 +745,7 @@
             "items": {
               "required": [
                 "id",
+                "quizName",
                 "description",
                 "capacity",
                 "durationMinute",
