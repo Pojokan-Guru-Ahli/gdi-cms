@@ -611,12 +611,6 @@
                 "icon": {
                   "type": "string"
                 },
-                "curriculums": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "classes": {
                   "type": "array",
                   "items": {
@@ -637,6 +631,12 @@
                 },
                 "user": {
                   "type": "string"
+                },
+                "kurikulums": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -758,9 +758,6 @@
                     "type": "string"
                   }
                 },
-                "curriculum": {
-                  "type": "string"
-                },
                 "courses": {
                   "type": "array",
                   "items": {
@@ -771,6 +768,9 @@
                   "type": "string"
                 },
                 "user": {
+                  "type": "string"
+                },
+                "kurikulum": {
                   "type": "string"
                 }
               }
