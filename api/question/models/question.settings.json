@@ -111,8 +111,8 @@
       "component": "workflow.data"
     },
     "questionsource": {
-      "model": "questionsource",
-      "via": "questions"
+      "via": "questions",
+      "model": "questionsource"
     },
     "chapter": {
       "via": "questions",

@@ -888,9 +888,6 @@
                   "type": "string"
                 }
               },
-              "curriculum": {
-                "type": "string"
-              },
               "courses": {
                 "type": "array",
                 "items": {
@@ -901,6 +898,9 @@
                 "type": "string"
               },
               "user": {
+                "type": "string"
+              },
+              "kurikulum": {
                 "type": "string"
               }
             }
@@ -993,6 +993,7 @@
             "items": {
               "required": [
                 "id",
+                "quizName",
                 "description",
                 "capacity",
                 "durationMinute",
