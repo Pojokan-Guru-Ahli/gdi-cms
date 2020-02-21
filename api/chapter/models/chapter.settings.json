@@ -21,10 +21,6 @@
       "collection": "question",
       "via": "chapter"
     },
-    "curriculum": {
-      "model": "curriculum",
-      "via": "chapters"
-    },
     "courses": {
       "collection": "course",
       "via": "chapter"
@@ -36,6 +32,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "kurikulum": {
+      "via": "chapters",
+      "model": "kurikulum"
     }
   }
 }
