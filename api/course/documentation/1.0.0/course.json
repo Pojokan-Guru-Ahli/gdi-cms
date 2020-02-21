@@ -571,34 +571,6 @@
               }
             }
           },
-          "curriculums": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "classes": {
             "type": "array",
             "items": {
@@ -654,6 +626,7 @@
             "items": {
               "required": [
                 "id",
+                "quizName",
                 "description",
                 "capacity",
                 "durationMinute",
@@ -731,9 +704,6 @@
                   "type": "string"
                 }
               },
-              "curriculum": {
-                "type": "string"
-              },
               "courses": {
                 "type": "array",
                 "items": {
@@ -744,6 +714,9 @@
                 "type": "string"
               },
               "user": {
+                "type": "string"
+              },
+              "kurikulum": {
                 "type": "string"
               }
             }
@@ -767,9 +740,6 @@
                 "items": {
                   "type": "string"
                 }
-              },
-              "curriculum": {
-                "type": "string"
               },
               "user": {
                 "type": "string"
@@ -826,6 +796,35 @@
                 "type": "string"
               }
             }
+          },
+          "kurikulums": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "chapters": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -833,12 +832,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "curriculums": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "classes": {
             "type": "array",
@@ -860,6 +853,12 @@
           },
           "user": {
             "type": "string"
+          },
+          "kurikulums": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

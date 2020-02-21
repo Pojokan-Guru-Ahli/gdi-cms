@@ -18,10 +18,6 @@
       "plugin": "upload",
       "required": false
     },
-    "curriculums": {
-      "collection": "curriculum",
-      "via": "courses"
-    },
     "classes": {
       "via": "courses",
       "collection": "classe"
@@ -42,6 +38,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "kurikulums": {
+      "via": "courses",
+      "collection": "kurikulum"
     }
   }
 }
