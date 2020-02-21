@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            kurikulums: {
+                policies: [],
+                resolver: "Kurikulum.find"
+            },
+            kurikulum: {
+                policies: [],
+                resolver: "Kurikulum.findOne"
+            }
+        },
+        Mutation: {
+            createKurikulum: {
+                policies: [],
+                resolver: "Kurikulum.create"
+            },
+            updateKurikulum: {
+                policies: [],
+                resolver: "Kurikulum.update"
+            },
+            deleteKurikulum: {
+                policies: [],
+                resolver: "Kurikulum.delete"
+            }
+        }
+    },
+};
