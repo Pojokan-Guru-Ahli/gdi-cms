@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/19/2020 3:46:19 PM"
+    "x-generation-date": "03/06/2020 9:21:47 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9925,6 +9925,9 @@
                 "questionImage": {
                   "type": "string"
                 },
+                "questionAudio": {
+                  "type": "string"
+                },
                 "questionVideo": {
                   "type": "string"
                 },
@@ -10376,6 +10379,9 @@
                   "type": "string"
                 },
                 "questionImage": {
+                  "type": "string"
+                },
+                "questionAudio": {
                   "type": "string"
                 },
                 "questionVideo": {
@@ -11393,6 +11399,52 @@
               }
             }
           },
+          "questionAudio": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
           "questionVideo": {
             "required": [
               "id",
@@ -12073,6 +12125,9 @@
                 "questionImage": {
                   "type": "string"
                 },
+                "questionAudio": {
+                  "type": "string"
+                },
                 "questionVideo": {
                   "type": "string"
                 },
@@ -12311,6 +12366,9 @@
                   "type": "string"
                 },
                 "questionImage": {
+                  "type": "string"
+                },
+                "questionAudio": {
                   "type": "string"
                 },
                 "questionVideo": {
@@ -13001,6 +13059,9 @@
                 "questionImage": {
                   "type": "string"
                 },
+                "questionAudio": {
+                  "type": "string"
+                },
                 "questionVideo": {
                   "type": "string"
                 },
@@ -13314,6 +13375,9 @@
                     "questionImage": {
                       "type": "string"
                     },
+                    "questionAudio": {
+                      "type": "string"
+                    },
                     "questionVideo": {
                       "type": "string"
                     },
@@ -13490,6 +13554,9 @@
                       "type": "string"
                     },
                     "questionImage": {
+                      "type": "string"
+                    },
+                    "questionAudio": {
                       "type": "string"
                     },
                     "questionVideo": {

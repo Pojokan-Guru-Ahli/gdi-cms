@@ -585,6 +585,9 @@
                 "questionImage": {
                   "type": "string"
                 },
+                "questionAudio": {
+                  "type": "string"
+                },
                 "questionVideo": {
                   "type": "string"
                 },
