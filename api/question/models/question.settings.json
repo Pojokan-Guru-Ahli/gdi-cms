@@ -32,6 +32,12 @@
       "plugin": "upload",
       "required": false
     },
+    "questionAudio": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
     "questionVideo": {
       "model": "file",
       "via": "related",
