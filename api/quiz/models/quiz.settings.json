@@ -1,0 +1,56 @@
+{
+  "connection": "default",
+  "collectionName": "quizzes",
+  "info": {
+    "name": "quiz"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "quizName": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "required": true,
+      "type": "richtext"
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true
+    },
+    "durationMinute": {
+      "type": "integer",
+      "required": true
+    },
+    "totalQuestions": {
+      "type": "integer",
+      "required": true
+    },
+    "quizStatus": {
+      "type": "boolean"
+    },
+    "classes": {
+      "via": "quizzes",
+      "collection": "classe"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "quizzes"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "quizzes"
+    },
+    "chapters": {
+      "via": "quiz",
+      "collection": "chapter"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

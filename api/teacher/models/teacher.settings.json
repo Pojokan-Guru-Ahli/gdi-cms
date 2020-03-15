@@ -1,0 +1,40 @@
+{
+  "connection": "default",
+  "collectionName": "teachers",
+  "info": {
+    "name": "teacher"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "NUPTK": {
+      "type": "string",
+      "required": true
+    },
+    "workflow": {
+      "type": "component",
+      "repeatable": false,
+      "component": "workflow.data"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "teacher"
+    },
+    "classes": {
+      "collection": "classe"
+    },
+    "courses": {
+      "collection": "course"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

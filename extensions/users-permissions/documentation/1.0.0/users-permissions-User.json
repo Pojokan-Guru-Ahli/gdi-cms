@@ -180,7 +180,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -190,7 +193,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -655,6 +661,77 @@
         "parameters": []
       }
     },
+    "/auth/send-email-confirmation": {
+      "post": {
+        "deprecated": false,
+        "description": "Send a confirmation email to user",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Users-Permissions - User"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "foo": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/users": {
       "get": {
         "deprecated": false,
@@ -825,7 +902,10 @@
             "required": false,
             "description": "Get records that matches any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           },
@@ -835,7 +915,10 @@
             "required": false,
             "description": "Get records that doesn't match any value in the array of values",
             "schema": {
-              "type": "array"
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "deprecated": false
           }
@@ -1161,6 +1244,101 @@
                 }
               }
             }
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "admin",
+              "student",
+              "teacher"
+            ]
+          },
+          "student": {
+            "required": [
+              "id",
+              "studentNumber",
+              "studentName"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "studentNumber": {
+                "type": "string"
+              },
+              "studentName": {
+                "type": "string"
+              },
+              "studentBirthday": {
+                "type": "string"
+              },
+              "parentMobilePhone": {
+                "type": "string"
+              },
+              "activeStatus": {
+                "type": "boolean"
+              },
+              "userquizzes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "class": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "grade": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              }
+            }
+          },
+          "teacher": {
+            "required": [
+              "id",
+              "name",
+              "NUPTK"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "NUPTK": {
+                "type": "string"
+              },
+              "workflow": {
+                "type": "component"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "classes": {
+                "type": "string"
+              },
+              "courses": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1197,6 +1375,26 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string"
+          },
+          "userType": {
+            "type": "string",
+            "enum": [
+              "admin",
+              "student",
+              "teacher"
+            ]
+          },
+          "student": {
+            "type": "string"
+          },
+          "teacher": {
             "type": "string"
           }
         }

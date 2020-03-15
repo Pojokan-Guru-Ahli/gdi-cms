@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "chapters",
+  "info": {
+    "name": "chapter"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "SubChapter": {
+      "type": "component",
+      "repeatable": true,
+      "component": "subchapter.sub-chapter"
+    },
+    "questions": {
+      "collection": "question",
+      "via": "chapter"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "chapter"
+    },
+    "quiz": {
+      "model": "quiz",
+      "via": "chapters"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "kurikulum": {
+      "via": "chapters",
+      "model": "kurikulum"
+    }
+  }
+}

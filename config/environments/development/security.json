@@ -2,9 +2,6 @@
   "csp": {
     "enabled": true,
     "policy": [
-      {
-        "img-src": "'self' http:"
-      },
       "block-all-mixed-content"
     ]
   },

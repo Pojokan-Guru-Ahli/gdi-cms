@@ -1,0 +1,64 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quizzes",
+      "handler": "quiz.find",
+      "config": {
+        "policies": [
+          "global.isMe"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quizzes/count",
+      "handler": "quiz.count",
+      "config": {
+        "policies": [
+          "global.isMe"
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quizzes/:id",
+      "handler": "quiz.findOne",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quizzes",
+      "handler": "quiz.create",
+      "config": {
+        "policies": [
+          "global.setOwner"
+        ]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quizzes/:id",
+      "handler": "quiz.update",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quizzes/:id",
+      "handler": "quiz.delete",
+      "config": {
+        "policies": [
+          "checkOwner"
+        ]
+      }
+    }
+  ]
+}

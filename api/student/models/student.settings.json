@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "students",
+  "info": {
+    "name": "student"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "studentNumber": {
+      "required": true,
+      "type": "string",
+      "unique": true
+    },
+    "studentName": {
+      "required": true,
+      "type": "string"
+    },
+    "studentBirthday": {
+      "type": "date"
+    },
+    "parentMobilePhone": {
+      "type": "string"
+    },
+    "activeStatus": {
+      "type": "boolean"
+    },
+    "userquizzes": {
+      "collection": "userquiz",
+      "via": "student"
+    },
+    "class": {
+      "via": "students",
+      "model": "classe"
+    },
+    "school": {
+      "model": "school",
+      "via": "students"
+    },
+    "grade": {
+      "model": "grade",
+      "via": "students"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

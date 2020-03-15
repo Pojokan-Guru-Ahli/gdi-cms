@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "kompetensidasars",
+  "info": {
+    "name": "kompetensidasar"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "kompetensidasar"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

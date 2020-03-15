@@ -1,0 +1,28 @@
+module.exports = {
+    resolver: {
+        Query: {
+            courses: {
+                policies: ["global.isMe"],
+                resolver: "Course.find"
+            },
+            course: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Course.findOne"
+            }
+        },
+        Mutation: {
+            createCourse: {
+                policies: ["global.setOwner"],
+                resolver: "Course.create"
+            },
+            updateCourse: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Course.update"
+            },
+            deleteCourse: {
+                policies: ["checkOwnerGQL"],
+                resolver: "Course.delete"
+            }
+        }
+    },
+};

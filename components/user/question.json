@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "components_user_questions",
+  "info": {
+    "name": "user Question",
+    "description": "",
+    "icon": "question-circle"
+  },
+  "attributes": {
+    "questionNumber": {
+      "type": "integer"
+    },
+    "question": {
+      "model": "question"
+    }
+  }
+}

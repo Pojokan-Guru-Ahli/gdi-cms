@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "kurikulum"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "chapters": {
+      "collection": "chapter",
+      "via": "kurikulum"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "kurikulums",
+      "dominant": true
+    }
+  },
+  "connection": "default",
+  "collectionName": "curriculums"
+}

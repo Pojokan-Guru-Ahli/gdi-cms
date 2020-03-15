@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "components_user_answers",
+  "info": {
+    "name": "User Answer",
+    "description": "",
+    "icon": "check"
+  },
+  "attributes": {
+    "answerNumber": {
+      "type": "integer"
+    },
+    "answer": {
+      "type": "json"
+    }
+  }
+}
