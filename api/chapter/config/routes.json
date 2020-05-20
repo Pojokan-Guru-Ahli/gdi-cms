@@ -6,7 +6,7 @@
       "handler": "chapter.find",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -16,7 +16,7 @@
       "handler": "chapter.count",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -36,7 +36,7 @@
       "handler": "chapter.create",
       "config": {
         "policies": [
-          "global.setOwner"
+          "global::setOwner"
         ]
       }
     },

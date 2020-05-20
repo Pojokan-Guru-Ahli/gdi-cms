@@ -2,7 +2,7 @@ module.exports = {
     resolver: {
         Query: {
             chapters: {
-                policies: ["global.isMe"],
+                policies: ["global::isMe"],
                 resolver: "Chapter.find"
             },
             chapter: {
@@ -12,7 +12,7 @@ module.exports = {
         },
         Mutation: {
             createChapter: {
-                policies: ["global.setOwner"],
+                policies: ["global::setOwner"],
                 resolver: "Chapter.create"
             },
             updateChapter: {

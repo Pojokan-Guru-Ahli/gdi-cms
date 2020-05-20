@@ -2,7 +2,7 @@ module.exports = {
     resolver: {
         Query: {
             questions: {
-                policies: ["global.isMe"],
+                policies: ["global::isMe"],
                 resolver: "Question.find"
             },
             question: {
@@ -12,7 +12,7 @@ module.exports = {
         },
         Mutation: {
             createQuestion: {
-                policies: ["global.setOwner"],
+                policies: ["global::setOwner"],
                 resolver: "Question.create"
             },
             updateQuestion: {
