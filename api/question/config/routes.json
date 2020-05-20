@@ -6,7 +6,7 @@
       "handler": "question.find",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -16,7 +16,7 @@
       "handler": "question.count",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -36,7 +36,7 @@
       "handler": "question.create",
       "config": {
         "policies": [
-          "global.setOwner"
+          "global::setOwner"
         ]
       }
     },

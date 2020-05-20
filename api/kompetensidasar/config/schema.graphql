@@ -2,7 +2,7 @@ module.exports = {
     resolver: {
         Query: {
             kompetensidasars: {
-                policies: ["global.isMe"],
+                policies: ["global::isMe"],
                 resolver: "Kompetensidasar.find"
             },
             kompetensidasar: {
@@ -12,7 +12,7 @@ module.exports = {
         },
         Mutation: {
             createKompetensidasar: {
-                policies: ["global.setOwner"],
+                policies: ["global::setOwner"],
                 resolver: "Kompetensidasar.create"
             },
             updateKompetensidasar: {

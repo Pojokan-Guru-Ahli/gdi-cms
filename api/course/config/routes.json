@@ -6,7 +6,7 @@
       "handler": "course.find",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -16,7 +16,7 @@
       "handler": "course.count",
       "config": {
         "policies": [
-          "global.isMe"
+          "global::isMe"
         ]
       }
     },
@@ -36,7 +36,7 @@
       "handler": "course.create",
       "config": {
         "policies": [
-          "global.setOwner"
+          "global::setOwner"
         ]
       }
     },
