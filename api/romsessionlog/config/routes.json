@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/romsessionlogs",
+      "handler": "romsessionlog.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/romsessionlogs/count",
+      "handler": "romsessionlog.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/romsessionlogs/:id",
+      "handler": "romsessionlog.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/romsessionlogs",
+      "handler": "romsessionlog.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/romsessionlogs/:id",
+      "handler": "romsessionlog.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/romsessionlogs/:id",
+      "handler": "romsessionlog.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

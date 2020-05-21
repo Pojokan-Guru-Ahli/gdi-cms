@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/courses": {
+    "/companies": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Course"
+                    "$ref": "#/components/schemas/Company"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCourse"
+                "$ref": "#/components/schemas/NewCompany"
               }
             }
           }
         }
       }
     },
-    "/courses/count": {
+    "/companies/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "parameters": []
       }
     },
-    "/courses/{id}": {
+    "/companies/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Company"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCourse"
+                "$ref": "#/components/schemas/NewCompany"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Course"
+          "Company"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Course": {
+      "Company": {
         "required": [
           "id"
         ],
@@ -525,355 +525,18 @@
           "name": {
             "type": "string"
           },
-          "icon": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "className"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "classLevel": {
-                  "type": "string"
-                },
-                "className": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "grades": {
-                  "type": "string"
-                },
-                "students": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "quizzes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "quizName",
-                "description",
-                "capacity",
-                "durationMinute",
-                "totalQuestions"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "quizName": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "capacity": {
-                  "type": "integer"
-                },
-                "durationMinute": {
-                  "type": "integer"
-                },
-                "totalQuestions": {
-                  "type": "integer"
-                },
-                "quizStatus": {
-                  "type": "boolean"
-                },
-                "classes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "questions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "user": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "chapter": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "SubChapter": {
-                "type": "component"
-              },
-              "questions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "quiz": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "kurikulum": {
-                "type": "string"
-              }
-            }
-          },
-          "kompetensidasar": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "courses": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "user": {
-                "type": "string"
-              }
-            }
-          },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "phone_number": {
-                "type": "string"
-              },
-              "image_url": {
-                "type": "string"
-              },
-              "userType": {
-                "type": "string"
-              },
-              "student": {
-                "type": "string"
-              },
-              "teacher": {
-                "type": "string"
-              }
-            }
-          },
-          "kurikulums": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "chapters": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "state": {
+            "type": "boolean"
           }
         }
       },
-      "NewCourse": {
+      "NewCompany": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "quizzes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "chapter": {
-            "type": "string"
-          },
-          "kompetensidasar": {
-            "type": "string"
-          },
-          "user": {
-            "type": "string"
-          },
-          "kurikulums": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "state": {
+            "type": "boolean"
           }
         }
       }
@@ -881,7 +544,7 @@
   },
   "tags": [
     {
-      "name": "Course"
+      "name": "Company"
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomparticipants",
+  "info": {
+    "name": "Roomparticipants"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "invitationemail": {
+      "type": "email"
+    },
+    "invitationname": {
+      "type": "string"
+    },
+    "starttime": {
+      "type": "datetime"
+    },
+    "endtime": {
+      "type": "datetime"
+    },
+    "state": {
+      "type": "boolean"
+    },
+    "roomsession": {
+      "model": "roomsession"
+    },
+    "room": {
+      "model": "room"
+    },
+    "company": {
+      "model": "company"
+    }
+  }
+}

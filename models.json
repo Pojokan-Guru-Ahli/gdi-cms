@@ -1,0 +1,103 @@
+{
+  "Chapter": {
+    "collection": "chapters",
+    "files": {}
+  },
+  "City": {
+    "collection": "cities",
+    "files": {}
+  },
+  "Classe": {
+    "collection": "classes",
+    "files": {}
+  },
+  "Course": {
+    "collection": "courses",
+    "files": {
+      "icon": "single"
+    }
+  },
+  "Grade": {
+    "collection": "grades",
+    "files": {}
+  },
+  "Kompetensidasar": {
+    "collection": "kompetensidasars",
+    "files": {}
+  },
+  "Kurikulum": {
+    "collection": "curriculums",
+    "files": {}
+  },
+  "Province": {
+    "collection": "provinces",
+    "files": {}
+  },
+  "Question": {
+    "collection": "questions",
+    "files": {
+      "questionImage": "single",
+      "questionAudio": "single",
+      "questionVideo": "single",
+      "imageExplanation": "single",
+      "pdfExplanation": "single",
+      "videoExplanation": "single"
+    }
+  },
+  "Questionsource": {
+    "collection": "questionsources",
+    "files": {}
+  },
+  "Quiz": {
+    "collection": "quizzes",
+    "files": {}
+  },
+  "School": {
+    "collection": "schools",
+    "files": {}
+  },
+  "Student": {
+    "collection": "students",
+    "files": {}
+  },
+  "Teacher": {
+    "collection": "teachers",
+    "files": {}
+  },
+  "Userquiz": {
+    "collection": "userquizs",
+    "files": {}
+  },
+  "UploadFile": {
+    "collection": "upload_file",
+    "files": {}
+  },
+  "UsersPermissionsPermission": {
+    "collection": "users-permissions_permission",
+    "files": {}
+  },
+  "UsersPermissionsRole": {
+    "collection": "users-permissions_role",
+    "files": {}
+  },
+  "UsersPermissionsUser": {
+    "collection": "users-permissions_user",
+    "files": {}
+  },
+  "ComponentSubchapterSubChapter": {
+    "collection": "components_subchapter_sub_chapters",
+    "files": {}
+  },
+  "ComponentUserAnswer": {
+    "collection": "components_user_answers",
+    "files": {}
+  },
+  "ComponentUserQuestion": {
+    "collection": "components_user_questions",
+    "files": {}
+  },
+  "ComponentWorkflowData": {
+    "collection": "components_workflows",
+    "files": {}
+  }
+}
