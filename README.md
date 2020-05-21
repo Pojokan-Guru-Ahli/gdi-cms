@@ -64,6 +64,8 @@ If you already restore a database, access url `http://localhost:1337/blogs`
 - `NODE_ENV=production APP_HOST=your-domain.com yarn start`
   - Access Admin : `/gdidashboard`
 
+**Please Check File `.env.example` For Complete List**
+
 ## Strapi CLI
 
 - `node_modules/.bin/strapi`
