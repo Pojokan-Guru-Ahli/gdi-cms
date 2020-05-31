@@ -1,4 +1,6 @@
-module.exports = {
+module.exports = ({
+  env
+}) => ({
   timeout: 100,
   load: {
     before: ['responseTime', 'logger', 'cors', 'responses', 'gzip'],
@@ -78,4 +80,4 @@ module.exports = {
     enabled: true,
     multipart: true
   }
-};
+});
