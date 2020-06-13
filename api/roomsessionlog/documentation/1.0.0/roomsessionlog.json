@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/romsessionlogs": {
+    "/roomsessionlogs": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Romsessionlog"
+                    "$ref": "#/components/schemas/Roomsessionlog"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Romsessionlog"
+                  "$ref": "#/components/schemas/Roomsessionlog"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRomsessionlog"
+                "$ref": "#/components/schemas/NewRoomsessionlog"
               }
             }
           }
         }
       }
     },
-    "/romsessionlogs/count": {
+    "/roomsessionlogs/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "parameters": []
       }
     },
-    "/romsessionlogs/{id}": {
+    "/roomsessionlogs/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Romsessionlog"
+                  "$ref": "#/components/schemas/Roomsessionlog"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Romsessionlog"
+                  "$ref": "#/components/schemas/Roomsessionlog"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRomsessionlog"
+                "$ref": "#/components/schemas/NewRoomsessionlog"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Romsessionlog"
+          "Roomsessionlog"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Romsessionlog": {
+      "Roomsessionlog": {
         "required": [
           "id"
         ],
@@ -589,7 +589,7 @@
           }
         }
       },
-      "NewRomsessionlog": {
+      "NewRoomsessionlog": {
         "properties": {
           "invitationemail": {
             "type": "string"
@@ -624,7 +624,7 @@
   },
   "tags": [
     {
-      "name": "Romsessionlog"
+      "name": "Roomsessionlog"
     }
   ]
 }

@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/romsessionlogs",
-      "handler": "romsessionlog.find",
+      "path": "/roomsessionlogs",
+      "handler": "roomsessionlog.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/romsessionlogs/count",
-      "handler": "romsessionlog.count",
+      "path": "/roomsessionlogs/count",
+      "handler": "roomsessionlog.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/romsessionlogs/:id",
-      "handler": "romsessionlog.findOne",
+      "path": "/roomsessionlogs/:id",
+      "handler": "roomsessionlog.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/romsessionlogs",
-      "handler": "romsessionlog.create",
+      "path": "/roomsessionlogs",
+      "handler": "roomsessionlog.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/romsessionlogs/:id",
-      "handler": "romsessionlog.update",
+      "path": "/roomsessionlogs/:id",
+      "handler": "roomsessionlog.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/romsessionlogs/:id",
-      "handler": "romsessionlog.delete",
+      "path": "/roomsessionlogs/:id",
+      "handler": "roomsessionlog.delete",
       "config": {
         "policies": []
       }

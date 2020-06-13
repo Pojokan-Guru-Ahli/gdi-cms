@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "romsessionlogs",
+  "collectionName": "roomsessionlogs",
   "info": {
-    "name": "Romsessionlog"
+    "name": "roomsessionlog"
   },
   "options": {
     "increments": true,
