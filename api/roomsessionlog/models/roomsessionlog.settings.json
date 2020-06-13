@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomsessionlogs",
+  "info": {
+    "name": "roomsessionlog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "invitationemail": {
+      "type": "email"
+    },
+    "invitationname": {
+      "type": "string"
+    },
+    "ipaddress": {
+      "type": "string"
+    },
+    "useragent": {
+      "type": "string"
+    },
+    "chimeattendeeid": {
+      "type": "string"
+    },
+    "chimemeetingid": {
+      "type": "string"
+    },
+    "state": {
+      "type": "boolean"
+    },
+    "roomsession": {
+      "model": "roomsession"
+    },
+    "company": {
+      "model": "company"
+    }
+  }
+}
