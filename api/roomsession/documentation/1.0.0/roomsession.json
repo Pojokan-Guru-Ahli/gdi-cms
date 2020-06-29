@@ -569,6 +569,9 @@
               },
               "company": {
                 "type": "string"
+              },
+              "user": {
+                "type": "string"
               }
             }
           }

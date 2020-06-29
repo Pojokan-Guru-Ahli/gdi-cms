@@ -546,6 +546,57 @@
                 "type": "boolean"
               }
             }
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "image_url": {
+                "type": "string"
+              },
+              "userType": {
+                "type": "string"
+              },
+              "student": {
+                "type": "string"
+              },
+              "teacher": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -561,6 +612,9 @@
             "type": "boolean"
           },
           "company": {
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           }
         }
