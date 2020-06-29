@@ -35,6 +35,9 @@
     },
     "company": {
       "model": "company"
+    },
+    "body": {
+      "type": "richtext"
     }
   }
 }

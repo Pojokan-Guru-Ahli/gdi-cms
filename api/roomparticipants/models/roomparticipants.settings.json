@@ -32,6 +32,9 @@
     },
     "company": {
       "model": "company"
+    },
+    "uniqueid": {
+      "type": "string"
     }
   }
 }
