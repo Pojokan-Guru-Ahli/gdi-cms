@@ -20,6 +20,10 @@
     },
     "company": {
       "model": "company"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
