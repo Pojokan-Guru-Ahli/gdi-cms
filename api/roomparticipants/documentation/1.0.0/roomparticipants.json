@@ -602,6 +602,9 @@
                 "type": "boolean"
               }
             }
+          },
+          "uniqueid": {
+            "type": "string"
           }
         }
       },
@@ -629,6 +632,9 @@
             "type": "string"
           },
           "company": {
+            "type": "string"
+          },
+          "uniqueid": {
             "type": "string"
           }
         }
