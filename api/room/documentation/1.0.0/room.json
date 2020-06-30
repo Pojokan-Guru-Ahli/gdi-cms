@@ -597,6 +597,12 @@
                 "type": "string"
               }
             }
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "pubsecret": {
+            "type": "string"
           }
         }
       },
@@ -615,6 +621,12 @@
             "type": "string"
           },
           "user": {
+            "type": "string"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "pubsecret": {
             "type": "string"
           }
         }

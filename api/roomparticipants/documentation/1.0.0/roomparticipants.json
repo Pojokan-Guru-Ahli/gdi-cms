@@ -587,6 +587,12 @@
               },
               "user": {
                 "type": "string"
+              },
+              "private": {
+                "type": "boolean"
+              },
+              "pubsecret": {
+                "type": "string"
               }
             }
           },
