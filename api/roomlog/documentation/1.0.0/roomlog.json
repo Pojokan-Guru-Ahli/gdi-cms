@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/roomsessionlogs": {
+    "/roomlogs": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Roomsessionlog"
+                    "$ref": "#/components/schemas/Roomlog"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roomsessionlog"
+                  "$ref": "#/components/schemas/Roomlog"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRoomsessionlog"
+                "$ref": "#/components/schemas/NewRoomlog"
               }
             }
           }
         }
       }
     },
-    "/roomsessionlogs/count": {
+    "/roomlogs/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "parameters": []
       }
     },
-    "/roomsessionlogs/{id}": {
+    "/roomlogs/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roomsessionlog"
+                  "$ref": "#/components/schemas/Roomlog"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Roomsessionlog"
+                  "$ref": "#/components/schemas/Roomlog"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRoomsessionlog"
+                "$ref": "#/components/schemas/NewRoomlog"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Roomsessionlog"
+          "Roomlog"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Roomsessionlog": {
+      "Roomlog": {
         "required": [
           "id"
         ],
@@ -522,10 +522,13 @@
           "id": {
             "type": "string"
           },
-          "invitationemail": {
+          "name": {
             "type": "string"
           },
-          "invitationname": {
+          "description": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           },
           "ipaddress": {
@@ -534,44 +537,7 @@
           "useragent": {
             "type": "string"
           },
-          "chimeattendeeid": {
-            "type": "string"
-          },
-          "chimemeetingid": {
-            "type": "string"
-          },
-          "state": {
-            "type": "boolean"
-          },
-          "roomsession": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "start": {
-                "type": "datetime"
-              },
-              "expired": {
-                "type": "datetime"
-              },
-              "uniqueid": {
-                "type": "string"
-              },
-              "state": {
-                "type": "boolean"
-              },
-              "company": {
-                "type": "string"
-              },
-              "room": {
-                "type": "string"
-              }
-            }
-          },
-          "company": {
+          "room": {
             "required": [
               "id"
             ],
@@ -582,22 +548,80 @@
               "name": {
                 "type": "string"
               },
-              "state": {
+              "description": {
+                "type": "string"
+              },
+              "start": {
+                "type": "datetime"
+              },
+              "expired": {
+                "type": "datetime"
+              },
+              "meetingid": {
+                "type": "string"
+              },
+              "pubsecret": {
+                "type": "string"
+              },
+              "active": {
                 "type": "boolean"
+              },
+              "private": {
+                "type": "boolean"
+              },
+              "company": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
               }
             }
           },
-          "body": {
-            "type": "string"
+          "roomparticipant": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "invitationemail": {
+                "type": "string"
+              },
+              "invitationname": {
+                "type": "string"
+              },
+              "starttime": {
+                "type": "datetime"
+              },
+              "endtime": {
+                "type": "datetime"
+              },
+              "state": {
+                "type": "boolean"
+              },
+              "room": {
+                "type": "string"
+              },
+              "company": {
+                "type": "string"
+              },
+              "uniqueid": {
+                "type": "string"
+              }
+            }
           }
         }
       },
-      "NewRoomsessionlog": {
+      "NewRoomlog": {
         "properties": {
-          "invitationemail": {
+          "name": {
             "type": "string"
           },
-          "invitationname": {
+          "description": {
+            "type": "string"
+          },
+          "status": {
             "type": "string"
           },
           "ipaddress": {
@@ -606,22 +630,10 @@
           "useragent": {
             "type": "string"
           },
-          "chimeattendeeid": {
+          "room": {
             "type": "string"
           },
-          "chimemeetingid": {
-            "type": "string"
-          },
-          "state": {
-            "type": "boolean"
-          },
-          "roomsession": {
-            "type": "string"
-          },
-          "company": {
-            "type": "string"
-          },
-          "body": {
+          "roomparticipant": {
             "type": "string"
           }
         }
@@ -630,7 +642,7 @@
   },
   "tags": [
     {
-      "name": "Roomsessionlog"
+      "name": "Roomlog"
     }
   ]
 }

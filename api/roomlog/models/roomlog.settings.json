@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomlogs",
+  "info": {
+    "name": "Roomlog"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "string"
+    },
+    "ipaddress": {
+      "type": "string"
+    },
+    "useragent": {
+      "type": "string"
+    },
+    "room": {
+      "model": "room"
+    },
+    "roomparticipant": {
+      "model": "roomparticipants"
+    }
+  }
+}
