@@ -537,34 +537,6 @@
           "state": {
             "type": "boolean"
           },
-          "roomsession": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "start": {
-                "type": "datetime"
-              },
-              "expired": {
-                "type": "datetime"
-              },
-              "uniqueid": {
-                "type": "string"
-              },
-              "state": {
-                "type": "boolean"
-              },
-              "company": {
-                "type": "string"
-              },
-              "room": {
-                "type": "string"
-              }
-            }
-          },
           "room": {
             "required": [
               "id"
@@ -579,19 +551,28 @@
               "description": {
                 "type": "string"
               },
-              "state": {
+              "start": {
+                "type": "datetime"
+              },
+              "expired": {
+                "type": "datetime"
+              },
+              "meetingid": {
+                "type": "string"
+              },
+              "pubsecret": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "private": {
                 "type": "boolean"
               },
               "company": {
                 "type": "string"
               },
               "user": {
-                "type": "string"
-              },
-              "private": {
-                "type": "boolean"
-              },
-              "pubsecret": {
                 "type": "string"
               }
             }
@@ -633,9 +614,6 @@
           },
           "state": {
             "type": "boolean"
-          },
-          "roomsession": {
-            "type": "string"
           },
           "room": {
             "type": "string"
