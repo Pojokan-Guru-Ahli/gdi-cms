@@ -15,7 +15,22 @@
     "description": {
       "type": "richtext"
     },
-    "state": {
+    "start": {
+      "type": "datetime"
+    },
+    "expired": {
+      "type": "datetime"
+    },
+    "meetingid": {
+      "type": "string"
+    },
+    "pubsecret": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "private": {
       "type": "boolean"
     },
     "company": {
@@ -24,12 +39,6 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
-    },
-    "private": {
-      "type": "boolean"
-    },
-    "pubsecret": {
-      "type": "string"
     }
   }
 }

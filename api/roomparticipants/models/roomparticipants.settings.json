@@ -24,9 +24,6 @@
     "state": {
       "type": "boolean"
     },
-    "roomsession": {
-      "model": "roomsession"
-    },
     "room": {
       "model": "room"
     },
