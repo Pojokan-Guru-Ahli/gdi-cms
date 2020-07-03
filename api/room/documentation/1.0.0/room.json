@@ -528,7 +528,22 @@
           "description": {
             "type": "string"
           },
-          "state": {
+          "start": {
+            "type": "datetime"
+          },
+          "expired": {
+            "type": "datetime"
+          },
+          "meetingid": {
+            "type": "string"
+          },
+          "pubsecret": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "private": {
             "type": "boolean"
           },
           "company": {
@@ -597,12 +612,6 @@
                 "type": "string"
               }
             }
-          },
-          "private": {
-            "type": "boolean"
-          },
-          "pubsecret": {
-            "type": "string"
           }
         }
       },
@@ -614,19 +623,28 @@
           "description": {
             "type": "string"
           },
-          "state": {
+          "start": {
+            "type": "datetime"
+          },
+          "expired": {
+            "type": "datetime"
+          },
+          "meetingid": {
+            "type": "string"
+          },
+          "pubsecret": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "private": {
             "type": "boolean"
           },
           "company": {
             "type": "string"
           },
           "user": {
-            "type": "string"
-          },
-          "private": {
-            "type": "boolean"
-          },
-          "pubsecret": {
             "type": "string"
           }
         }
