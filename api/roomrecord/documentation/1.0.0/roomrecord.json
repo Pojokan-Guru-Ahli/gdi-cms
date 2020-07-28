@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/rooms": {
+    "/roomrecords": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Room"
+                    "$ref": "#/components/schemas/Roomrecord"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Room"
+                  "$ref": "#/components/schemas/Roomrecord"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRoom"
+                "$ref": "#/components/schemas/NewRoomrecord"
               }
             }
           }
         }
       }
     },
-    "/rooms/count": {
+    "/roomrecords/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "parameters": []
       }
     },
-    "/rooms/{id}": {
+    "/roomrecords/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Room"
+                  "$ref": "#/components/schemas/Roomrecord"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Room"
+                  "$ref": "#/components/schemas/Roomrecord"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewRoom"
+                "$ref": "#/components/schemas/NewRoomrecord"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Room"
+          "Roomrecord"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Room": {
+      "Roomrecord": {
         "required": [
           "id"
         ],
@@ -522,31 +522,7 @@
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "start": {
-            "type": "datetime"
-          },
-          "expired": {
-            "type": "datetime"
-          },
-          "meetingid": {
-            "type": "string"
-          },
-          "pubsecret": {
-            "type": "string"
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "private": {
-            "type": "boolean"
-          },
-          "company": {
+          "room": {
             "required": [
               "id"
             ],
@@ -557,8 +533,32 @@
               "name": {
                 "type": "string"
               },
-              "state": {
+              "description": {
+                "type": "string"
+              },
+              "start": {
+                "type": "datetime"
+              },
+              "expired": {
+                "type": "datetime"
+              },
+              "meetingid": {
+                "type": "string"
+              },
+              "pubsecret": {
+                "type": "string"
+              },
+              "active": {
                 "type": "boolean"
+              },
+              "private": {
+                "type": "boolean"
+              },
+              "company": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -568,62 +568,11 @@
               }
             }
           },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "phone_number": {
-                "type": "string"
-              },
-              "image_url": {
-                "type": "string"
-              },
-              "userType": {
-                "type": "string"
-              },
-              "student": {
-                "type": "string"
-              },
-              "teacher": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "status": {
+            "type": "boolean"
+          },
+          "arn": {
+            "type": "string"
           },
           "created_by": {
             "required": [
@@ -715,36 +664,15 @@
           }
         }
       },
-      "NewRoom": {
+      "NewRoomrecord": {
         "properties": {
-          "name": {
+          "room": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
-          "start": {
-            "type": "datetime"
-          },
-          "expired": {
-            "type": "datetime"
-          },
-          "meetingid": {
-            "type": "string"
-          },
-          "pubsecret": {
-            "type": "string"
-          },
-          "active": {
+          "status": {
             "type": "boolean"
           },
-          "private": {
-            "type": "boolean"
-          },
-          "company": {
-            "type": "string"
-          },
-          "user": {
+          "arn": {
             "type": "string"
           },
           "created_by": {
@@ -759,7 +687,7 @@
   },
   "tags": [
     {
-      "name": "Room"
+      "name": "Roomrecord"
     }
   ]
 }

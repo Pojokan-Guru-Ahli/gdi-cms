@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "roomrecords",
+  "info": {
+    "name": "Roomrecord"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "room": {
+      "model": "room"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "arn": {
+      "type": "string"
+    }
+  }
+}
