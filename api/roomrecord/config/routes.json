@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/roomrecords",
+      "handler": "roomrecord.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/roomrecords/count",
+      "handler": "roomrecord.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/roomrecords/:id",
+      "handler": "roomrecord.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/roomrecords",
+      "handler": "roomrecord.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/roomrecords/:id",
+      "handler": "roomrecord.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/roomrecords/:id",
+      "handler": "roomrecord.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
