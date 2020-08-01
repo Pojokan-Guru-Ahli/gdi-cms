@@ -17,6 +17,12 @@
     },
     "arn": {
       "type": "string"
+    },
+    "bucket": {
+      "type": "string"
+    },
+    "meetingurl": {
+      "type": "text"
     }
   }
 }
